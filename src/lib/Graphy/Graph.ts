@@ -5,6 +5,7 @@ export class Graph {
   nodeMap: Map<number, Node> = new Map<number, Node>();
   nodes: Node[] = [];
   edges: Edge[] = [];
+  adjacency: {};
 
   nextNodeId: number = 0;
   nextEdgeId: number = 0;
@@ -30,6 +31,22 @@ export class Graph {
       this.edges.push(edge);
     }
 
+    if (!(edge.source.id in this.adjacency)) {
+      this.adjacency[edge.source.id] = {};
+    }
+    if (!(edge.target.id in this.adjacency[edge.source.id])) {
+      this.adjacency[edge.source.id][edge.target.id] = [];
+    }
+
+    exists = this.adjacency[edge.source.id][edge.target.id].some(
+      e => e.id === edge.id,
+      false
+    );
+
+    if (!exists) {
+      this.adjacency[edge.source.id][edge.target.id].push(edge);
+    }
+
     return edge;
   }
 
@@ -49,9 +66,11 @@ export class Graph {
     return edge;
   }
 
-  getEdgesByNodes(source: Node, target: Node): Edge | null {
-    //TODO: Implement adjacency matrix
-    return null;
+  getEdges(source: Node, target: Node): Edge[] {
+    if (source.id in this.adjacency && target.id in this.adjacency[source.id]) {
+      return this.adjacency[source.id][target.id];
+    }
+    return [];
   }
 
   removeNode(node: Node): boolean {
@@ -69,11 +88,23 @@ export class Graph {
   }
 
   detachNode(node: Node): void {
-    // TODO: Implement unused edge removal
+    this.edges
+      .filter(e => e.source.id === node.id || e.target.id === node.id)
+      .forEach(e => this.removeEdge(e), this);
   }
 
   removeEdge(edge: Edge): boolean {
-    // TODO: Implement unused edge removal
+    this.edges = this.edges.filter(e => e.id !== edge.id);
+    for (let x in this.adjacency) {
+      for (let y in this.adjacency[x]) {
+        this.adjacency[x][y] = this.adjacency[x][y].filter(
+          e => e.id !== edge.id
+        );
+        if (this.adjacency[x][y].length === 0) {
+          delete this.adjacency[x][y];
+        }
+      }
+    }
     return false;
   }
 }

@@ -11,7 +11,7 @@ interface Map<K, V> {
   set(key: K, value?: V): Map<K, V>;
   keys(): Array<K>;
   size: number;
-  values(): Array<V>;
+  values(): Iterable<V>;
 }
 
 interface MapConstructor {

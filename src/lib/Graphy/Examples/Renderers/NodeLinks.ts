@@ -5,6 +5,7 @@ import {
 import { CanvasStyleOptions } from "../../Abstract/Renderers/CanvasRenderer";
 import { NodeLinkEdgeRenderer } from "./NodeLinkEdgeRenderer";
 import { NodeLinkNodeRenderer } from "./NodeLinkNodeRenderer";
+import { Point } from "../Layouts/ForceDirected/Point";
 
 export class NodeLinks extends NodeLinkRenderer {
   constructor(
@@ -25,9 +26,16 @@ export class NodeLinks extends NodeLinkRenderer {
         styleOptions
       );
     super(canvas, styleOptions, options);
+    this.setNodePoints = this.setNodePoints.bind(this);
   }
 
   render(context: CanvasRenderingContext2D): void {
+    context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     super.render(context);
+  }
+
+  setNodePoints(nodePoints: Point[]) {
+    super.setNodePoints(nodePoints);
+    this.getNodeRenderer().setNodePoints(nodePoints);
   }
 }

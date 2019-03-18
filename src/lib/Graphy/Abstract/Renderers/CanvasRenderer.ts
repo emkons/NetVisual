@@ -1,4 +1,6 @@
 import { Renderer, RendererOptions } from "../../Renderer";
+import { Layout } from "../../Layout";
+import { Point } from "../../Examples/Layouts/ForceDirected/Point";
 
 export interface CanvasRendererOptions extends RendererOptions {}
 
@@ -32,6 +34,12 @@ export interface CanvasStyleOptions {
 
 export abstract class CanvasRendererAbstract
   implements CanvasRendererInterface {
+  setNodePoints(nodePoints: Point[]): void {}
+  canvas: HTMLCanvasElement;
+  options: CanvasRendererOptions;
+  setLayout(layout: Layout): void {
+    this.options.layout = layout;
+  }
   context: CanvasRenderingContext2D;
   styleOptions: CanvasStyleOptions;
 
@@ -65,9 +73,6 @@ export abstract class CanvasRendererAbstract
 }
 
 export abstract class CanvasRenderer extends CanvasRendererAbstract {
-  canvas: HTMLCanvasElement;
-  options: CanvasRendererOptions;
-
   protected constructor(
     canvas: HTMLCanvasElement,
     styleOptions: CanvasStyleOptions,
@@ -78,6 +83,7 @@ export abstract class CanvasRenderer extends CanvasRendererAbstract {
       styleOptions
     );
     this.canvas = canvas;
+    this.context.translate(canvas.width / 2, canvas.height / 2);
     this.options = options;
     window.requestAnimationFrame(() => this.drawFrame());
   }

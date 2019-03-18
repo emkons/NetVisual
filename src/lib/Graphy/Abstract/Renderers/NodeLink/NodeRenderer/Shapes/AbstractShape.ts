@@ -5,7 +5,7 @@ import {
 
 export abstract class AbstractShape extends CanvasRendererAbstract {
   size: number;
-  protected constructor(
+  constructor(
     context: CanvasRenderingContext2D,
     styleOptions: CanvasStyleOptions,
     size: number
