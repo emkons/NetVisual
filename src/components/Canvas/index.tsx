@@ -36,10 +36,11 @@ class Canvas extends Component<CanvasProps, CanvasState> {
   }
 
   componentDidMount(): void {
-    this.state.graph.newNode({ name: "hello" });
-    this.state.graph.newNode({ name: "hello2" });
-    this.state.graph.newNode({ name: "hello3" });
-    this.state.graph.newNode({ name: "hello4" });
+    const node1 = this.state.graph.newNode({ name: "hello", mass: 5 });
+      const node2 = this.state.graph.newNode({ name: "hello2" });
+      const node3 = this.state.graph.newNode({ name: "hello3" });
+      const node4 = this.state.graph.newNode({ name: "hello4" });
+    this.state.graph.newEdge(node1, node2, {});
     this.layout = new ForceDirected(this.state.graph, {
       repulsion: 5000,
       damping: 0.05,

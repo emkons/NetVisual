@@ -5,7 +5,7 @@ export class Graph {
   nodeMap: Map<number, Node> = new Map<number, Node>();
   nodes: Node[] = [];
   edges: Edge[] = [];
-  adjacency: {};
+  adjacency: Object = {};
 
   nextNodeId: number = 0;
   nextEdgeId: number = 0;
