@@ -1,13 +1,18 @@
-const { resolve } = require("path");
+const {
+  resolve
+} = require("path");
 const HtmlPlugin = require("html-webpack-plugin");
 const addCssTypes = require("./config/add-css-types");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = async function(_, env) {
+module.exports = async function (_, env) {
   const isProd = env.mode === "production";
   const nodeModules = resolve(__dirname, "node_modules");
   const componentStyleDirs = [resolve(__dirname, "src/components")];
 
-  await addCssTypes(componentStyleDirs, { watch: !isProd });
+  await addCssTypes(componentStyleDirs, {
+    watch: !isProd
+  });
 
   return {
     devtool: "source-map",
@@ -20,11 +25,13 @@ module.exports = async function(_, env) {
       filename: "app.js"
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".scss", ".js"]
+      extensions: [".ts", ".tsx", ".scss", ".js"],
+      alias: {
+        style: resolve(__dirname, 'src/style')
+      }
     },
     module: {
-      rules: [
-        {
+      rules: [{
           test: /\.tsx?$/,
           exclude: nodeModules,
           loaders: ["ts-loader"]
@@ -37,6 +44,42 @@ module.exports = async function(_, env) {
             sourceMap: true,
             includePaths: [nodeModules]
           }
+        },
+        {
+          test: /\.(scss|sass|css)$/,
+          // Only enable CSS Modules within `src/components/*`
+          include: componentStyleDirs,
+          use: [
+            // In production, CSS is extracted to files on disk. In development, it's inlined into JS:
+            isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: isProd ? '[hash:base64:5]' : '[local]__[hash:base64:5]',
+                namedExport: true,
+                camelCase: true,
+                importLoaders: 1,
+                sourceMap: isProd,
+                sass: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.(scss|sass|css)$/,
+          // Process non-modular CSS everywhere *except* `src/components/*`
+          exclude: componentStyleDirs,
+          use: [
+            isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                sourceMap: isProd
+              }
+            }
+          ]
         }
       ]
     },

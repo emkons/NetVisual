@@ -1,7 +1,12 @@
-import { Graph } from "./Graph";
-import { Point } from "./Examples/Layouts/ForceDirected/Point";
+import { Graph } from './Graph';
+import { Point } from './Examples/Layouts/ForceDirected/Point';
+import { Spring } from './Examples/Layouts/ForceDirected/Spring';
 
 export interface Layout {
   graph: Graph;
-  generate(cb: (nodePoints: Point[]) => void, incremental?: boolean): void;
+  generate(
+    nodeCallback: (nodePoints: Point[]) => void,
+    edgeCallback: (edgeSprings: Spring[]) => void,
+    incremental?: boolean,
+  ): void;
 }

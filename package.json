@@ -4,18 +4,22 @@
   "description": "Lightweight networked organization visualization solution",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --hot"
+    "start": "webpack-dev-server --host 0.0.0.0 --hot",
+    "build": "webpack -p"
   },
   "author": "Emils Melders",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/webpack-env": "^1.13.9",
     "chokidar": "^2.1.2",
+    "css-loader": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "preact": "^8.4.2",
     "sass-loader": "^7.1.0",
     "sigma": "^1.2.1",
+    "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.14.0",
     "tslint-config-airbnb": "^5.11.1",

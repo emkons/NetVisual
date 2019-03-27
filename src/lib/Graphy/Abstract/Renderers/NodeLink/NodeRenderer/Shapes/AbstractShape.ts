@@ -1,16 +1,17 @@
 import {
   CanvasRendererAbstract,
-  CanvasStyleOptions
-} from "../../../CanvasRenderer";
+  CanvasStyleOptions,
+} from '../../../CanvasRenderer';
 
 export abstract class AbstractShape extends CanvasRendererAbstract {
   size: number;
   constructor(
+    canvas: HTMLCanvasElement,
     context: CanvasRenderingContext2D,
     styleOptions: CanvasStyleOptions,
-    size: number
+    size: number,
   ) {
-    super(context, styleOptions);
+    super(canvas, context, styleOptions);
     this.size = size;
   }
   render(context: CanvasRenderingContext2D): void {}
