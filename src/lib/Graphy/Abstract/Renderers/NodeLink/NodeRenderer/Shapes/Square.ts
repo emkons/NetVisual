@@ -1,4 +1,4 @@
-import { AbstractShape } from './AbstractShape';
+import { AbstractShape } from "./AbstractShape";
 
 export class Square extends AbstractShape {
   draw(x: number, y: number): void {
@@ -7,7 +7,7 @@ export class Square extends AbstractShape {
       x - this.size / 2,
       y - this.size / 2,
       this.size,
-      this.size,
+      this.size
     );
   }
 }

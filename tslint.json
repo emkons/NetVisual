@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "tslint-config-airbnb",
-    "tslint-react"
-  ],
+  "extends": ["tslint-config-airbnb", "tslint-react"],
   "rules": {
     "jsx-boolean-value": [true, "never"],
     "jsx-no-multiline-js": false,
@@ -15,8 +12,6 @@
     "import-name": false
   },
   "linterOptions": {
-    "exclude": [
-      "build"
-    ]
+    "exclude": ["build"]
   }
 }

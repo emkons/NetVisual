@@ -1,4 +1,4 @@
-import { EdgeRenderer } from '../../Abstract/Renderers/NodeLink/EdgeRenderer';
+import { EdgeRenderer } from "../../Abstract/Renderers/NodeLink/EdgeRenderer";
 
 export class NodeLinkEdgeRenderer extends EdgeRenderer {
   render(context: CanvasRenderingContext2D): void {

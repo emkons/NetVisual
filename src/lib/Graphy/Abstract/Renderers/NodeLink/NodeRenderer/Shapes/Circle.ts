@@ -1,4 +1,4 @@
-import { AbstractShape } from './AbstractShape';
+import { AbstractShape } from "./AbstractShape";
 
 export class Circle extends AbstractShape {
   draw(x: number, y: number): void {

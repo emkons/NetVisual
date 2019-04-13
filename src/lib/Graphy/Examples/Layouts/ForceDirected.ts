@@ -1,10 +1,10 @@
-import { Layout } from '../../Layout';
-import { Graph } from '../../Graph';
-import { Node } from '../../Node';
-import { Point } from './ForceDirected/Point';
-import { Spring } from './ForceDirected/Spring';
-import { Vector } from './ForceDirected/Vector';
-import { Edge } from '../../Edge';
+import { Layout } from "../../Layout";
+import { Graph } from "../../Graph";
+import { Node } from "../../Node";
+import { Point } from "./ForceDirected/Point";
+import { Spring } from "./ForceDirected/Spring";
+import { Vector } from "./ForceDirected/Vector";
+import { Edge } from "../../Edge";
 
 export interface ForceDirectedOptions {
   stiffness?: number;
@@ -27,7 +27,7 @@ export class ForceDirected implements Layout {
       repulsion: 400,
       damping: 0.5,
       minEnergy: 0.0001,
-      maxSpeed: Infinity,
+      maxSpeed: Infinity
     };
     this.options = Object.assign({}, defaultOptions, options);
   }
@@ -35,7 +35,7 @@ export class ForceDirected implements Layout {
   async generate(
     nodeCallback: (nodePoints: Point[]) => void,
     edgeCallback: (edgeSprings: Spring[]) => void,
-    incremental?: boolean,
+    incremental?: boolean
   ) {
     const time = 0.03;
     const shouldStop = false;
@@ -47,7 +47,7 @@ export class ForceDirected implements Layout {
       nodeCallback(Array.from(this.nodePoints.values()));
       edgeCallback(Array.from(this.edgeSprings.values()));
     } while (!shouldStop); // && this.totalEnergy(time) > this.options.minEnergy);
-    console.log('Total Iterations: ' + counter);
+    console.log("Total Iterations: " + counter);
   }
 
   protected sleep(ms: number): Promise<any> {
@@ -81,7 +81,7 @@ export class ForceDirected implements Layout {
       const from = this.graph.getEdges(edge.source, edge.target);
       let existingEdgeSpring: Edge = from.find(
         e => this.edgeSprings.has(edge.id),
-        this,
+        this
       );
 
       if (existingEdgeSpring !== undefined) {
@@ -103,8 +103,8 @@ export class ForceDirected implements Layout {
           this.point(edge.source),
           this.point(edge.target),
           length,
-          this.options.stiffness,
-        ),
+          this.options.stiffness
+        )
       );
     }
     return this.edgeSprings.get(edge.id);
@@ -123,16 +123,16 @@ export class ForceDirected implements Layout {
           point1.applyForce(
             direction
               .multiply(this.options.repulsion)
-              .divide(distance * distance * 0.5),
+              .divide(distance * distance * 0.5)
           );
           point2.applyForce(
             direction
               .multiply(this.options.repulsion)
-              .divide(distance * distance * -0.5),
+              .divide(distance * distance * -0.5)
           );
         }
-      },                       this);
-    },                       this);
+      }, this);
+    }, this);
   }
 
   applyHookesLaw() {
@@ -143,12 +143,12 @@ export class ForceDirected implements Layout {
       const direction = d.normalize();
 
       spring.point1.applyForce(
-        direction.multiply(spring.k * displacement * -0.5),
+        direction.multiply(spring.k * displacement * -0.5)
       );
       spring.point2.applyForce(
-        direction.multiply(spring.k * displacement * 0.5),
+        direction.multiply(spring.k * displacement * 0.5)
       );
-    },                       this);
+    }, this);
   }
 
   attractToCenter() {
@@ -156,7 +156,7 @@ export class ForceDirected implements Layout {
       const point = this.point(n);
       const direction = point.position.multiply(-1);
       point.applyForce(direction.multiply(this.options.repulsion / 100));
-    },                       this);
+    }, this);
   }
 
   updateVelocity(timestep: number) {
@@ -171,14 +171,14 @@ export class ForceDirected implements Layout {
           .multiply(this.options.maxSpeed);
       }
       point.acceleration = new Vector(0, 0);
-    },                       this);
+    }, this);
   }
 
   updatePosition(timestep: number) {
     this.graph.nodes.forEach(n => {
       const point = this.point(n);
       point.position = point.position.add(point.velocity.multiply(timestep));
-    },                       this);
+    }, this);
   }
 
   totalEnergy(timestep: number): number {
@@ -187,7 +187,7 @@ export class ForceDirected implements Layout {
       const point = this.point(n);
       const speed = point.velocity.magnitude();
       energy += 0.5 * point.mass * speed * speed;
-    },                       this);
+    }, this);
     return energy;
   }
 }

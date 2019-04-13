@@ -1,8 +1,8 @@
-import { NodeRenderer } from '../../Abstract/Renderers/NodeLink/NodeRenderer';
-import { Circle } from '../../Abstract/Renderers/NodeLink/NodeRenderer/Shapes/Circle';
-import { CanvasStyleOptions } from '../../Abstract/Renderers/CanvasRenderer';
-import { AbstractShape } from '../../Abstract/Renderers/NodeLink/NodeRenderer/Shapes/AbstractShape';
-import { Point } from '../Layouts/ForceDirected/Point';
+import { NodeRenderer } from "../../Abstract/Renderers/NodeLink/NodeRenderer";
+import { Circle } from "../../Abstract/Renderers/NodeLink/NodeRenderer/Shapes/Circle";
+import { CanvasStyleOptions } from "../../Abstract/Renderers/CanvasRenderer";
+import { AbstractShape } from "../../Abstract/Renderers/NodeLink/NodeRenderer/Shapes/AbstractShape";
+import { Point } from "../Layouts/ForceDirected/Point";
 
 export class NodeLinkNodeRenderer extends NodeRenderer {
   shape: AbstractShape;
@@ -11,12 +11,12 @@ export class NodeLinkNodeRenderer extends NodeRenderer {
   constructor(
     canvas: HTMLCanvasElement,
     context: CanvasRenderingContext2D,
-    styleOptions: CanvasStyleOptions,
+    styleOptions: CanvasStyleOptions
   ) {
     super(canvas, context, styleOptions);
-    canvas.addEventListener('mousedown', this.dragStart.bind(this));
-    canvas.addEventListener('mousemove', this.drag.bind(this));
-    canvas.addEventListener('mouseup', this.dragEnd.bind(this));
+    canvas.addEventListener("mousedown", this.dragStart.bind(this));
+    canvas.addEventListener("mousemove", this.drag.bind(this));
+    canvas.addEventListener("mouseup", this.dragEnd.bind(this));
   }
   render(context: CanvasRenderingContext2D): void {
     this.shape =
@@ -30,7 +30,7 @@ export class NodeLinkNodeRenderer extends NodeRenderer {
             this.canvas,
             context,
             this.styleOptions,
-            20,
+            20
           );
         }
         shape.draw(p.position.x, p.position.y);
@@ -39,12 +39,12 @@ export class NodeLinkNodeRenderer extends NodeRenderer {
   }
 
   dragStart(event: DragEvent): void {
-    console.log('Drag start');
+    console.log("Drag start");
   }
   drag(event: DragEvent): void {
-    console.log('Drag in progress');
+    console.log("Drag in progress");
   }
   dragEnd(event: DragEvent): void {
-    console.log('Drag end');
+    console.log("Drag end");
   }
 }

@@ -1,6 +1,6 @@
-import { Layout } from './Layout';
-import { Point } from './Examples/Layouts/ForceDirected/Point';
-import { Spring } from './Examples/Layouts/ForceDirected/Spring';
+import { Layout } from "./Layout";
+import { Point } from "./Examples/Layouts/ForceDirected/Point";
+import { Spring } from "./Examples/Layouts/ForceDirected/Spring";
 
 export interface RendererOptions {
   layout?: Layout;

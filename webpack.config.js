@@ -1,49 +1,48 @@
-const {
-  resolve
-} = require("path");
-const HtmlPlugin = require("html-webpack-plugin");
-const addCssTypes = require("./config/add-css-types");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { resolve } = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
+const addCssTypes = require('./config/add-css-types')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-module.exports = async function (_, env) {
-  const isProd = env.mode === "production";
-  const nodeModules = resolve(__dirname, "node_modules");
-  const componentStyleDirs = [resolve(__dirname, "src/components")];
+module.exports = async function(_, env) {
+  const isProd = env.mode === 'production'
+  const nodeModules = resolve(__dirname, 'node_modules')
+  const componentStyleDirs = [resolve(__dirname, 'src/components')]
 
   await addCssTypes(componentStyleDirs, {
-    watch: !isProd
-  });
+    watch: !isProd,
+  })
 
   return {
-    devtool: "source-map",
+    devtool: 'source-map',
     entry: {
-      "first-interaction": "./src/app"
+      'first-interaction': './src/app',
     },
-    mode: "development",
+    mode: 'development',
     output: {
-      path: resolve(__dirname, "build"),
-      filename: "app.js"
+      path: resolve(__dirname, 'build'),
+      filename: 'app.js',
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".scss", ".js"],
+      extensions: ['.ts', '.tsx', '.scss', '.js'],
       alias: {
-        style: resolve(__dirname, 'src/style')
-      }
+        style: resolve(__dirname, 'src/style'),
+      },
     },
     module: {
-      rules: [{
+      rules: [
+        {
           test: /\.tsx?$/,
           exclude: nodeModules,
-          loaders: ["ts-loader"]
+          loaders: ['ts-loader'],
         },
         {
           test: /\.(scss|sass)$/,
-          loader: "sass-loader",
-          enforce: "pre",
+          loader: 'sass-loader',
+          enforce: 'pre',
           options: {
             sourceMap: true,
-            includePaths: [nodeModules]
-          }
+            includePaths: [nodeModules],
+          },
         },
         {
           test: /\.(scss|sass|css)$/,
@@ -56,15 +55,17 @@ module.exports = async function (_, env) {
               loader: 'css-loader',
               options: {
                 modules: true,
-                localIdentName: isProd ? '[hash:base64:5]' : '[local]__[hash:base64:5]',
+                localIdentName: isProd
+                  ? '[hash:base64:5]'
+                  : '[local]__[hash:base64:5]',
                 namedExport: true,
                 camelCase: true,
                 importLoaders: 1,
                 sourceMap: isProd,
-                sass: true
-              }
-            }
-          ]
+                sass: true,
+              },
+            },
+          ],
         },
         {
           test: /\.(scss|sass|css)$/,
@@ -76,44 +77,44 @@ module.exports = async function (_, env) {
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
-                sourceMap: isProd
-              }
-            }
-          ]
-        }
-      ]
+                sourceMap: isProd,
+              },
+            },
+          ],
+        },
+      ],
     },
     plugins: [
       new HtmlPlugin({
-        filename: resolve(__dirname, "build/index.html"),
-        template: "src/index.html",
+        filename: resolve(__dirname, 'build/index.html'),
+        template: 'src/index.html',
         minify: isProd && {
           collapseWhitespace: true,
           removeStrictTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
           removeRedundantAttributes: true,
-          removeComments: true
+          removeComments: true,
         },
-        inject: "body",
-        compile: true
-      })
+        inject: 'body',
+        compile: true,
+      }),
     ],
     node: {
       console: false,
       global: true,
       process: false,
-      __filename: "mock",
-      __dirname: "mock",
+      __filename: 'mock',
+      __dirname: 'mock',
       Buffer: false,
-      setImmediate: false
+      setImmediate: false,
     },
     devServer: {
-      contentBase: resolve(__dirname, "src"),
+      contentBase: resolve(__dirname, 'src'),
       compress: true,
       historyApiFallback: true,
-      clientLogLevel: "none",
-      stats: "minimal",
-      overlay: false
-    }
-  };
-};
+      clientLogLevel: 'none',
+      stats: 'minimal',
+      overlay: false,
+    },
+  }
+}

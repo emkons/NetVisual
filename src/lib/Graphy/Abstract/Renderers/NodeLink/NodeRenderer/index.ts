@@ -1,5 +1,5 @@
-import { CanvasRendererAbstract } from '../../CanvasRenderer';
-import { Point } from '../../../../Examples/Layouts/ForceDirected/Point';
+import { CanvasRendererAbstract } from "../../CanvasRenderer";
+import { Point } from "../../../../Examples/Layouts/ForceDirected/Point";
 
 export abstract class NodeRenderer extends CanvasRendererAbstract {
   nodePoints: Point[];

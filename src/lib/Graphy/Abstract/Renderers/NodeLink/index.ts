@@ -1,10 +1,10 @@
 import {
   CanvasRenderer,
   CanvasRendererOptions,
-  CanvasStyleOptions,
-} from '../CanvasRenderer';
-import { NodeRenderer } from './NodeRenderer';
-import { EdgeRenderer } from './EdgeRenderer';
+  CanvasStyleOptions
+} from "../CanvasRenderer";
+import { NodeRenderer } from "./NodeRenderer";
+import { EdgeRenderer } from "./EdgeRenderer";
 
 export interface NodeLinkRendererOptions extends CanvasRendererOptions {
   nodeRenderer?: NodeRenderer;
@@ -18,7 +18,7 @@ export class NodeLinkRenderer extends CanvasRenderer {
   constructor(
     canvas: HTMLCanvasElement,
     styleOptions: CanvasStyleOptions,
-    options: NodeLinkRendererOptions,
+    options: NodeLinkRendererOptions
   ) {
     super(canvas, styleOptions, options);
     this.nodeRenderer = options.nodeRenderer;

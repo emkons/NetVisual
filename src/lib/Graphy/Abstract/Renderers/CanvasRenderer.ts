@@ -1,8 +1,8 @@
-import { Renderer, RendererOptions } from '../../Renderer';
-import { Layout } from '../../Layout';
-import { Point } from '../../Examples/Layouts/ForceDirected/Point';
-import { Vector } from '../../Examples/Layouts/ForceDirected/Vector';
-import { Spring } from '../../Examples/Layouts/ForceDirected/Spring';
+import { Renderer, RendererOptions } from "../../Renderer";
+import { Layout } from "../../Layout";
+import { Point } from "../../Examples/Layouts/ForceDirected/Point";
+import { Vector } from "../../Examples/Layouts/ForceDirected/Vector";
+import { Spring } from "../../Examples/Layouts/ForceDirected/Spring";
 
 export interface CanvasRendererOptions extends RendererOptions {}
 
@@ -50,26 +50,26 @@ export abstract class CanvasRendererAbstract
   protected constructor(
     canvas: HTMLCanvasElement,
     context: CanvasRenderingContext2D,
-    styleOptions: CanvasStyleOptions,
+    styleOptions: CanvasStyleOptions
   ) {
     this.canvas = canvas;
     this.context = context;
     this.styleOptions = styleOptions;
   }
   protected preRender(context: CanvasRenderingContext2D): void {
-    context.lineCap = this.styleOptions.lineCap || 'square';
+    context.lineCap = this.styleOptions.lineCap || "square";
     context.lineDashOffset = this.styleOptions.lineDashOffset || 5;
-    context.lineJoin = this.styleOptions.lineJoin || 'bevel';
+    context.lineJoin = this.styleOptions.lineJoin || "bevel";
     context.lineWidth = this.styleOptions.lineWidth || 1;
     context.miterLimit = this.styleOptions.miterLimit || 1;
-    context.direction = this.styleOptions.direction || 'ltr';
-    context.font = this.styleOptions.font || 'arial';
-    context.textAlign = this.styleOptions.textAlign || 'start';
-    context.textBaseline = this.styleOptions.textBaseline || 'bottom';
-    context.fillStyle = this.styleOptions.fillStyle || '#000';
-    context.strokeStyle = this.styleOptions.strokeStyle || '#000';
+    context.direction = this.styleOptions.direction || "ltr";
+    context.font = this.styleOptions.font || "arial";
+    context.textAlign = this.styleOptions.textAlign || "start";
+    context.textBaseline = this.styleOptions.textBaseline || "bottom";
+    context.fillStyle = this.styleOptions.fillStyle || "#000";
+    context.strokeStyle = this.styleOptions.strokeStyle || "#000";
     context.shadowBlur = this.styleOptions.shadowBlur || 0;
-    context.shadowColor = this.styleOptions.shadowColor || '#000';
+    context.shadowColor = this.styleOptions.shadowColor || "#000";
     context.shadowOffsetX = this.styleOptions.shadowOffsetX || 0;
     context.shadowOffsetY = this.styleOptions.shadowOffsetY || 0;
   }
@@ -83,7 +83,7 @@ export abstract class CanvasRendererAbstract
         .multiply(this.scaleFactor)
         .add(new Vector(this.canvas.width / 2, this.canvas.height / 2)),
       1,
-      point.node,
+      point.node
     );
     return newPoint;
   }
@@ -94,7 +94,7 @@ export abstract class CanvasRendererAbstract
         .subtract(new Vector(this.canvas.width / 2, this.canvas.height / 2))
         .divide(this.scaleFactor),
       1,
-      point.node,
+      point.node
     );
   }
 }
@@ -103,16 +103,16 @@ export abstract class CanvasRenderer extends CanvasRendererAbstract {
   protected constructor(
     canvas: HTMLCanvasElement,
     styleOptions: CanvasStyleOptions,
-    options: CanvasRendererOptions,
+    options: CanvasRendererOptions
   ) {
     super(
       canvas,
-      canvas.getContext('2d') || new CanvasRenderingContext2D(),
-      styleOptions,
+      canvas.getContext("2d") || new CanvasRenderingContext2D(),
+      styleOptions
     );
     this.canvas = canvas;
-    window.addEventListener('resize', this.resizeCanvas.bind(this));
-    window.addEventListener('load', this.resizeCanvas.bind(this));
+    window.addEventListener("resize", this.resizeCanvas.bind(this));
+    window.addEventListener("load", this.resizeCanvas.bind(this));
     this.options = options;
     window.requestAnimationFrame(() => this.drawFrame());
   }

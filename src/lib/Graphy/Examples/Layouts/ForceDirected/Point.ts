@@ -1,5 +1,5 @@
-import { Vector } from './Vector';
-import { Node } from '../../../Node';
+import { Vector } from "./Vector";
+import { Node } from "../../../Node";
 
 export class Point {
   position: Vector;
