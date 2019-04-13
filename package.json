@@ -10,6 +10,8 @@
   "author": "Emils Melders",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/node": "^11.11.3",
+    "@types/sigmajs": "^1.0.27",
     "@types/webpack-env": "^1.13.9",
     "chokidar": "^2.1.2",
     "css-loader": "^1.0.1",
@@ -18,7 +20,6 @@
     "node-sass": "^4.11.0",
     "preact": "^8.4.2",
     "sass-loader": "^7.1.0",
-    "sigma": "^1.2.1",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.14.0",
@@ -31,6 +32,6 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "@types/node": "^11.11.3"
+    "sigma": "^1.2.1"
   }
 }

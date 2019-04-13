@@ -98,6 +98,7 @@ module.exports = async function(_, env) {
         inject: 'body',
         compile: true,
       }),
+      new MiniCssExtractPlugin(),
     ],
     node: {
       console: false,

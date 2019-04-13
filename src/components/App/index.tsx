@@ -1,5 +1,5 @@
-import { h, Component } from 'preact';
-import Canvas from '../Canvas';
+import { h, Component } from 'preact'
+import Canvas from '../Canvas'
 
 export interface AppProps {}
 
@@ -11,8 +11,8 @@ class App extends Component<AppProps, AppState> {
       <div>
         <Canvas />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
