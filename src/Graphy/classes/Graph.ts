@@ -1,13 +1,14 @@
 import { ID, isID, isIDArray } from '../util'
 import GraphyComponent from './Abstract'
 import Settings from './Settings'
+import Graphy from '../Graphy'
 
 interface DataObject {
   id: ID
 }
 
-interface Node extends DataObject {}
-interface Edge extends DataObject {
+export interface Node extends DataObject {}
+export interface Edge extends DataObject {
   source: Node
   target: Node
 }
@@ -26,10 +27,12 @@ export default class Graph extends GraphyComponent {
 
   public readonly namespace = 'graphy.graph'
 
-  constructor(settings: Settings, options?: Object) {
-    super(settings, options)
-    this.initOptions()
+  constructor(root: Graphy, options?: Object) {
+    super(root, options)
+    this.init(this.namespace)
   }
+
+  protected initComponent() {}
 
   /**
    * Node and edge indexes by id

@@ -13,6 +13,10 @@ export function isIDArray(ids: any): ids is ID[] {
   return ids.every(id => isID(id))
 }
 
+export function isCanvas(el: any): el is HTMLCanvasElement {
+  return el instanceof HTMLCanvasElement
+}
+
 export function resolveNestedProp(path: string | string[], object: any): any {
   const properties = isArray(path) ? path : path.split('.')
   return properties.reduce((prev, curr) => prev && prev[curr], object)

@@ -33,11 +33,11 @@ export default class Settings {
   }
 
   public namespacedGetter(namespace: string): any {
-    return key => this.get(key, namespace)
+    return (key: string) => this.get(key, namespace)
   }
 
   public namespacedSetter(namespace: string): any {
-    return (key, value) => {
+    return (key: string, value: any) => {
       this.set(key, value, namespace)
     }
   }
