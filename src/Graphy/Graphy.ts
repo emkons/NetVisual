@@ -3,10 +3,12 @@ import GraphyComponent, { IGraphyComponent } from './classes/Abstract'
 import Settings from './classes/Settings'
 import Renderer from './classes/Renderer'
 import CanvasRenderer from './renderer/Canvas'
+import Events from './classes/Events'
 
 export default class Graphy implements IGraphyComponent {
   public readonly namespace: string = 'graphy'
   public settings: Settings
+  public events: Events
   public graph: Graph
   public renderer: Renderer
 
@@ -16,6 +18,7 @@ export default class Graphy implements IGraphyComponent {
   constructor(options?: Object) {
     this.settings = new Settings(options)
     this.initOptions(this.namespace)
+    this.events = new Events()
     // TODO: Separate passed options
     this.graph = new Graph(this, options)
     this.renderer = new CanvasRenderer(this, options, this.graph)

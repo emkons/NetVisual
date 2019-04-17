@@ -3,7 +3,6 @@ import Graph, { Node, Edge } from '../classes/Graph'
 import Renderer from '../classes/Renderer'
 import Graphy from '../Graphy'
 import { isCanvas } from '../util'
-import { render } from 'preact'
 
 export interface IContexts {
   [key: string]: CanvasRenderingContext2D

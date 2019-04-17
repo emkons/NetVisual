@@ -21,7 +21,7 @@ export default abstract class GraphyComponent implements IGraphyComponent {
     this.options = options
   }
 
-  protected init(namespace: string, options: Object) {
+  protected init(namespace: string, options?: Object) {
     this.initSettings(namespace)
     this.setOption('type', this)
     this.initComponent()
