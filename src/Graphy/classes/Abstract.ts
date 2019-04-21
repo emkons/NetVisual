@@ -7,6 +7,10 @@ export interface IGraphyComponent {
   setOption: (key: string, value: any) => any
 }
 
+export interface IOptions {
+  [key: string]: any
+}
+
 export default abstract class GraphyComponent implements IGraphyComponent {
   protected settings: Settings
   protected options: Object
@@ -21,10 +25,10 @@ export default abstract class GraphyComponent implements IGraphyComponent {
     this.options = options
   }
 
-  protected init(namespace: string, options?: Object) {
+  protected init(namespace: string, options?: IOptions) {
     this.initSettings(namespace)
     this.setOption('type', this)
-    this.initComponent()
+    this.initComponent(options)
   }
 
   protected initSettings(namespace: string) {
@@ -32,5 +36,5 @@ export default abstract class GraphyComponent implements IGraphyComponent {
     this.setOption = this.settings.namespacedSetter(namespace)
   }
 
-  protected abstract initComponent(): void
+  protected abstract initComponent(options: IOptions): void
 }

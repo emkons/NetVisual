@@ -1,25 +1,25 @@
 import { resolveNestedPropWithFallback, createNestedPath } from '../util'
 
 interface SettingsData {
-  default?: Object
+  default: Object
+  [key: string]: any
 }
 
 export default class Settings {
-  private data: SettingsData = {}
+  private data: SettingsData = {
+    default: {
+      defaultNodeSize: 10,
+    },
+  }
 
-  constructor(options: Object) {
-    this.data = options
+  constructor() {
     this.get = this.get.bind(this)
     this.set = this.set.bind(this)
   }
 
   public get(key: string, namespace?: string): any {
-    console.log(this.data, namespace)
     if (namespace) {
-      return resolveNestedPropWithFallback(namespace, key, this.data)
-    }
-    if (this.data.default && this.data.default[key]) {
-      return this.data.default[key]
+      return resolveNestedPropWithFallback(namespace, key, this.data) || this.data.default[key]
     }
     return this.data[key]
   }

@@ -3,9 +3,19 @@ import Graph, { Node, Edge } from '../classes/Graph'
 import Renderer from '../classes/Renderer'
 import Graphy from '../Graphy'
 import { isCanvas } from '../util'
+import CanvasNodes, { ICanvasNodeRenderer } from './Canvas/CanvasNodes'
+import { IOptions } from '../classes/Abstract'
 
 export interface IContexts {
   [key: string]: CanvasRenderingContext2D
+}
+
+export interface ICanvasNodeRenderers {
+  [type: string]: ICanvasNodeRenderer
+}
+
+export interface ICanvasRendererOptions {
+  container: HTMLElement
 }
 
 export default class CanvasRenderer extends Renderer {
@@ -18,19 +28,28 @@ export default class CanvasRenderer extends Renderer {
   protected domElements: HTMLElement[] = []
   protected contexts: IContexts = {}
 
+  protected nodeRenderers: ICanvasNodeRenderers = {}
+
   protected width: number
   protected height: number
 
-  constructor(root: Graphy, options: Object, graph: Graph) {
+  constructor(root: Graphy, options: ICanvasRendererOptions, graph: Graph) {
     super(root, options, graph)
-    this.init(this.namespace)
+    this.init(this.namespace, options)
   }
 
-  protected initComponent() {
+  protected initComponent(options?: IOptions) {
+    if (!options || !(options.container instanceof HTMLElement)) {
+      throw 'Container not found.'
+    }
+    this.container = options.container
     this.initDOM('canvas', 'scene')
     this.contexts.edges = this.contexts.scene
     this.contexts.nodes = this.contexts.scene
     this.contexts.labels = this.contexts.scene
+
+    // Register default renderers
+    this.registerNodeRenderer('default', new CanvasNodes())
 
     // TODO: Implement mouse canvas
 
@@ -42,6 +61,7 @@ export default class CanvasRenderer extends Renderer {
     el.style.position = 'absolute'
     el.className = 'graphy-' + id
     this.container.appendChild(el)
+    this.domElements.push(el)
     if (isCanvas(el)) {
       this.contexts[id] = el.getContext('2d')
     }
@@ -66,26 +86,29 @@ export default class CanvasRenderer extends Renderer {
           el.width = this.width
           el.height = this.height
         }
+        console.log('resized', this.width, this.height)
       })
     }
   }
 
   public render(options: Object = {}) {
     const graph = this.graph
-    const nodes = graph.nodes
+    const nodes = graph.nodes()
     const drawNodes = this.getOption('drawNodes')
 
     this.resize()
 
     this.clear()
 
-    if (drawNodes) {
-      const renderers = this.settings.get('graphy.renderer.canvas.nodes')
-      const defaultRenderer = this.getOption('nodes.default')
-      const nodeRenderers = Object.keys(renderers).filter(
-        key => renderers[key] && renderers[key]['type'],
-      )
-    }
+    // if (drawNodes) {
+    Object.values(nodes).forEach(node => {
+      if (node.type && this.nodeRenderers[node.type]) {
+        this.nodeRenderers[node.type].render(node, this.contexts.nodes, this.getOption)
+      } else {
+        this.nodeRenderers.default.render(node, this.contexts.nodes, this.getOption)
+      }
+    })
+    // }
 
     return this
   }
@@ -94,5 +117,10 @@ export default class CanvasRenderer extends Renderer {
     Object.values(this.contexts).forEach(c => {
       c.clearRect(0, 0, this.width, this.height)
     })
+  }
+
+  public registerNodeRenderer(name: string, renderer: ICanvasNodeRenderer) {
+    // TODO: Make async loading?
+    this.nodeRenderers[name] = renderer
   }
 }

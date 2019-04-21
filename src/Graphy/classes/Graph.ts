@@ -1,10 +1,14 @@
 import { ID, isID, isIDArray } from '../util'
-import GraphyComponent from './Abstract'
+import GraphyComponent, { IOptions } from './Abstract'
 import Settings from './Settings'
 import Graphy from '../Graphy'
 
-interface DataObject {
+export interface DataObject {
   id: ID
+  color?: string
+  x?: number
+  y?: number
+  size?: number
 }
 
 export interface Node extends DataObject {}
@@ -22,14 +26,19 @@ interface AdjacencyList {
 }
 
 export default class Graph extends GraphyComponent {
-  private nodesArray: Node[]
-  private edgesArray: Edge[]
+  private nodesArray: Node[] = []
+  private edgesArray: Edge[] = []
 
   public readonly namespace = 'graphy.graph'
 
-  constructor(root: Graphy, options?: Object) {
+  constructor(root: Graphy, options?: IOptions) {
     super(root, options)
     this.init(this.namespace)
+    if (options && options.nodes) {
+      options.nodes.forEach(node => {
+        this.addNode(node)
+      })
+    }
   }
 
   protected initComponent() {}
@@ -43,9 +52,9 @@ export default class Graph extends GraphyComponent {
   /**
    * Edge indexes by node
    */
-  private adjacencyListIn: AdjacencyList
-  private adjacencyListOut: AdjacencyList
-  private adjacencyListAll: AdjacencyList
+  private adjacencyListIn: AdjacencyList = {}
+  private adjacencyListOut: AdjacencyList = {}
+  private adjacencyListAll: AdjacencyList = {}
 
   public addNode(node: Node): Graph {
     if (this.nodesIndex[node.id]) {
