@@ -1,6 +1,8 @@
 const { resolve } = require("path")
 const HtmlPlugin = require("html-webpack-plugin")
 const addCssTypes = require("./config/add-css-types")
+const CopyPlugin = require("copy-webpack-plugin")
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = async function(_, env) {
@@ -96,7 +98,15 @@ module.exports = async function(_, env) {
         inject: "body",
         compile: true
       }),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new CopyPlugin([{ from: "src/assets", to: "assets" }]),
+      // Add bundle analyzer output for production builds
+      isProd &&
+        new BundleAnalyzerPlugin({
+          analyzerMode: "static",
+          defaultSizes: "gzip",
+          openAnalyzer: false
+        })
     ],
     node: {
       console: false,

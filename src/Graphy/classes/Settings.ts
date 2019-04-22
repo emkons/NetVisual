@@ -9,6 +9,7 @@ export default class Settings {
   private data: SettingsData = {
     default: {
       defaultNodeSize: 10,
+      defaultEdgeWidth: 2,
     },
   }
 

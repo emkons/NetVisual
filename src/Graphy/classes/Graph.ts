@@ -10,10 +10,10 @@ export interface DataObject {
   x?: number
   y?: number
   size?: number
+  type?: string
 }
 
 export interface Node extends DataObject {
-  type?: string
   force?: Vector
   pos?: Vector
   camProps?: INodeCamProps

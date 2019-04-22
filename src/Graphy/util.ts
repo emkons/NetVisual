@@ -1,5 +1,3 @@
-import { isArray } from 'util'
-
 export type ID = string | number
 
 export function isID(id: any): id is ID {
@@ -7,7 +5,7 @@ export function isID(id: any): id is ID {
 }
 
 export function isIDArray(ids: any): ids is ID[] {
-  if (!isArray(ids)) {
+  if (!Array.isArray(ids)) {
     return false
   }
   return ids.every(id => isID(id))
@@ -18,7 +16,7 @@ export function isCanvas(el: any): el is HTMLCanvasElement {
 }
 
 export function resolveNestedProp(path: string | string[], object: any): any {
-  const properties = isArray(path) ? path : path.split('.')
+  const properties = Array.isArray(path) ? path : path.split('.')
   return properties.reduce((prev, curr) => prev && prev[curr], object)
 }
 
@@ -33,7 +31,7 @@ export function resolveNestedPropWithFallback(path: string, key: string, object:
 }
 
 export function createNestedPath(path: string | string[], object: any): any {
-  const properties = isArray(path) ? path : path.split('.')
+  const properties = Array.isArray(path) ? path : path.split('.')
   return properties.reduce((prev, curr) => (prev[curr] = prev[curr] || {}), object)
 }
 

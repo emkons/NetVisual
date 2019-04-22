@@ -12,6 +12,7 @@ export interface INodeCamProps {
   x: number
   y: number
   size: number
+  hover?: boolean
 }
 
 export interface ICameraOptions {
@@ -31,6 +32,7 @@ export default class Camera extends GraphyComponent {
     x: number
     y: number,
   }
+  private hoverNode: {}
 
   constructor(root: Graphy, options?: ICameraOptions) {
     super(root, options)
@@ -69,6 +71,12 @@ export default class Camera extends GraphyComponent {
     this.root.events.subscribe('dragEnd', (event: MouseEvent) => {
       this.dragStart = null
     })
+    this.root.events.subscribe('hoverNode', (node: Node) => {
+      this.root.events.dispatch('render', null)
+    })
+    this.root.events.subscribe('hoverNodeEnd', (node: Node) => {
+      this.root.events.dispatch('render', null)
+    })
   }
 
   public goTo(coords: ICameraCoords) {
@@ -76,6 +84,13 @@ export default class Camera extends GraphyComponent {
     this.y = coords.y
     if (coords.zoom) {
       this.zoom = coords.zoom
+    }
+  }
+
+  public coordsFromScreen(x: number, y: number): { x: number; y: number } {
+    return {
+      x: x / this.zoom + this.x,
+      y: y / this.zoom + this.y,
     }
   }
 

@@ -5,6 +5,7 @@ import Graphy from '../Graphy'
 import { isCanvas } from '../util'
 import CanvasNodes, { ICanvasNodeRenderer } from './Canvas/CanvasNodes'
 import { IOptions } from '../classes/Abstract'
+import CanvasEdges, { ICanvasEdgeRenderer } from './Canvas/CanvasEdges'
 
 export interface IContexts {
   [key: string]: CanvasRenderingContext2D
@@ -12,6 +13,10 @@ export interface IContexts {
 
 export interface ICanvasNodeRenderers {
   [type: string]: ICanvasNodeRenderer
+}
+
+export interface ICanvasEdgeRenderers {
+  [type: string]: ICanvasEdgeRenderer
 }
 
 export interface ICanvasRendererOptions {
@@ -29,6 +34,7 @@ export default class CanvasRenderer extends Renderer {
   protected contexts: IContexts = {}
 
   protected nodeRenderers: ICanvasNodeRenderers = {}
+  protected edgeRenderers: ICanvasEdgeRenderers = {}
 
   protected width: number
   protected height: number
@@ -52,6 +58,7 @@ export default class CanvasRenderer extends Renderer {
 
     // Register default renderers
     this.registerNodeRenderer('default', new CanvasNodes())
+    this.registerEdgeRenderer('default', new CanvasEdges())
 
     // TODO: Implement mouse canvas
     this.addEventListeners()
@@ -73,6 +80,7 @@ export default class CanvasRenderer extends Renderer {
   private addEventListeners() {
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
+        let hoverNodes: Node[] = []
         el.addEventListener('wheel', event => {
           this.root.events.dispatch('scroll', event)
         })
@@ -80,11 +88,28 @@ export default class CanvasRenderer extends Renderer {
           // TODO: Recognize hovered nodes
           this.root.events.dispatch('dragStart', event)
         })
+        el.addEventListener('mousemove', event => {
+          const newHoverNodes = this.graph.nodes().filter(node => {
+            const dX = node.camProps.x - event.clientX
+            const dY = node.camProps.y - event.clientY
+            const size = node.camProps.size
+            return dX * dX + dY * dY < size * size
+          })
+          newHoverNodes.forEach(node => {
+            node.camProps.hover = true
+            this.root.events.dispatch('hoverNode', node)
+          })
+          hoverNodes
+            .filter(node => newHoverNodes.indexOf(node) === -1)
+            .forEach(node => {
+              node.camProps.hover = false
+              this.root.events.dispatch('hoverNodeEnd', node)
+            })
+          hoverNodes = newHoverNodes
+          this.root.events.dispatch('drag', event)
+        })
         el.addEventListener('mouseup', event => {
           this.root.events.dispatch('dragEnd', event)
-        })
-        el.addEventListener('mousemove', event => {
-          this.root.events.dispatch('drag', event)
         })
       }
     })
@@ -117,11 +142,19 @@ export default class CanvasRenderer extends Renderer {
   public render(options: Object = {}) {
     const graph = this.graph
     const nodes = this.root.camera.getNodeCoords(graph.nodes())
-    const drawNodes = this.getOption('drawNodes')
+    const edges = graph.edges()
 
     this.resize()
 
     this.clear()
+
+    Object.values(edges).forEach(edge => {
+      if (edge.type && this.edgeRenderers[edge.type]) {
+        this.edgeRenderers[edge.type].render(edge, this.contexts.edges, this.getOption)
+      } else {
+        this.edgeRenderers.default.render(edge, this.contexts.edges, this.getOption)
+      }
+    })
 
     // if (drawNodes) {
     Object.values(nodes).forEach(node => {
@@ -145,5 +178,10 @@ export default class CanvasRenderer extends Renderer {
   public registerNodeRenderer(name: string, renderer: ICanvasNodeRenderer) {
     // TODO: Make async loading?
     this.nodeRenderers[name] = renderer
+  }
+
+  public registerEdgeRenderer(name: string, renderer: ICanvasEdgeRenderer) {
+    // TODO: Make async loading?
+    this.edgeRenderers[name] = renderer
   }
 }
