@@ -42,6 +42,8 @@ export default class CanvasRenderer extends Renderer {
     if (!options || !(options.container instanceof HTMLElement)) {
       throw 'Container not found.'
     }
+    this.render = this.render.bind(this)
+    this.root.events.subscribe('render', this.render)
     this.container = options.container
     this.initDOM('canvas', 'scene')
     this.contexts.edges = this.contexts.scene
@@ -52,6 +54,7 @@ export default class CanvasRenderer extends Renderer {
     this.registerNodeRenderer('default', new CanvasNodes())
 
     // TODO: Implement mouse canvas
+    this.addEventListeners()
 
     this.resize()
   }
@@ -65,6 +68,26 @@ export default class CanvasRenderer extends Renderer {
     if (isCanvas(el)) {
       this.contexts[id] = el.getContext('2d')
     }
+  }
+
+  private addEventListeners() {
+    this.domElements.forEach(el => {
+      if (isCanvas(el)) {
+        el.addEventListener('wheel', event => {
+          this.root.events.dispatch('scroll', event)
+        })
+        el.addEventListener('mousedown', event => {
+          // TODO: Recognize hovered nodes
+          this.root.events.dispatch('dragStart', event)
+        })
+        el.addEventListener('mouseup', event => {
+          this.root.events.dispatch('dragEnd', event)
+        })
+        el.addEventListener('mousemove', event => {
+          this.root.events.dispatch('drag', event)
+        })
+      }
+    })
   }
 
   public resize(w?: number, h?: number) {
@@ -93,7 +116,7 @@ export default class CanvasRenderer extends Renderer {
 
   public render(options: Object = {}) {
     const graph = this.graph
-    const nodes = graph.nodes()
+    const nodes = this.root.camera.getNodeCoords(graph.nodes())
     const drawNodes = this.getOption('drawNodes')
 
     this.resize()

@@ -21,6 +21,7 @@ export default abstract class GraphyComponent implements IGraphyComponent {
   public setOption: (key: string, value: any) => any
 
   constructor(root: Graphy, options: Object) {
+    this.root = root
     this.settings = root.settings
     this.options = options
   }

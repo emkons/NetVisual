@@ -1,7 +1,8 @@
-import { ID, isID, isIDArray } from '../util'
+import { ID, isID, isIDArray, Vector } from '../util'
 import GraphyComponent, { IOptions } from './Abstract'
 import Settings from './Settings'
 import Graphy from '../Graphy'
+import { INodeCamProps } from './Camera'
 
 export interface DataObject {
   id: ID
@@ -11,7 +12,12 @@ export interface DataObject {
   size?: number
 }
 
-export interface Node extends DataObject {}
+export interface Node extends DataObject {
+  type?: string
+  force?: Vector
+  pos?: Vector
+  camProps?: INodeCamProps
+}
 export interface Edge extends DataObject {
   source: Node
   target: Node
@@ -38,6 +44,17 @@ export default class Graph extends GraphyComponent {
       options.nodes.forEach(node => {
         this.addNode(node)
       })
+    }
+    if (options && options.edges) {
+      options.edges
+        .map(edge => {
+          edge.source = this.nodesIndex[edge.source]
+          edge.target = this.nodesIndex[edge.target]
+          return edge
+        })
+        .forEach(edge => {
+          this.addEdge(edge)
+        })
     }
   }
 
@@ -161,7 +178,7 @@ export default class Graph extends GraphyComponent {
     return this
   }
 
-  public nodes(ids?: ID | ID[]): Node | Node[] {
+  public nodes(ids?: ID | ID[]): Node[] {
     if (!ids) {
       return this.nodesArray
     }
@@ -177,7 +194,7 @@ export default class Graph extends GraphyComponent {
     throw 'nodes: Wrong arguments.'
   }
 
-  public edges(ids?: ID | ID[]): Edge | Edge[] {
+  public edges(ids?: ID | ID[]): Edge[] {
     if (!ids) {
       return this.edgesArray
     }

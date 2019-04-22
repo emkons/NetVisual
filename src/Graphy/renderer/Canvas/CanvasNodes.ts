@@ -9,7 +9,7 @@ export default class CanvasNodes implements ICanvasNodeRenderer {
     context.save()
     context.fillStyle = node.color || getter('defaultNodeColor')
     context.beginPath()
-    context.arc(node.x, node.y, node.size || getter('defaultNodeSize'), 0, Math.PI * 2)
+    context.arc(node.camProps.x, node.camProps.y, node.camProps.size, 0, Math.PI * 2)
     context.closePath()
     context.fill()
     context.restore()

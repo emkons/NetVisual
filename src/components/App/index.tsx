@@ -1,5 +1,6 @@
 import { h, Component } from 'preact'
 import Canvas from '../Canvas'
+import Controls from '../Controls'
 
 export interface AppProps {}
 
@@ -10,6 +11,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <Canvas />
+        <Controls />
       </div>
     )
   }

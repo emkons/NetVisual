@@ -2,6 +2,7 @@ import { h, Component } from 'preact'
 import * as style from './style.scss'
 import Graphy from '../../Graphy/Graphy'
 import { Edge, Node } from '../../Graphy/classes/Graph'
+import ForceDirected from '../../Graphy/layout/ForceDirected'
 
 interface CanvasProps {}
 
@@ -37,6 +38,14 @@ class Canvas extends Component<CanvasProps, CanvasState> {
         color: '#666',
       })
     }
+    for (let i = 0; i < 10; i += 1) {
+      g.edges.push({
+        id: 'e' + i,
+        source: 'n' + ((Math.random() * 10) | 0),
+        target: 'n' + ((Math.random() * 10) | 0),
+        color: '#666',
+      })
+    }
 
     const graphy = new Graphy({
       renderer: {
@@ -44,6 +53,12 @@ class Canvas extends Component<CanvasProps, CanvasState> {
       },
       graph: g,
     })
+    const fd = new ForceDirected()
+    fd.subscribe('iteration', graph => {
+      // console.log('increment', graph)
+      graphy.events.dispatch('render', null)
+    })
+    fd.start(graphy.graph)
   }
 }
 
