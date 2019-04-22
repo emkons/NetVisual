@@ -81,14 +81,7 @@ export default class CanvasRenderer extends Renderer {
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
         let hoverNodes: Node[] = []
-        el.addEventListener('wheel', event => {
-          this.root.events.dispatch('scroll', event)
-        })
-        el.addEventListener('mousedown', event => {
-          // TODO: Recognize hovered nodes
-          this.root.events.dispatch('dragStart', event)
-        })
-        el.addEventListener('mousemove', event => {
+        const handleMove = event => {
           const newHoverNodes = this.graph.nodes().filter(node => {
             const dX = node.camProps.x - event.clientX
             const dY = node.camProps.y - event.clientY
@@ -106,10 +99,39 @@ export default class CanvasRenderer extends Renderer {
               this.root.events.dispatch('hoverNodeEnd', node)
             })
           hoverNodes = newHoverNodes
+        }
+        el.addEventListener('wheel', event => {
+          event.preventDefault()
+          this.root.events.dispatch('scroll', event)
+        })
+        el.addEventListener('mousedown', event => {
+          // TODO: Recognize hovered nodes
+          this.root.events.dispatch('dragStart', event)
+        })
+        el.addEventListener('touchstart', event => {
+          console.log(event)
+          // TODO: Recognize hovered nodes
+          if (event.touches.length === 1) {
+            this.root.events.dispatch('dragStart', event.touches[0])
+          }
+        })
+        el.addEventListener('mousemove', event => {
+          handleMove(event)
           this.root.events.dispatch('drag', event)
+        })
+        el.addEventListener('touchmove', event => {
+          if (event.touches.length === 1) {
+            handleMove(event)
+            this.root.events.dispatch('drag', event.touches[0])
+          }
         })
         el.addEventListener('mouseup', event => {
           this.root.events.dispatch('dragEnd', event)
+        })
+        el.addEventListener('touchend', event => {
+          if (event.touches.length === 1) {
+            this.root.events.dispatch('dragEnd', event.touches[0])
+          }
         })
       }
     })

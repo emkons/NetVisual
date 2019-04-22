@@ -98,15 +98,18 @@ module.exports = async function(_, env) {
         inject: "body",
         compile: true
       }),
-      new MiniCssExtractPlugin(),
+      ...(isProd ? [new MiniCssExtractPlugin()] : []),
       new CopyPlugin([{ from: "src/assets", to: "assets" }]),
       // Add bundle analyzer output for production builds
-      isProd &&
-        new BundleAnalyzerPlugin({
-          analyzerMode: "static",
-          defaultSizes: "gzip",
-          openAnalyzer: false
-        })
+      ...(isProd
+        ? [
+            new BundleAnalyzerPlugin({
+              analyzerMode: "static",
+              defaultSizes: "gzip",
+              openAnalyzer: false
+            })
+          ]
+        : [])
     ],
     node: {
       console: false,

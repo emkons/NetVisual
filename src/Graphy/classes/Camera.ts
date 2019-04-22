@@ -24,7 +24,7 @@ export interface ICameraOptions {
 export default class Camera extends GraphyComponent {
   public x: number = 0
   public y: number = 0
-  public zoom: number = 2
+  public zoom: number = 1
 
   public readonly namespace = 'graphy.camera'
 
