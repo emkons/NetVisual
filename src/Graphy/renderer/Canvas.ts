@@ -112,6 +112,7 @@ export default class CanvasRenderer extends Renderer {
           console.log(event)
           // TODO: Recognize hovered nodes
           if (event.touches.length === 1) {
+            event.preventDefault()
             this.root.events.dispatch('dragStart', event.touches[0])
           }
         })
@@ -121,6 +122,7 @@ export default class CanvasRenderer extends Renderer {
         })
         el.addEventListener('touchmove', event => {
           if (event.touches.length === 1) {
+            event.preventDefault()
             handleMove(event)
             this.root.events.dispatch('drag', event.touches[0])
           }
@@ -130,6 +132,7 @@ export default class CanvasRenderer extends Renderer {
         })
         el.addEventListener('touchend', event => {
           if (event.touches.length === 1) {
+            event.preventDefault()
             this.root.events.dispatch('dragEnd', event.touches[0])
           }
         })
