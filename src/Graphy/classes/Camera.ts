@@ -41,13 +41,17 @@ export default class Camera extends GraphyComponent {
 
   public initComponent() {
     this.root.events.subscribe('scroll', (event: WheelEvent) => {
-      this.x -= event.clientX / this.zoom
-      this.y -= event.clientY / this.zoom
+      if (event.clientX) {
+        this.x -= event.clientX / this.zoom
+        this.y -= event.clientY / this.zoom
+      }
       this.zoom -= event.deltaY / 1000
       this.zoom = Math.max(this.zoom, 0.1)
-      this.x += event.clientX / this.zoom
-      this.y += event.clientY / this.zoom
-      this.zoom = Math.max(0.1, this.zoom)
+      if (event.clientX) {
+        this.x += event.clientX / this.zoom
+        this.y += event.clientY / this.zoom
+      }
+      this.root.events.dispatch('zoomChanged', this.zoom)
       this.root.events.dispatch('render', null)
     })
 

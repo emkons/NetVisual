@@ -40,21 +40,8 @@ export default class Graph extends GraphyComponent {
   constructor(root: Graphy, options?: IOptions) {
     super(root, options)
     this.init(this.namespace)
-    if (options && options.nodes) {
-      options.nodes.forEach(node => {
-        this.addNode(node)
-      })
-    }
-    if (options && options.edges) {
-      options.edges
-        .map(edge => {
-          edge.source = this.nodesIndex[edge.source]
-          edge.target = this.nodesIndex[edge.target]
-          return edge
-        })
-        .forEach(edge => {
-          this.addEdge(edge)
-        })
+    if (options) {
+      this.parseGraph(options)
     }
   }
 
@@ -86,6 +73,29 @@ export default class Graph extends GraphyComponent {
     this.nodesIndex[node.id] = node
 
     return this
+  }
+
+  public parseGraph(graph: { nodes?: Node[]; edges?: Edge[] }) {
+    if (graph.nodes) {
+      graph.nodes.forEach(node => {
+        this.addNode(node)
+      })
+    }
+    if (graph.edges) {
+      graph.edges
+        .map(edge => {
+          if (typeof edge.source === 'string') {
+            edge.source = this.nodesIndex[edge.source]
+          }
+          if (typeof edge.target === 'string') {
+            edge.target = this.nodesIndex[edge.target]
+          }
+          return edge
+        })
+        .forEach(edge => {
+          this.addEdge(edge)
+        })
+    }
   }
 
   public dropNode(id: ID): Graph {

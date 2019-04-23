@@ -7,7 +7,7 @@ import Events from './classes/Events'
 import Camera, { ICameraOptions } from './classes/Camera'
 
 export interface IGraphyOptions {
-  renderer: ICanvasRendererOptions
+  renderer?: ICanvasRendererOptions
   graph?: {
     nodes: Node[]
     edges: Edge[],
@@ -25,15 +25,17 @@ export default class Graphy implements IGraphyComponent {
   public getOption: (key: string) => any
   public setOption: (key: string, value: any) => any
 
-  constructor(options?: IGraphyOptions) {
+  constructor(options: IGraphyOptions) {
     this.settings = new Settings()
     this.initOptions(this.namespace)
     this.events = new Events()
     // TODO: Separate passed options
     this.camera = new Camera(this, options.camera)
     this.graph = new Graph(this, options.graph)
-    this.renderer = new CanvasRenderer(this, options.renderer, this.graph)
-    this.renderer.render()
+    if (options.renderer) {
+      this.renderer = new CanvasRenderer(this, options.renderer, this.graph)
+      this.renderer.render()
+    }
   }
 
   private initOptions(namespace: string) {

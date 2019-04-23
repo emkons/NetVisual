@@ -26,9 +26,6 @@ export interface ICanvasRendererOptions {
 export default class CanvasRenderer extends Renderer {
   public readonly namespace: string = 'graphy.renderer.canvas'
 
-  protected nodes: Node[]
-  protected edges: Edge[]
-
   protected container: HTMLElement
   protected domElements: HTMLElement[] = []
   protected contexts: IContexts = {}

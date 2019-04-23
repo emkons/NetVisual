@@ -1,8 +1,9 @@
 import { h, Component } from 'preact'
 import * as style from './style.scss'
-import Graphy from '../../Graphy/Graphy'
+import { graphy } from '../../Graphy/Instance'
 import { Edge, Node } from '../../Graphy/classes/Graph'
 import ForceDirected from '../../Graphy/layout/ForceDirected'
+import CanvasRenderer from '../../Graphy/renderer/Canvas'
 
 interface CanvasProps {}
 
@@ -46,13 +47,8 @@ class Canvas extends Component<CanvasProps, CanvasState> {
         color: '#666',
       })
     }
-
-    const graphy = new Graphy({
-      renderer: {
-        container: this.container,
-      },
-      graph: g,
-    })
+    graphy.graph.parseGraph(g)
+    graphy.renderer = new CanvasRenderer(graphy, { container: this.container }, graphy.graph)
     const fd = new ForceDirected()
     fd.subscribe('iteration', graph => {
       // console.log('increment', graph)
