@@ -99,7 +99,10 @@ module.exports = async function(_, env) {
         compile: true
       }),
       ...(isProd ? [new MiniCssExtractPlugin()] : []),
-      new CopyPlugin([{ from: "src/assets", to: "assets" }]),
+      new CopyPlugin([
+        { from: "src/assets", to: "assets" },
+        { from: "src/manifest.json", to: "manifest.json" }
+      ]),
       // Add bundle analyzer output for production builds
       ...(isProd
         ? [

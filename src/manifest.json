@@ -1,0 +1,16 @@
+{
+  "name": "Net Visual",
+  "short_name": "NetVis",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff",
+  "theme_color": "#f78f21",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ]
+}
