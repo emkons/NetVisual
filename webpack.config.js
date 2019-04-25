@@ -103,24 +103,22 @@ module.exports = async function(_, env) {
         { from: "src/assets", to: "assets" },
         { from: "src/manifest.json", to: "manifest.json" }
       ]),
-      ...(isProd
-        ? [
-            new MiniCssExtractPlugin(),
-            // Add bundle analyzer output for production builds
-            new BundleAnalyzerPlugin({
-              analyzerMode: "static",
-              defaultSizes: "gzip",
-              openAnalyzer: false
-            }),
-            new CrittersPlugin({
-              // Async css loading
-              preload: "media",
-              inlineTreshhold: 2000,
-              minimuExternalSize: 4000
-            })
-          ]
-        : [])
-    ],
+      isProd && new MiniCssExtractPlugin(),
+      // Add bundle analyzer output for production builds
+      isProd &&
+        new BundleAnalyzerPlugin({
+          analyzerMode: "static",
+          defaultSizes: "gzip",
+          openAnalyzer: false
+        }),
+      isProd &&
+        new CrittersPlugin({
+          // Async css loading
+          preload: "media",
+          inlineTreshhold: 2000,
+          minimuExternalSize: 4000
+        })
+    ].filter(Boolean),
     node: {
       console: false,
       global: true,

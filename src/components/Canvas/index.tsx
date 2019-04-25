@@ -49,12 +49,7 @@ class Canvas extends Component<CanvasProps, CanvasState> {
     }
     graphy.graph.parseGraph(g)
     graphy.renderer = new CanvasRenderer(graphy, { container: this.container }, graphy.graph)
-    const fd = new ForceDirected()
-    fd.subscribe('iteration', graph => {
-      // console.log('increment', graph)
-      graphy.events.dispatch('render', null)
-    })
-    fd.start(graphy.graph)
+    graphy.events.dispatch('render', null)
   }
 }
 
