@@ -1,51 +1,17 @@
-import { ILayout } from '../classes/ILayout'
+import Layout, { ILayout } from '../classes/ILayout'
 import Graph, { Node } from '../classes/Graph'
 import Events from '../classes/Events'
-import { Vector } from '../util'
 
-export default class ForceDirected extends Events implements ILayout {
+export default class ForceDirected extends Layout implements ILayout {
   public readonly incremental = true
 
-  private running = false
   private aForce = 10000
   private rForce = 5
 
   private iters = 0
 
-  public start(graph: Graph): Promise<Graph> {
-    this.running = true
-
-    setTimeout(() => {
-      this.handleMultipleIterations(graph)
-    },         0)
-
-    return new Promise<Graph>(resolve => {
-      this.subscribe('done', resolve)
-    })
-  }
-
-  private handleMultipleIterations(graph: Graph) {
-    const startTime = window.performance.now()
-    let finishTime = 0
-    do {
-      this.iterate(graph)
-      this.iters += 1
-      finishTime = window.performance.now()
-    } while (finishTime - startTime < 1)
-
-    this.dispatch('iteration', graph)
-    // console.log('iterations', this.iters)
-
-    if (this.iters < 100000) {
-      setTimeout(() => {
-        this.handleMultipleIterations(graph)
-      },         0)
-    } else {
-      this.dispatch('done', graph)
-    }
-  }
-
-  private iterate(graph: Graph) {
+  protected process(graph: Graph) {
+    this.iters += 1
     this.repulse(graph)
     this.attract(graph)
     this.updatePositions(graph)
@@ -55,27 +21,32 @@ export default class ForceDirected extends Events implements ILayout {
     const edges = graph.edges()
     edges.forEach(e => {
       if (e.source !== e.target) {
-        const dir = e.source.pos.clone().subtract(e.target.pos)
-        const force = dir.norm().multiply(dir.dist2() / this.aForce)
-        e.source.force.subtract(force)
-        e.target.force.add(force)
+        const distX = e.target.x - e.source.x
+        const distY = e.target.y - e.target.y
+        const dist = Math.sqrt(distX * distX + distY * distY)
+        const force = (dist * dist) / this.aForce
+        e.source.layoutProps.f.x += force * distX
+        e.source.layoutProps.f.y += force * distY
+        e.target.layoutProps.f.x -= force * distX
+        e.target.layoutProps.f.y -= force * distY
       }
     })
   }
 
   private repulse(graph: Graph) {
     const nodes = graph.nodes()
-    nodes.forEach(node => {
-      node.force = new Vector(0, 0)
-      node.pos = new Vector(node.x, node.y)
-    })
+    this.initNodeLayoutProps(nodes)
     nodes.forEach(n1 => {
       nodes.forEach(n2 => {
         if (n1.id !== n2.id) {
-          const dir = n1.pos.clone().subtract(n2.pos)
-          const force = dir.norm().multiply((this.rForce * this.rForce) / dir.dist())
-          n1.force.add(force)
-          n2.force.subtract(force)
+          const distX = n2.x - n1.x
+          const distY = n2.y - n1.y
+          const dist = Math.sqrt(distX * distX + distY * distY)
+          const force = (this.rForce * this.rForce) / dist
+          n1.layoutProps.f.x += force * distX
+          n1.layoutProps.f.y += force * distY
+          n2.layoutProps.f.x -= force * distX
+          n2.layoutProps.f.y -= force * distY
         }
       })
     })
@@ -83,13 +54,12 @@ export default class ForceDirected extends Events implements ILayout {
 
   private updatePositions(graph: Graph) {
     graph.nodes().forEach(node => {
-      node.x += node.force.x
-      node.y += node.force.y
+      node.x += node.layoutProps.f.x
+      node.y += node.layoutProps.f.y
     })
   }
 
-  public stop(): boolean {
-    this.running = false
-    return this.running
+  protected shouldContinue(graph: Graph): boolean {
+    return this.iters < 10000
   }
 }

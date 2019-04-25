@@ -3,6 +3,7 @@ import GraphyComponent, { IOptions } from './Abstract'
 import Settings from './Settings'
 import Graphy from '../Graphy'
 import { INodeCamProps } from './Camera'
+import { ILayoutProps } from './ILayout'
 
 export interface DataObject {
   id: ID
@@ -14,9 +15,8 @@ export interface DataObject {
 }
 
 export interface Node extends DataObject {
-  force?: Vector
-  pos?: Vector
   camProps?: INodeCamProps
+  layoutProps?: ILayoutProps
 }
 export interface Edge extends DataObject {
   source: Node
@@ -220,7 +220,7 @@ export default class Graph extends GraphyComponent {
     throw 'edges: Wrong arguments.'
   }
 
-  public test(key: string): any {
-    return this.getOption(key)
+  public getDegree(node: Node) {
+    return Object.keys(this.adjacencyListAll[node.id]).length
   }
 }
