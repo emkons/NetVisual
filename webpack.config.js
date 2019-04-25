@@ -4,6 +4,7 @@ const addCssTypes = require("./config/add-css-types")
 const CopyPlugin = require("copy-webpack-plugin")
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CrittersPlugin = require("critters-webpack-plugin")
 
 module.exports = async function(_, env) {
   const isProd = env.mode === "production"
@@ -98,18 +99,24 @@ module.exports = async function(_, env) {
         inject: "body",
         compile: true
       }),
-      ...(isProd ? [new MiniCssExtractPlugin()] : []),
       new CopyPlugin([
         { from: "src/assets", to: "assets" },
         { from: "src/manifest.json", to: "manifest.json" }
       ]),
-      // Add bundle analyzer output for production builds
       ...(isProd
         ? [
+            new MiniCssExtractPlugin(),
+            // Add bundle analyzer output for production builds
             new BundleAnalyzerPlugin({
               analyzerMode: "static",
               defaultSizes: "gzip",
               openAnalyzer: false
+            }),
+            new CrittersPlugin({
+              // Async css loading
+              preload: "media",
+              inlineTreshhold: 2000,
+              minimuExternalSize: 4000
             })
           ]
         : [])

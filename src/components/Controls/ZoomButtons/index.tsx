@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import * as style from './style.scss'
 
-import { graphy } from '../../Graphy/Instance'
+import { graphy } from '../../../Graphy/Instance'
 
 interface ZoomButtonsProps {}
 

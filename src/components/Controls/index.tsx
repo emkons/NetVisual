@@ -1,7 +1,8 @@
 import { h, Component } from 'preact'
 import * as style from './style.scss'
-import StatusBar from '../StatusBar'
-import ZoomButtons from '../ZoomButtons'
+import StatusBar from './StatusBar'
+import ZoomButtons from './ZoomButtons'
+import DataObjectInfo from './DataObjectInfo'
 
 interface ControlsProps {}
 
@@ -11,8 +12,9 @@ export default class Controls extends Component<ControlsProps, ControlsState> {
   render() {
     return (
       <div class={style.controls}>
-        <StatusBar />
+        <DataObjectInfo />
         <ZoomButtons />
+        <StatusBar />
       </div>
     )
   }

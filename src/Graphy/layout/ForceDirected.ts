@@ -16,7 +16,7 @@ export default class ForceDirected extends Events implements ILayout {
     this.running = true
 
     setTimeout(() => {
-      this.iterate(graph)
+      this.handleMultipleIterations(graph)
     },         0)
 
     return new Promise<Graph>(resolve => {
@@ -24,20 +24,31 @@ export default class ForceDirected extends Events implements ILayout {
     })
   }
 
-  private iterate(graph: Graph) {
-    this.repulse(graph)
-    this.attract(graph)
-    this.updatePositions(graph)
-    if (this.iters < 1000) {
+  private handleMultipleIterations(graph: Graph) {
+    const startTime = window.performance.now()
+    let finishTime = 0
+    do {
+      this.iterate(graph)
       this.iters += 1
-      // Check if should proceed
-      this.dispatch('iteration', graph)
+      finishTime = window.performance.now()
+    } while (finishTime - startTime < 1)
+
+    this.dispatch('iteration', graph)
+    // console.log('iterations', this.iters)
+
+    if (this.iters < 100000) {
       setTimeout(() => {
-        this.iterate(graph)
+        this.handleMultipleIterations(graph)
       },         0)
     } else {
       this.dispatch('done', graph)
     }
+  }
+
+  private iterate(graph: Graph) {
+    this.repulse(graph)
+    this.attract(graph)
+    this.updatePositions(graph)
   }
 
   private attract(graph: Graph) {

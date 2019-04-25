@@ -26,6 +26,8 @@ export interface ICanvasRendererOptions {
 export default class CanvasRenderer extends Renderer {
   public readonly namespace: string = 'graphy.renderer.canvas'
 
+  protected queuedRender = false
+
   protected container: HTMLElement
   protected domElements: HTMLElement[] = []
   protected contexts: IContexts = {}
@@ -46,7 +48,8 @@ export default class CanvasRenderer extends Renderer {
       throw 'Container not found.'
     }
     this.render = this.render.bind(this)
-    this.root.events.subscribe('render', this.render)
+    this.queueRender = this.queueRender.bind(this)
+    this.root.events.subscribe('render', this.queueRender)
     this.container = options.container
     this.initDOM('canvas', 'scene')
     this.contexts.edges = this.contexts.scene
@@ -74,6 +77,13 @@ export default class CanvasRenderer extends Renderer {
     }
   }
 
+  private queueRender() {
+    if (!this.queuedRender) {
+      this.queuedRender = true
+      requestAnimationFrame(this.render)
+    }
+  }
+
   private addEventListeners() {
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
@@ -97,6 +107,13 @@ export default class CanvasRenderer extends Renderer {
             })
           hoverNodes = newHoverNodes
         }
+        el.addEventListener('click', event => {
+          if (hoverNodes.length) {
+            this.root.events.dispatch('nodeClick', hoverNodes[0])
+          } else {
+            this.root.events.dispatch('nodeClick', null)
+          }
+        })
         el.addEventListener('wheel', event => {
           event.preventDefault()
           this.root.events.dispatch('scroll', event)
@@ -187,6 +204,8 @@ export default class CanvasRenderer extends Renderer {
       }
     })
     // }
+
+    this.queuedRender = false
 
     return this
   }
