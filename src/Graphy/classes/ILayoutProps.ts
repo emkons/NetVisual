@@ -8,4 +8,5 @@ export interface ILayoutProps {
     y: number,
   }
   freeze?: number
+  [key: string]: number | { x: number; y: number } | { [key: string]: string | number }
 }

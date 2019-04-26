@@ -11,7 +11,13 @@
     "prefer-template": [true, "allow-single-concat"],
     "import-name": false,
     "semicolon": false,
-    "ter-arrow-parens": [true, "as-needed"]
+    "ter-arrow-parens": [true, "as-needed"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {}
+      }
+    ]
   },
   "linterOptions": {
     "exclude": ["build"]

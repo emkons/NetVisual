@@ -8,9 +8,10 @@ export default abstract class Layout extends Events {
   protected running: boolean = false
 
   public start(graph: Graph): Promise<Graph> {
+    this.init(graph)
     setTimeout(() => {
       this.iterate(graph)
-    },         0)
+    }, 0)
     return new Promise<Graph>(resolve => {
       this.subscribe('done', resolve)
     })
@@ -22,14 +23,14 @@ export default abstract class Layout extends Events {
     do {
       this.process(graph)
       finishTime = window.performance.now()
-    } while (finishTime - startTime < this.timePerIteration)
+    } while (finishTime - startTime < this.timePerIteration && this.shouldContinue(graph))
 
     this.dispatch('iteration', graph)
 
     if (this.incremental && this.shouldContinue(graph)) {
       setTimeout(() => {
         this.iterate(graph)
-      },         0)
+      }, 0)
     } else {
       this.dispatch('done', graph)
     }
@@ -61,6 +62,10 @@ export default abstract class Layout extends Events {
         }
       }
     })
+  }
+
+  protected init(graph: Graph): void {
+    this.initNodeLayoutProps(graph.nodes())
   }
 
   protected abstract process(graph: Graph): void

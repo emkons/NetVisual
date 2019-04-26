@@ -31,6 +31,7 @@ class Canvas extends Component<CanvasProps, CanvasState> {
       nodes: [],
       edges: [],
     }
+    let edgeCount: number = 0
     for (let i = 0; i < 10; i += 1) {
       g.nodes.push({
         id: 'n' + i,
@@ -38,14 +39,15 @@ class Canvas extends Component<CanvasProps, CanvasState> {
         y: Math.random() * 800,
         color: '#666',
       })
-    }
-    for (let i = 0; i < 10; i += 1) {
-      g.edges.push({
-        id: 'e' + i,
-        source: 'n' + ((Math.random() * 10) | 0),
-        target: 'n' + ((Math.random() * 10) | 0),
-        color: '#666',
-      })
+      for (let j = 0; j < Math.ceil(Math.random() * 2); j += 1) {
+        g.edges.push({
+          id: 'e' + edgeCount,
+          source: 'n' + i,
+          target: 'n' + ((Math.random() * i) | 0),
+          color: '#666',
+        })
+        edgeCount += 1
+      }
     }
     graphy.graph.parseGraph(g)
     graphy.renderer = new CanvasRenderer(graphy, { container: this.container }, graphy.graph)

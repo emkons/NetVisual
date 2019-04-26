@@ -10,7 +10,7 @@ export interface IGraphyOptions {
   renderer?: ICanvasRendererOptions
   graph?: {
     nodes: Node[]
-    edges: Edge[],
+    edges: Edge[]
   }
   camera?: ICameraOptions
 }

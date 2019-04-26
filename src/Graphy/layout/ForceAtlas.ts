@@ -49,7 +49,7 @@ export default class ForceAtlas extends Layout implements ILayout {
               n2,
               this.repStr * (1 + graph.getDegree(n1)) * (1 + graph.getDegree(n2)),
               false,
-              true,
+              true
             )
           }
         })
@@ -62,7 +62,7 @@ export default class ForceAtlas extends Layout implements ILayout {
               n1,
               n2,
               this.repStr * (1 + graph.getDegree(n1)) * (1 + graph.getDegree(n2)),
-              false,
+              false
             )
           }
         })

@@ -1,4 +1,4 @@
-import { ID, isID, isIDArray, Vector } from '../util'
+import { ID, isID, isIDArray, Vector, PriorityQueue } from '../util'
 import GraphyComponent, { IOptions } from './Abstract'
 import Settings from './Settings'
 import Graphy from '../Graphy'
@@ -26,8 +26,8 @@ export interface Edge extends DataObject {
 interface AdjacencyList {
   [sourceId: string]: {
     [targetId: string]: {
-      [edgeId: string]: Edge,
-    },
+      [edgeId: string]: Edge
+    }
   }
 }
 
@@ -222,5 +222,37 @@ export default class Graph extends GraphyComponent {
 
   public getDegree(node: Node) {
     return Object.keys(this.adjacencyListAll[node.id]).length
+  }
+
+  public calcPaths(): Node[] {
+    const nodes = this.nodesArray
+    // Initiallize distance
+    nodes.forEach(n1 => {
+      n1.layoutProps.dist = {}
+      nodes.forEach(n2 => {
+        n1.layoutProps.dist[n2.id] = Infinity
+      })
+    })
+
+    nodes.forEach(start => {
+      const dist = start.layoutProps.dist
+      dist[start.id] = 0
+      const queue = new PriorityQueue<Node>((n1, n2) => {
+        return dist[n1.id] < dist[n2.id]
+      })
+      nodes.forEach(node => {
+        queue.push(node)
+      })
+      while (!queue.isEmpty()) {
+        const current = queue.pop()
+        const adj = Object.keys(this.adjacencyListAll[current.id])
+        adj.forEach(n => {
+          if (dist[current.id] + 1 < dist[n]) {
+            dist[n] = dist[current.id] + 1
+          }
+        })
+      }
+    })
+    return nodes
   }
 }

@@ -78,3 +78,86 @@ export class Vector {
     return new Vector(this.x, this.y)
   }
 }
+
+export class PriorityQueue<T> {
+  private top = 0
+
+  private parent(i: number) {
+    return ((i + 1) >>> 1) - 1
+  }
+  private left(i: number) {
+    return (i << 1) + 1
+  }
+
+  private right(i: number) {
+    return (i + 1) << 1
+  }
+
+  protected heap: T[] = []
+
+  protected comp: (a: T, b: T) => boolean
+
+  constructor(comp: (a: T, b: T) => boolean = (a: T, b: T) => a > b) {
+    this.comp = comp
+  }
+  size(): number {
+    return this.heap.length
+  }
+  isEmpty(): boolean {
+    return this.size() === 0
+  }
+  peek(): T {
+    return this.heap[this.top]
+  }
+  push(...values: T[]): number {
+    values.forEach(value => {
+      this.heap.push(value)
+      this.siftUp()
+    })
+    return this.size()
+  }
+  pop(): T {
+    const poppedValue = this.peek()
+    const bottom = this.size() - 1
+    if (bottom > this.top) {
+      this.swap(this.top, bottom)
+    }
+    this.heap.pop()
+    this.siftDown()
+    return poppedValue
+  }
+  replace(value: T): T {
+    const replacedValue = this.peek()
+    this.heap[this.top] = value
+    this.siftDown()
+    return replacedValue
+  }
+  private greater(i: number, j: number): boolean {
+    return this.comp(this.heap[i], this.heap[j])
+  }
+  private swap(i: number, j: number): void {
+    ; [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]]
+  }
+  private siftUp(): void {
+    let node = this.size() - 1
+    while (node > this.top && this.greater(node, this.parent(node))) {
+      this.swap(node, this.parent(node))
+      node = this.parent(node)
+    }
+  }
+  private siftDown(): void {
+    let node = this.top
+    let left = this.left(node)
+    let right = this.right(node)
+    while (
+      (left < this.size() && this.greater(left, node)) ||
+      (right < this.size() && this.greater(right, node))
+    ) {
+      const maxChild = right < this.size() && this.greater(right, left) ? right : left
+      this.swap(node, maxChild)
+      node = maxChild
+      left = this.left(node)
+      right = this.right(node)
+    }
+  }
+}

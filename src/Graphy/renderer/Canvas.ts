@@ -85,6 +85,9 @@ export default class CanvasRenderer extends Renderer {
   }
 
   private addEventListeners() {
+    this.container.addEventListener('resize', () => {
+      this.resize()
+    })
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
         let hoverNodes: Node[] = []

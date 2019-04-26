@@ -12,8 +12,10 @@ interface State {}
 
 export default class StatusBar extends Component<Props, State> {
   async startForceAtlas() {
-    const fA = await import(/* webpackChunkName: 'layout' */
-    '../../../Graphy/layout/ForceAtlas')
+    const fA = await import(
+      /* webpackChunkName: 'layout' */
+      '../../../Graphy/layout/KamadaKawai'
+    )
     const fa = new fA.default()
     fa.subscribe('iteration', graph => {
       // console.log('increment', graph)
@@ -22,8 +24,10 @@ export default class StatusBar extends Component<Props, State> {
     fa.start(graphy.graph)
   }
   async startForceDirected() {
-    const fD = await import(/* webpackChunkName: 'layout' */
-    '../../../Graphy/layout/ForceDirected')
+    const fD = await import(
+      /* webpackChunkName: 'layout' */
+      '../../../Graphy/layout/ForceDirected'
+    )
     const fa = new fD.default()
     fa.subscribe('iteration', graph => {
       graphy.events.dispatch('render', null)
@@ -31,8 +35,10 @@ export default class StatusBar extends Component<Props, State> {
     fa.start(graphy.graph)
   }
   async startFruchterman() {
-    import(/* webpackChunkName: 'layout' */
-    '../../../Graphy/layout/FruchtermanReingold').then(fR => {
+    import(
+      /* webpackChunkName: 'layout' */
+      '../../../Graphy/layout/FruchtermanReingold'
+    ).then(fR => {
       const fa = new fR.default()
       fa.subscribe('iteration', graph => {
         // console.log('increment', graph)
@@ -46,7 +52,7 @@ export default class StatusBar extends Component<Props, State> {
       <div class={style.statusBar}>
         <Expander>
           <div class={style.nodeCount}>123</div>
-          <button onClick={this.startForceAtlas}>Start ForceAtlas</button>
+          <button onClick={this.startForceAtlas}>Start KamadaKawai</button>
           <button onClick={this.startForceDirected}>Start ForceDirected</button>
           <button onClick={this.startFruchterman}>Start Fruchterman</button>
         </Expander>
