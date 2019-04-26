@@ -3,39 +3,43 @@ import Expander from '../Expander'
 import DataObjectInfo from '../DataObjectInfo'
 
 import { graphy } from '../../../Graphy/Instance'
-import ForceDirected from '../../../Graphy/layout/ForceDirected'
 
 import * as style from './style.scss'
-import FruchtermanReingold from '../../../Graphy/layout/FruchtermanReingold'
-import ForceAtlas from '../../../Graphy/layout/ForceAtlas'
 
 interface Props {}
 
 interface State {}
 
 export default class StatusBar extends Component<Props, State> {
-  startForceAtlas() {
-    const fa = new ForceAtlas()
+  async startForceAtlas() {
+    const fA = await import(/* webpackChunkName: 'layout' */
+    '../../../Graphy/layout/ForceAtlas')
+    const fa = new fA.default()
     fa.subscribe('iteration', graph => {
       // console.log('increment', graph)
       graphy.events.dispatch('render', null)
     })
     fa.start(graphy.graph)
   }
-  startForceDirected() {
-    const fa = new ForceDirected()
+  async startForceDirected() {
+    const fD = await import(/* webpackChunkName: 'layout' */
+    '../../../Graphy/layout/ForceDirected')
+    const fa = new fD.default()
     fa.subscribe('iteration', graph => {
       graphy.events.dispatch('render', null)
     })
     fa.start(graphy.graph)
   }
-  startFruchterman() {
-    const fa = new FruchtermanReingold()
-    fa.subscribe('iteration', graph => {
-      // console.log('increment', graph)
-      graphy.events.dispatch('render', null)
+  async startFruchterman() {
+    import(/* webpackChunkName: 'layout' */
+    '../../../Graphy/layout/FruchtermanReingold').then(fR => {
+      const fa = new fR.default()
+      fa.subscribe('iteration', graph => {
+        // console.log('increment', graph)
+        graphy.events.dispatch('render', null)
+      })
+      fa.start(graphy.graph)
     })
-    fa.start(graphy.graph)
   }
   render() {
     return (

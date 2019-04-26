@@ -1,4 +1,5 @@
-import Layout, { ILayout } from '../classes/ILayout'
+import { ILayout } from '../classes/ILayout'
+import Layout from '../classes/Layout'
 import Graph from '../classes/Graph'
 import { forceNodes, sumSqrt, assignForce } from './util'
 

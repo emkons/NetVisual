@@ -1,4 +1,4 @@
-import nanoid = require('nanoid')
+import nanoid from 'nanoid'
 
 interface IEvents {
   [name: string]: IEvent

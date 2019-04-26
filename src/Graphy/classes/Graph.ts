@@ -3,7 +3,7 @@ import GraphyComponent, { IOptions } from './Abstract'
 import Settings from './Settings'
 import Graphy from '../Graphy'
 import { INodeCamProps } from './Camera'
-import { ILayoutProps } from './ILayout'
+import { ILayoutProps } from './ILayoutProps'
 
 export interface DataObject {
   id: ID

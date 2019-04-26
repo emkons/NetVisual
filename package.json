@@ -13,6 +13,7 @@
     "@types/node": "^11.11.3",
     "@types/webpack-env": "^1.13.9",
     "chokidar": "^2.1.2",
+    "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.2",
     "critters-webpack-plugin": "^2.3.0",
     "css-loader": "^1.0.1",

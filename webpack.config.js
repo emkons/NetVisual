@@ -2,6 +2,7 @@ const { resolve } = require("path")
 const HtmlPlugin = require("html-webpack-plugin")
 const addCssTypes = require("./config/add-css-types")
 const CopyPlugin = require("copy-webpack-plugin")
+const CleanPlugin = require("clean-webpack-plugin")
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CrittersPlugin = require("critters-webpack-plugin")
@@ -23,8 +24,10 @@ module.exports = async function(_, env) {
     mode: isProd ? "production" : "development",
     output: {
       path: resolve(__dirname, "build"),
-      filename: "app.js"
+      filename: "app.js",
+      chunkFilename: "[name].js"
     },
+    stats: "normal",
     resolve: {
       extensions: [".ts", ".tsx", ".scss", ".js"],
       alias: {
@@ -86,6 +89,12 @@ module.exports = async function(_, env) {
       ]
     },
     plugins: [
+      isProd &&
+        new CleanPlugin({
+          root: resolve(__dirname, "build"),
+          verbose: false,
+          beforeEmit: true
+        }),
       new HtmlPlugin({
         filename: resolve(__dirname, "build/index.html"),
         template: "src/index.html",
