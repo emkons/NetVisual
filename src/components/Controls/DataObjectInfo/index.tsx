@@ -37,7 +37,6 @@ export default class DataObjectInfo extends Component<DataObjectInfoProps, DataO
     return (
       <div class={style.container}>
         <Importer />
-        {nodeContent}
       </div>
     )
   }
