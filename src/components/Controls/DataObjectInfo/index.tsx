@@ -1,5 +1,6 @@
 import { h, Component } from 'preact'
 import { DataObject } from '../../../Graphy/classes/Graph'
+import Importer from '../Importer'
 import * as style from './style.scss'
 
 import { graphy } from '../../../Graphy/Instance'
@@ -33,7 +34,12 @@ export default class DataObjectInfo extends Component<DataObjectInfoProps, DataO
       )
     }
 
-    return <div class={style.container}>{nodeContent}</div>
+    return (
+      <div class={style.container}>
+        <Importer />
+        {nodeContent}
+      </div>
+    )
   }
 
   componentDidMount() {

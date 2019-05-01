@@ -4,9 +4,15 @@ import Settings from './Settings'
 import Graphy from '../Graphy'
 import { INodeCamProps } from './Camera'
 import { ILayoutProps } from './ILayoutProps'
+import nanoid from 'nanoid'
+
+export interface ArbitraryData {
+  [key: string]: any
+}
 
 export interface DataObject {
   id: ID
+  data?: ArbitraryData
   color?: string
   x?: number
   y?: number
@@ -64,6 +70,8 @@ export default class Graph extends GraphyComponent {
     if (this.nodesIndex[node.id]) {
       throw `Node with id ${node.id} already exists`
     }
+    if (!node.x) node.x = Math.random() * 500
+    if (!node.y) node.y = Math.random() * 500
 
     this.adjacencyListIn[node.id] = {}
     this.adjacencyListOut[node.id] = {}
@@ -82,19 +90,25 @@ export default class Graph extends GraphyComponent {
       })
     }
     if (graph.edges) {
-      graph.edges
-        .map(edge => {
-          if (typeof edge.source === 'string') {
-            edge.source = this.nodesIndex[edge.source]
-          }
-          if (typeof edge.target === 'string') {
-            edge.target = this.nodesIndex[edge.target]
-          }
-          return edge
-        })
-        .forEach(edge => {
-          this.addEdge(edge)
-        })
+      graph.edges.forEach(edge => {
+        this.addEdge(edge)
+      })
+    }
+  }
+
+  public clear(): void {
+    this.nodesArray.length = 0
+    this.edgesArray.length = 0
+    this._clearObj(this.nodesIndex)
+    this._clearObj(this.edgesIndex)
+    this._clearObj(this.adjacencyListIn)
+    this._clearObj(this.adjacencyListOut)
+    this._clearObj(this.adjacencyListAll)
+  }
+
+  private _clearObj(obj: any): void {
+    for (const prop of Object.keys(obj)) {
+      delete obj[prop]
     }
   }
 
@@ -128,6 +142,15 @@ export default class Graph extends GraphyComponent {
   public addEdge(edge: Edge): Graph {
     if (this.edgesIndex[edge.id]) {
       throw `Edge with id ${edge.id} already exists`
+    }
+    if (typeof edge.source === 'string') {
+      edge.source = this.nodesIndex[edge.source]
+    }
+    if (typeof edge.target === 'string') {
+      edge.target = this.nodesIndex[edge.target]
+    }
+    if (edge.id === undefined) {
+      edge.id = nanoid()
     }
 
     this.edgesArray.push(edge)

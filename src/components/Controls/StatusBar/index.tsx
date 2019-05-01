@@ -26,7 +26,7 @@ export default class StatusBar extends Component<Props, State> {
   async startForceDirected() {
     const fD = await import(
       /* webpackChunkName: 'layout' */
-      '../../../Graphy/layout/ForceDirected'
+      '../../../Graphy/layout/ForceAtlas'
     )
     const fa = new fD.default()
     fa.subscribe('iteration', graph => {
@@ -53,7 +53,7 @@ export default class StatusBar extends Component<Props, State> {
         <Expander>
           <div class={style.nodeCount}>123</div>
           <button onClick={this.startForceAtlas}>Start KamadaKawai</button>
-          <button onClick={this.startForceDirected}>Start ForceDirected</button>
+          <button onClick={this.startForceDirected}>Start ForceAtlas</button>
           <button onClick={this.startFruchterman}>Start Fruchterman</button>
         </Expander>
       </div>

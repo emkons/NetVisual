@@ -49,6 +49,7 @@ class Canvas extends Component<CanvasProps, CanvasState> {
         edgeCount += 1
       }
     }
+    graphy.graph.clear()
     graphy.graph.parseGraph(g)
     graphy.renderer = new CanvasRenderer(graphy, { container: this.container }, graphy.graph)
     graphy.events.dispatch('render', null)

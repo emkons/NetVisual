@@ -145,8 +145,6 @@ export default class ForceAtlas extends Layout implements ILayout {
       }
       layoutProps.f.x *= ratio / this.cooling
       layoutProps.f.y *= ratio / this.cooling
-      console.log('dist', dist)
-      console.log('ratio', ratio)
       this.prevLimit = Math.max(this.prevLimit, dist * ratio)
       node.x += layoutProps.f.x
       node.y += layoutProps.f.y
@@ -154,7 +152,6 @@ export default class ForceAtlas extends Layout implements ILayout {
   }
 
   protected shouldContinue(graph: Graph) {
-    console.log(this.prevLimit)
     return this.prevLimit > this.minMovement
   }
 }
