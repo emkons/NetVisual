@@ -136,7 +136,7 @@ export class PriorityQueue<T> {
     return this.comp(this.heap[i], this.heap[j])
   }
   private swap(i: number, j: number): void {
-    ; [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]]
+    ;[this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]]
   }
   private siftUp(): void {
     let node = this.size() - 1

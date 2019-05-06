@@ -70,6 +70,12 @@ export default class Graph extends GraphyComponent {
     if (this.nodesIndex[node.id]) {
       throw `Node with id ${node.id} already exists`
     }
+    if (node.data && typeof node.data.x === 'number') {
+      node.x = node.data.x
+    }
+    if (node.data && typeof node.data.y === 'number') {
+      node.y = node.data.y
+    }
     if (!node.x) node.x = Math.random() * 500
     if (!node.y) node.y = Math.random() * 500
 
@@ -260,14 +266,28 @@ export default class Graph extends GraphyComponent {
     nodes.forEach(start => {
       const dist = start.layoutProps.dist
       dist[start.id] = 0
-      const queue = new PriorityQueue<Node>((n1, n2) => {
-        return dist[n1.id] < dist[n2.id]
-      })
+      const queue: Node[] = []
+      // const queue = new PriorityQueue<Node>((n1, n2) => {
+      //   return dist[n1.id] < dist[n2.id]
+      // })
       nodes.forEach(node => {
         queue.push(node)
       })
-      while (!queue.isEmpty()) {
-        const current = queue.pop()
+      while (queue.length > 0) {
+        let currentLength = Infinity
+        let current = null
+        let currentIndex = -1
+        queue.forEach((n, index) => {
+          if (dist[n.id] < currentLength) {
+            currentIndex = index
+          }
+        })
+        ;[queue[currentIndex], queue[queue.length - 1]] = [
+          queue[queue.length - 1],
+          queue[currentIndex],
+        ]
+        current = queue.pop()
+        currentLength = dist[current.id]
         const adj = Object.keys(this.adjacencyListAll[current.id])
         adj.forEach(n => {
           if (dist[current.id] + 1 < dist[n]) {
@@ -275,6 +295,9 @@ export default class Graph extends GraphyComponent {
           }
         })
       }
+      nodes.forEach(n => {
+        if (dist[n.id] === Infinity) debugger
+      })
     })
     return nodes
   }

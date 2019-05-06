@@ -90,32 +90,32 @@ export default class CanvasRenderer extends Renderer {
     })
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
-        let hoverNodes: Node[] = []
-        const handleMove = event => {
-          const newHoverNodes = this.graph.nodes().filter(node => {
-            const dX = node.camProps.x - event.clientX
-            const dY = node.camProps.y - event.clientY
-            const size = node.camProps.size
-            return dX * dX + dY * dY < size * size
-          })
-          newHoverNodes.forEach(node => {
-            node.camProps.hover = true
-            this.root.events.dispatch('hoverNode', node)
-          })
-          hoverNodes
-            .filter(node => newHoverNodes.indexOf(node) === -1)
-            .forEach(node => {
-              node.camProps.hover = false
-              this.root.events.dispatch('hoverNodeEnd', node)
-            })
-          hoverNodes = newHoverNodes
-        }
+        // let hoverNodes: Node[] = []
+        // const handleMove = event => {
+        //   const newHoverNodes = this.graph.nodes().filter(node => {
+        //     const dX = node.camProps.x - event.clientX
+        //     const dY = node.camProps.y - event.clientY
+        //     const size = node.camProps.size
+        //     return dX * dX + dY * dY < size * size
+        //   })
+        //   newHoverNodes.forEach(node => {
+        //     node.camProps.hover = true
+        //     this.root.events.dispatch('hoverNode', node)
+        //   })
+        //   hoverNodes
+        //     .filter(node => newHoverNodes.indexOf(node) === -1)
+        //     .forEach(node => {
+        //       node.camProps.hover = false
+        //       this.root.events.dispatch('hoverNodeEnd', node)
+        //     })
+        //   hoverNodes = newHoverNodes
+        // }
         el.addEventListener('click', event => {
-          if (hoverNodes.length) {
-            this.root.events.dispatch('nodeClick', hoverNodes[0])
-          } else {
-            this.root.events.dispatch('nodeClick', null)
-          }
+          // if (hoverNodes.length) {
+          //   this.root.events.dispatch('nodeClick', hoverNodes[0])
+          // } else {
+          //   this.root.events.dispatch('nodeClick', null)
+          // }
         })
         el.addEventListener('wheel', event => {
           event.preventDefault()
@@ -134,13 +134,13 @@ export default class CanvasRenderer extends Renderer {
           }
         })
         el.addEventListener('mousemove', event => {
-          handleMove(event)
+          // handleMove(event)
           this.root.events.dispatch('drag', event)
         })
         el.addEventListener('touchmove', event => {
           if (event.touches.length === 1) {
             event.preventDefault()
-            handleMove(event)
+            // handleMove(event)
             this.root.events.dispatch('drag', event.touches[0])
           }
         })

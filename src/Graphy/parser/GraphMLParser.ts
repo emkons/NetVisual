@@ -25,6 +25,18 @@ export class GraphMLParser extends Parser {
       attributes.forEach(attr => {
         data[attr] = node.getAttribute(attr)
       })
+      const dataAttrs = node.getElementsByTagName('data')
+      for (const dataAttr of dataAttrs) {
+        const key = dataAttr.getAttribute('key')
+        let value: string | number = dataAttr.innerHTML
+        const tmpNum = parseFloat(value)
+        if (tmpNum !== NaN) {
+          value = tmpNum
+        }
+        if (key) {
+          data[key] = value
+        }
+      }
       const n: Node = {
         data,
         id: data.id,

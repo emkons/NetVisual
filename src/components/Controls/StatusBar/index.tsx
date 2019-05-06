@@ -14,7 +14,7 @@ export default class StatusBar extends Component<Props, State> {
   async startForceAtlas() {
     const fA = await import(
       /* webpackChunkName: 'layout' */
-      '../../../Graphy/layout/KamadaKawai'
+      '../../../Graphy/layout/MDS'
     )
     const fa = new fA.default()
     fa.subscribe('iteration', graph => {
