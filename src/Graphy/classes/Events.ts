@@ -20,6 +20,14 @@ export default class Events {
     return eventId
   }
 
+  public unsub(name: string, eventId: string): boolean {
+    if (name in this.events && eventId in this.events[name]) {
+      delete this.events[name][eventId]
+      return true
+    }
+    return false
+  }
+
   public dispatch(name: string, payload: any): void {
     if (name in this.events) {
       for (const event in this.events[name]) {
