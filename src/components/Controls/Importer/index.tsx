@@ -1,14 +1,19 @@
 import { h, Component } from 'preact'
 import { GraphMLParser } from '../../../Graphy/parser/GraphMLParser'
 import { graphy } from '../../../Graphy/Instance'
+import Samples from '../Samples'
 
 export default class Importer extends Component {
   render() {
-    return <input type="file" onChange={this.upload} />
+    return (
+      <div>
+        <input type="file" onChange={this.upload} />
+        <Samples />
+      </div>
+    )
   }
 
   upload(e: Event) {
-    console.log(e)
     const input = e.target as HTMLInputElement
     if (input.files && input.files.length > 0) {
       const reader = new FileReader()

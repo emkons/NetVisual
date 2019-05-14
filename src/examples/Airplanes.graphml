@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key attr.name="label" attr.type="string" for="node" id="label"/>
+<key attr.name="Edge Label" attr.type="string" for="edge" id="edgelabel"/>
+<key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+<key attr.name="r" attr.type="int" for="node" id="r"/>
+<key attr.name="g" attr.type="int" for="node" id="g"/>
+<key attr.name="b" attr.type="int" for="node" id="b"/>
+<key attr.name="x" attr.type="float" for="node" id="x"/>
+<key attr.name="y" attr.type="float" for="node" id="y"/>
+<key attr.name="size" attr.type="float" for="node" id="size"/>
+<graph edgedefault="directed">
+<node id="17">
+<data key="label">Proculo</data>
+<data key="size">100.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-39.937283</data>
+<data key="y">41.61254</data>
+</node>
+<node id="23">
+<data key="label">Tudisio</data>
+<data key="size">90.98969</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-35.7311</data>
+<data key="y">32.60223</data>
+</node>
+<node id="1">
+<data key="label">Babalio</data>
+<data key="size">85.52577</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">26.866838</data>
+<data key="y">27.138317</data>
+</node>
+<node id="2">
+<data key="label">Basilio</data>
+<data key="size">82.73196</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-33.205326</data>
+<data key="y">24.3445</data>
+</node>
+<node id="13">
+<data key="label">Lucari</data>
+<data key="size">78.5567</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.1658089</data>
+<data key="y">20.169243</data>
+</node>
+<node id="12">
+<data key="label">Gradi</data>
+<data key="size">77.28866</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-16.45275</data>
+<data key="y">18.901201</data>
+</node>
+<node id="4">
+<data key="label">Bocignolo</data>
+<data key="size">76.639175</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">15.732815</data>
+<data key="y">18.251719</data>
+</node>
+<node id="14">
+<data key="label">Menze</data>
+<data key="size">68.762886</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-14.370274</data>
+<data key="y">10.375426</data>
+</node>
+<node id="15">
+<data key="label">Palmota</data>
+<data key="size">68.61855</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">37.897766</data>
+<data key="y">10.231097</data>
+</node>
+<node id="22">
+<data key="label">Sorgo</data>
+<data key="size">64.35052</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.56787</data>
+<data key="y">5.9630604</data>
+</node>
+<node id="19">
+<data key="label">Ragnina</data>
+<data key="size">63.824745</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">34.990547</data>
+<data key="y">5.437286</data>
+</node>
+<node id="5">
+<data key="label">Bona</data>
+<data key="size">58.814434</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">11.588486</data>
+<data key="y">0.426975</data>
+</node>
+<node id="10">
+<data key="label">Gondola</data>
+<data key="size">57.082478</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-9.349657</data>
+<data key="y">-1.3049823</data>
+</node>
+<node id="11">
+<data key="label">Goze</data>
+<data key="size">56.536087</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.5575589</data>
+<data key="y">-1.8513726</data>
+</node>
+<node id="8">
+<data key="label">Crieva</data>
+<data key="size">54.329895</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-11.7517185</data>
+<data key="y">-4.0575585</data>
+</node>
+<node id="3">
+<data key="label">Benessa</data>
+<data key="size">48.381443</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">26.021479</data>
+<data key="y">-10.006013</data>
+</node>
+<node id="18">
+<data key="label">Prodanelo</data>
+<data key="size">45.515465</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.9080772</data>
+<data key="y">-12.871991</data>
+</node>
+<node id="7">
+<data key="label">Caboga</data>
+<data key="size">44.37113</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-17.710482</data>
+<data key="y">-14.016324</data>
+</node>
+<node id="24">
+<data key="label">Zamagna</data>
+<data key="size">43.298965</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.9080777</data>
+<data key="y">-15.088489</data>
+</node>
+<node id="20">
+<data key="label">Resti</data>
+<data key="size">38.463913</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-12.030069</data>
+<data key="y">-19.92354</data>
+</node>
+<node id="16">
+<data key="label">Poza</data>
+<data key="size">37.814434</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">34.11426</data>
+<data key="y">-20.573023</data>
+</node>
+<node id="9">
+<data key="label">Georgio</data>
+<data key="size">35.072166</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.1554985</data>
+<data key="y">-23.31529</data>
+</node>
+<node id="6">
+<data key="label">Bucchia</data>
+<data key="size">20.329897</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-37.29811</data>
+<data key="y">-38.05756</data>
+</node>
+<node id="21">
+<data key="label">Saraca</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">13.36168</data>
+<data key="y">-54.387455</data>
+</node>
+<edge id="0" source="1" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="1" source="1" target="22">
+<data key="weight">2.0</data>
+</edge>
+<edge id="2" source="3" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="3" source="3" target="16">
+<data key="weight">1.0</data>
+</edge>
+<edge id="4" source="3" target="24">
+<data key="weight">1.0</data>
+</edge>
+<edge id="5" source="5" target="3">
+<data key="weight">2.0</data>
+</edge>
+<edge id="6" source="5" target="5">
+<data key="weight">4.0</data>
+</edge>
+<edge id="7" source="5" target="9">
+<data key="weight">1.0</data>
+</edge>
+<edge id="8" source="5" target="11">
+<data key="weight">4.0</data>
+</edge>
+<edge id="9" source="5" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="10" source="5" target="13">
+<data key="weight">2.0</data>
+</edge>
+<edge id="11" source="5" target="14">
+<data key="weight">3.0</data>
+</edge>
+<edge id="12" source="5" target="15">
+<data key="weight">1.0</data>
+</edge>
+<edge id="13" source="5" target="24">
+<data key="weight">1.0</data>
+</edge>
+<edge id="14" source="7" target="6">
+<data key="weight">1.0</data>
+</edge>
+<edge id="15" source="7" target="7">
+<data key="weight">1.0</data>
+</edge>
+<edge id="16" source="7" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="17" source="7" target="14">
+<data key="weight">1.0</data>
+</edge>
+<edge id="18" source="8" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="19" source="8" target="8">
+<data key="weight">1.0</data>
+</edge>
+<edge id="20" source="8" target="10">
+<data key="weight">1.0</data>
+</edge>
+<edge id="21" source="8" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="22" source="8" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="23" source="8" target="20">
+<data key="weight">1.0</data>
+</edge>
+<edge id="24" source="8" target="24">
+<data key="weight">1.0</data>
+</edge>
+<edge id="25" source="9" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="26" source="9" target="7">
+<data key="weight">1.0</data>
+</edge>
+<edge id="27" source="9" target="9">
+<data key="weight">1.0</data>
+</edge>
+<edge id="28" source="9" target="21">
+<data key="weight">1.0</data>
+</edge>
+<edge id="29" source="9" target="22">
+<data key="weight">1.0</data>
+</edge>
+<edge id="30" source="10" target="11">
+<data key="weight">2.0</data>
+</edge>
+<edge id="31" source="10" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="32" source="10" target="22">
+<data key="weight">1.0</data>
+</edge>
+<edge id="33" source="11" target="3">
+<data key="weight">1.0</data>
+</edge>
+<edge id="34" source="11" target="4">
+<data key="weight">1.0</data>
+</edge>
+<edge id="35" source="11" target="5">
+<data key="weight">4.0</data>
+</edge>
+<edge id="36" source="11" target="7">
+<data key="weight">1.0</data>
+</edge>
+<edge id="37" source="11" target="8">
+<data key="weight">1.0</data>
+</edge>
+<edge id="38" source="11" target="10">
+<data key="weight">1.0</data>
+</edge>
+<edge id="39" source="11" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="40" source="11" target="19">
+<data key="weight">1.0</data>
+</edge>
+<edge id="41" source="11" target="20">
+<data key="weight">1.0</data>
+</edge>
+<edge id="42" source="12" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="43" source="12" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="44" source="12" target="22">
+<data key="weight">5.0</data>
+</edge>
+<edge id="45" source="13" target="8">
+<data key="weight">1.0</data>
+</edge>
+<edge id="46" source="13" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="47" source="13" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="48" source="13" target="22">
+<data key="weight">1.0</data>
+</edge>
+<edge id="49" source="14" target="2">
+<data key="weight">1.0</data>
+</edge>
+<edge id="50" source="14" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="51" source="14" target="7">
+<data key="weight">1.0</data>
+</edge>
+<edge id="52" source="14" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="53" source="14" target="22">
+<data key="weight">4.0</data>
+</edge>
+<edge id="54" source="16" target="5">
+<data key="weight">2.0</data>
+</edge>
+<edge id="55" source="16" target="9">
+<data key="weight">1.0</data>
+</edge>
+<edge id="56" source="16" target="16">
+<data key="weight">1.0</data>
+</edge>
+<edge id="57" source="17" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="58" source="18" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="59" source="19" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="60" source="19" target="19">
+<data key="weight">1.0</data>
+</edge>
+<edge id="61" source="20" target="5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="62" source="20" target="6">
+<data key="weight">1.0</data>
+</edge>
+<edge id="63" source="20" target="8">
+<data key="weight">1.0</data>
+</edge>
+<edge id="64" source="20" target="9">
+<data key="weight">1.0</data>
+</edge>
+<edge id="65" source="20" target="20">
+<data key="weight">1.0</data>
+</edge>
+<edge id="66" source="22" target="3">
+<data key="weight">1.0</data>
+</edge>
+<edge id="67" source="22" target="4">
+<data key="weight">1.0</data>
+</edge>
+<edge id="68" source="22" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="69" source="22" target="12">
+<data key="weight">2.0</data>
+</edge>
+<edge id="70" source="22" target="13">
+<data key="weight">1.0</data>
+</edge>
+<edge id="71" source="22" target="14">
+<data key="weight">1.0</data>
+</edge>
+<edge id="72" source="22" target="20">
+<data key="weight">1.0</data>
+</edge>
+<edge id="73" source="22" target="22">
+<data key="weight">6.0</data>
+</edge>
+<edge id="74" source="23" target="12">
+<data key="weight">1.0</data>
+</edge>
+<edge id="75" source="23" target="14">
+<data key="weight">1.0</data>
+</edge>
+<edge id="76" source="24" target="5">
+<data key="weight">3.0</data>
+</edge>
+<edge id="77" source="24" target="9">
+<data key="weight">1.0</data>
+</edge>
+<edge id="78" source="24" target="10">
+<data key="weight">2.0</data>
+</edge>
+<edge id="79" source="24" target="11">
+<data key="weight">1.0</data>
+</edge>
+<edge id="80" source="24" target="22">
+<data key="weight">1.0</data>
+</edge>
+</graph>
+</graphml>
