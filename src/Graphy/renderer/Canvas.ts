@@ -2,7 +2,7 @@ import Settings from '../classes/Settings'
 import Graph, { Node, Edge } from '../classes/Graph'
 import Renderer from '../classes/Renderer'
 import Graphy from '../Graphy'
-import { isCanvas } from '../util'
+import { isCanvas, ID } from '../util'
 import CanvasNodes, { ICanvasNodeRenderer } from './Canvas/CanvasNodes'
 import { IOptions } from '../classes/Abstract'
 import CanvasEdges, { ICanvasEdgeRenderer } from './Canvas/CanvasEdges'
@@ -37,6 +37,16 @@ export default class CanvasRenderer extends Renderer {
 
   protected width: number
   protected height: number
+
+  protected shouldAddEdge: boolean = false
+  protected addingEdge: {
+    source: Node | null
+    target: Node | null
+  } = {
+    source: null,
+    target: null,
+  }
+  protected tmpEdge: Edge | null = null
 
   constructor(root: Graphy, options: ICanvasRendererOptions, graph: Graph) {
     super(root, options, graph)
@@ -90,32 +100,70 @@ export default class CanvasRenderer extends Renderer {
     })
     this.domElements.forEach(el => {
       if (isCanvas(el)) {
-        // let hoverNodes: Node[] = []
+        let hoverNodes: Node[] = []
+        const handleMove = event => {
+          const newHoverNodes = this.graph.nodes().filter(node => {
+            const dX = node.camProps.x - event.clientX
+            const dY = node.camProps.y - event.clientY
+            const size = node.camProps.size
+            return dX * dX + dY * dY < size * size
+          })
+          newHoverNodes.forEach(node => {
+            node.camProps.hover = true
+            this.root.events.dispatch('hoverNode', node)
+          })
+          hoverNodes
+            .filter(node => newHoverNodes.indexOf(node) === -1)
+            .forEach(node => {
+              node.camProps.hover = false
+              this.root.events.dispatch('hoverNodeEnd', node)
+            })
+          hoverNodes = newHoverNodes
+          if (this.addingEdge.source !== null && this.addingEdge.target === null) {
+            this.tmpEdge = {
+              id: 'tmpNodeID',
+              source: this.addingEdge.source,
+              target: {
+                id: 'tmpEdgeID',
+                camProps: {
+                  x: event.clientX,
+                  y: event.clientY,
+                  size: 10,
+                },
+              },
+            }
+            this.root.events.dispatch('render', null)
+            // this.edgeRenderers.default.render(edge, this.contexts.edges, this.getOption)
+          } else {
+            this.tmpEdge = null
+          }
+        }
         // const handleMove = event => {
-        //   const newHoverNodes = this.graph.nodes().filter(node => {
-        //     const dX = node.camProps.x - event.clientX
-        //     const dY = node.camProps.y - event.clientY
-        //     const size = node.camProps.size
-        //     return dX * dX + dY * dY < size * size
-        //   })
-        //   newHoverNodes.forEach(node => {
-        //     node.camProps.hover = true
-        //     this.root.events.dispatch('hoverNode', node)
-        //   })
-        //   hoverNodes
-        //     .filter(node => newHoverNodes.indexOf(node) === -1)
-        //     .forEach(node => {
-        //       node.camProps.hover = false
-        //       this.root.events.dispatch('hoverNodeEnd', node)
+        //   if (this.addingEdge.source === null || this.addingEdge.target === null) {
+        //     const newHoverNodes = this.graph.nodes().filter(node => {
+        //       const dX = node.camProps.x - event.clientX
+        //       const dY = node.camProps.y - event.clientY
+        //       const size = node.camProps.size
+        //       return dX * dX + dY * dY < size * size
         //     })
-        //   hoverNodes = newHoverNodes
+        //   }
         // }
         el.addEventListener('click', event => {
-          // if (hoverNodes.length) {
-          //   this.root.events.dispatch('nodeClick', hoverNodes[0])
-          // } else {
-          //   this.root.events.dispatch('nodeClick', null)
-          // }
+          if (hoverNodes.length) {
+            this.root.events.dispatch('nodeClick', hoverNodes[0])
+            if (this.shouldAddEdge && this.addingEdge.source === null) {
+              this.addingEdge.source = hoverNodes[0]
+            } else if (this.shouldAddEdge && this.addingEdge.source !== null) {
+              this.addingEdge.target = hoverNodes[0]
+              this.root.graph.addEdge({
+                ...this.addingEdge,
+                id: 'generated' + Math.floor(Math.random() * 1000),
+              })
+              this.shouldAddEdge = false
+            }
+          } else {
+            this.root.events.dispatch('nodeClick', null)
+          }
         })
         el.addEventListener('wheel', event => {
           event.preventDefault()
@@ -134,13 +182,13 @@ export default class CanvasRenderer extends Renderer {
           }
         })
         el.addEventListener('mousemove', event => {
-          // handleMove(event)
+          handleMove(event)
           this.root.events.dispatch('drag', event)
         })
         el.addEventListener('touchmove', event => {
           if (event.touches.length === 1) {
             event.preventDefault()
-            // handleMove(event)
+            handleMove(event)
             this.root.events.dispatch('drag', event.touches[0])
           }
         })
@@ -154,6 +202,13 @@ export default class CanvasRenderer extends Renderer {
           }
         })
       }
+    })
+    this.root.events.subscribe('startEdgeAdd', () => {
+      this.addingEdge = {
+        source: null,
+        target: null,
+      }
+      this.shouldAddEdge = true
     })
   }
 
@@ -197,6 +252,14 @@ export default class CanvasRenderer extends Renderer {
         this.edgeRenderers.default.render(edge, this.contexts.edges, this.getOption)
       }
     })
+    if (this.tmpEdge) {
+      const edge = this.tmpEdge
+      if (edge.type && this.edgeRenderers[edge.type]) {
+        this.edgeRenderers[edge.type].render(edge, this.contexts.edges, this.getOption)
+      } else {
+        this.edgeRenderers.default.render(edge, this.contexts.edges, this.getOption)
+      }
+    }
 
     // if (drawNodes) {
     Object.values(nodes).forEach(node => {

@@ -86,6 +86,8 @@ export default class Graph extends GraphyComponent {
     this.nodesArray.push(node)
     this.nodesIndex[node.id] = node
 
+    this.root.events.dispatch('addNode', node)
+
     return this
   }
 
@@ -142,6 +144,8 @@ export default class Graph extends GraphyComponent {
       delete this.adjacencyListAll[i][id]
     }
 
+    this.root.events.dispatch('removeNode', id)
+
     return this
   }
 
@@ -180,6 +184,7 @@ export default class Graph extends GraphyComponent {
     this.adjacencyListAll[edge.target.id][edge.source.id][edge.id] = edge
     this.adjacencyListAll[edge.source.id][edge.target.id][edge.id] = edge
 
+    this.root.events.dispatch('addEdge', edge)
     return this
   }
 
@@ -213,8 +218,17 @@ export default class Graph extends GraphyComponent {
         delete this.adjacencyListAll[tmpEdge.source.id][tmpEdge.target.id]
       }
     }
+    this.root.events.dispatch('removeEdge', tmpEdge)
 
     return this
+  }
+
+  public get nodesCount(): number {
+    return this.nodesArray.length
+  }
+
+  public get edgesCount(): number {
+    return this.edgesArray.length
   }
 
   public nodes(ids?: ID | ID[]): Node[] {
@@ -282,7 +296,7 @@ export default class Graph extends GraphyComponent {
             currentIndex = index
           }
         })
-        ;[queue[currentIndex], queue[queue.length - 1]] = [
+        ; [queue[currentIndex], queue[queue.length - 1]] = [
           queue[queue.length - 1],
           queue[currentIndex],
         ]

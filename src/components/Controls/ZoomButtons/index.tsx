@@ -1,9 +1,11 @@
-import { h, Component } from 'preact'
+import { h, Component, ComponentChildren } from 'preact'
 import * as style from './style.scss'
 
 import { graphy } from '../../../Graphy/Instance'
 
-interface ZoomButtonsProps {}
+interface ZoomButtonsProps {
+  children: ComponentChildren
+}
 
 interface ZoomButtonsState {
   zoom: number
@@ -35,6 +37,7 @@ export default class ZoomButtons extends Component<ZoomButtonsProps, ZoomButtons
           -
         </button>
         <span>Zoom {state.zoom.toFixed(1)}x</span>
+        {props.children}
       </div>
     )
   }

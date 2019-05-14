@@ -9,9 +9,16 @@ import Layout from '../../../Graphy/classes/Layout'
 
 interface Props {}
 
-interface State {}
+interface State {
+  nodeCount: number
+  edgeCount: number
+}
 
 export default class StatusBar extends Component<Props, State> {
+  state = {
+    nodeCount: 0,
+    edgeCount: 0,
+  }
   private algos: string[] = ['kamada', 'force-atlas', 'force-directed', 'fruchterman', 'mds']
   private selectedAlgo: string = 'kamada'
   private algo: Layout
@@ -81,7 +88,8 @@ export default class StatusBar extends Component<Props, State> {
     return (
       <div class={style.statusBar}>
         <Expander>
-          <div class={style.nodeCount}>123</div>
+          <div class={style.nodeCount}>Mezgli: {this.state.nodeCount}</div>
+          <div class={style.nodeCount}>Malas: {this.state.edgeCount}</div>
           <select name="layout-algo" id="layout-algo" onChange={this.changeMethod.bind(this)}>
             {this.algos.map(algo => (
               <option value={algo} selected={algo === this.selectedAlgo}>
@@ -94,5 +102,28 @@ export default class StatusBar extends Component<Props, State> {
         </Expander>
       </div>
     )
+  }
+
+  componentDidMount() {
+    this.updateNodeEdgeCount()
+    graphy.events.subscribe('addNode', () => {
+      this.updateNodeEdgeCount()
+    })
+    graphy.events.subscribe('removeNode', () => {
+      this.updateNodeEdgeCount()
+    })
+    graphy.events.subscribe('addEdge', () => {
+      this.updateNodeEdgeCount()
+    })
+    graphy.events.subscribe('removeNode', () => {
+      this.updateNodeEdgeCount()
+    })
+  }
+
+  private updateNodeEdgeCount() {
+    this.setState({
+      nodeCount: graphy.graph.nodesCount,
+      edgeCount: graphy.graph.edgesCount,
+    })
   }
 }
