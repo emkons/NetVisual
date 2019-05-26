@@ -6,9 +6,16 @@ export default abstract class Layout extends Events {
   protected timePerIteration: number = 3
 
   protected running: boolean = false
+  protected totalRuntime: number = 0
+  protected initRuntime: number = 0
 
   public start(graph: Graph): Promise<Graph> {
+    const timeStart: number = window.performance.now()
     this.init(graph)
+    const timeEnd: number = window.performance.now()
+    this.initRuntime = timeEnd - timeStart
+    this.totalRuntime = timeEnd - timeStart
+    this.running = true
     setTimeout(() => {
       this.iterate(graph)
     }, 0)
@@ -24,14 +31,16 @@ export default abstract class Layout extends Events {
       this.process(graph)
       finishTime = window.performance.now()
     } while (finishTime - startTime < this.timePerIteration && this.shouldContinue(graph))
+    this.totalRuntime += finishTime - startTime
 
     this.dispatch('iteration', graph)
 
-    if (this.incremental && this.shouldContinue(graph)) {
+    if (this.incremental && this.running && this.shouldContinue(graph)) {
       setTimeout(() => {
         this.iterate(graph)
       }, 0)
     } else {
+      console.log(`Layout finished in ${this.totalRuntime}ms, init time: ${this.initRuntime}`)
       this.dispatch('done', graph)
     }
   }

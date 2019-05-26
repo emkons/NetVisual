@@ -7,7 +7,7 @@ export default class KamadaKawai extends Layout implements ILayout {
   public incremental = true
 
   // Properties
-  protected diameter: number = 600
+  protected diameter: number = 6000
   protected sprConst: number = 10
 
   // Internal variables
@@ -31,65 +31,71 @@ export default class KamadaKawai extends Layout implements ILayout {
     // const originalX = maxDeltaNode.x
     // const originalY = maxDeltaNode.y
 
-    // let delta = this.mD
-    // while (delta > 0.1) {
-    //   console.log('delta', delta)
-    const oldX = maxDeltaNode.x
-    const oldY = maxDeltaNode.y
+    let delta = this.mD
+    let innerIters = 0
+    while (delta > 0.001 && innerIters < 10) {
+      innerIters += 1
+      const oldX = maxDeltaNode.x
+      const oldY = maxDeltaNode.y
 
-    // Calculate Dx, Dy, A, B, C
-    let A = 0
-    let B = 0
-    let C = 0
-    nodes.forEach(node => {
-      if (node === maxDeltaNode) return
-      const dx = oldX - node.x
-      const dy = oldY - node.y
-      const dist = sumSqrt(dx, dy)
-      const den = dist * (dx * dx + dy * dy)
-      const k = maxDeltaNode.layoutProps.const[node.id]
-      const l = maxDeltaNode.layoutProps.length[node.id]
-      A += k * (1 - (l * dy * dy) / den)
-      B += (k * l * dx * dy) / den
-      C += k * (1 - (l * dx * dx) / den)
-    })
-    const myDx = maxDeltaNode.layoutProps.delta['x']
-    const myDy = maxDeltaNode.layoutProps.delta['y']
+      // Calculate Dx, Dy, A, B, C
+      let A = 0
+      let B = 0
+      let C = 0
+      nodes.forEach(node => {
+        if (node === maxDeltaNode) return
+        const dx = oldX - node.x
+        const dy = oldY - node.y
+        const dist = sumSqrt(dx, dy)
+        const den = dist * (dx * dx + dy * dy)
+        const k = maxDeltaNode.layoutProps.const[node.id]
+        const l = maxDeltaNode.layoutProps.length[node.id]
+        A += k * (1 - (l * dy * dy) / den)
+        B += (k * l * dx * dy) / den
+        C += k * (1 - (l * dx * dx) / den)
+      })
+      const myDx = maxDeltaNode.layoutProps.delta['x']
+      const myDy = maxDeltaNode.layoutProps.delta['y']
 
-    // Solve linear equations
-    const deltaY = (B * myDx - myDy * A) / (C * A - B * B)
-    const deltaX = -(myDx + B * deltaY) / A
-    // delta = deltaX * deltaX + deltaY * deltaY
+      // Solve linear equations
+      const deltaY = (myDx * B - myDy * A) / (A * C - B * B)
+      const deltaX = (B * myDy - C * myDx) / (A * C - B * B)
 
-    maxDeltaNode.x = oldX + deltaX
-    maxDeltaNode.y = oldY + deltaY
-    const newX = oldX + deltaX
-    const newY = oldY + deltaY
-    // }
+      maxDeltaNode.x = oldX + deltaX
+      maxDeltaNode.y = oldY + deltaY
+      const newX = oldX + deltaX
+      const newY = oldY + deltaY
 
-    // Update delta values
-    nodes.forEach(node => {
-      if (node === maxDeltaNode) return
-      const oldDx = oldX - node.x
-      const oldDy = oldY - node.y
-      const oldMiDist = sumSqrt(oldDx, oldDy)
-      const newDx = newX - node.x
-      const newDy = newY - node.y
-      const newMiDist = sumSqrt(newDx, newDy)
-      const k = maxDeltaNode.layoutProps.const[node.id]
-      const l = maxDeltaNode.layoutProps.length[node.id]
-      const delta = node.layoutProps.delta
-      delta['x'] -= k * (-oldDx + (l * oldDx) / oldMiDist)
-      delta['y'] -= k * (-oldDy + (l * oldDy) / oldMiDist)
-      delta['x'] += k * (-newDx + (l * newDx) / newMiDist)
-      delta['y'] += k * (-newDy + (l * newDy) / newMiDist)
+      // Update delta values
+      let newDxx = 0
+      let newDyy = 0
+      nodes.forEach(node => {
+        if (node === maxDeltaNode) return
+        const oldDx = oldX - node.x
+        const oldDy = oldY - node.y
+        const oldMiDist = sumSqrt(oldDx, oldDy)
+        const newDx = newX - node.x
+        const newDy = newY - node.y
+        const newMiDist = sumSqrt(newDx, newDy)
+        const k = maxDeltaNode.layoutProps.const[node.id]
+        const l = maxDeltaNode.layoutProps.length[node.id]
+        const delta = node.layoutProps.delta
+        delta['x'] -= k * (oldDx - (l * oldDx) / oldMiDist)
+        delta['y'] -= k * (oldDy - (l * oldDy) / oldMiDist)
+        delta['x'] += k * (newDx - (l * newDx) / newMiDist)
+        delta['y'] += k * (newDy - (l * newDy) / newMiDist)
+        newDxx += k * (newDx - (l * newDx) / newMiDist)
+        newDyy += k * (newDy - (l * newDy) / newMiDist)
+      })
+
       const maxDeltaNodeDelta = maxDeltaNode.layoutProps.delta
-      maxDeltaNodeDelta['x'] += k * (-newDx + (l * newDx) / newMiDist)
-      maxDeltaNodeDelta['y'] += k * (-newDy + (l * newDy) / newMiDist)
-    })
+      maxDeltaNodeDelta['x'] = newDxx
+      maxDeltaNodeDelta['y'] = newDyy
+      delta = newDxx * newDxx + newDyy * newDyy
 
-    maxDeltaNode.x = newX
-    maxDeltaNode.y = newY
+      maxDeltaNode.x = newX
+      maxDeltaNode.y = newY
+    }
 
     // Calculate deltas
     let maxDelta = 0
@@ -185,7 +191,6 @@ export default class KamadaKawai extends Layout implements ILayout {
   }
 
   protected shouldContinue(graph: Graph): boolean {
-    console.log(this.mD)
-    return this.mD > 1
+    return this.mD > 0.001
   }
 }
