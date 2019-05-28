@@ -1,3 +1,6 @@
+import Graph, { Edge, Node } from './classes/Graph'
+import { maxHeaderSize } from 'http'
+
 export type ID = string | number
 
 export function isID(id: any): id is ID {
@@ -160,4 +163,71 @@ export class PriorityQueue<T> {
       right = this.right(node)
     }
   }
+}
+
+export function getEdgeCrossings(graph: Graph): number {
+  const edges: Edge[] = graph.edges()
+
+  const onSegment = (p: Node, q: Node, r: Node): boolean => {
+    if (
+      q.x <= Math.max(p.x, r.x) &&
+      q.x >= Math.min(p.x, r.x) &&
+      q.y <= Math.max(p.y, r.y) &&
+      q.y >= Math.min(p.y, r.y)
+    ) {
+      return true
+    }
+    return false
+  }
+
+  const orientation = (p: Node, q: Node, r: Node): number => {
+    const val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y)
+    if (val === 0) return 0
+    return val > 0 ? 1 : 2
+  }
+
+  const doOverlap = (n1: Node, n2: Node): boolean => {
+    return n1.x === n2.x && n1.y === n2.y
+  }
+
+  const doIntercest = (n1: Node, n2: Node, n3: Node, n4: Node): boolean => {
+    // Ignore starting point overlaps
+    if (doOverlap(n1, n3) || doOverlap(n1, n4) || doOverlap(n2, n3) || doOverlap(n2, n4)) {
+      return false
+    }
+    const o1 = orientation(n1, n2, n3)
+    const o2 = orientation(n1, n2, n4)
+    const o3 = orientation(n3, n4, n1)
+    const o4 = orientation(n3, n4, n2)
+
+    if (o1 !== o2 && o3 !== o4) {
+      return true
+    }
+
+    if (o1 === 0 && onSegment(n1, n3, n2)) {
+      return true
+    }
+
+    if (o2 === 0 && onSegment(n1, n4, n2)) {
+      return true
+    }
+
+    if (o3 === 0 && onSegment(n3, n1, n4)) {
+      return true
+    }
+
+    if (o4 === 0 && onSegment(n3, n2, n4)) {
+      return true
+    }
+
+    return false
+  }
+  let crossings = 0
+  edges.forEach(e1 => {
+    edges.forEach(e2 => {
+      if (e1 === e2) return
+      crossings += doIntercest(e1.source, e1.target, e2.source, e2.target) ? 1 : 0
+    })
+  })
+  return crossings / 2
 }

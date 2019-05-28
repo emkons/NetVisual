@@ -10,7 +10,7 @@ export default class ForceAtlas extends Layout implements ILayout {
   protected inertia: number = 0.1
   protected repStr: number = 200
   protected attrStr: number = 1
-  protected maxDispl: number = 10
+  protected maxDispl: number = 1000
   protected freezeBal: boolean = false
   protected freezeStr: number = 80
   protected freezeIner: number = 0.2

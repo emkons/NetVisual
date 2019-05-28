@@ -6,20 +6,30 @@ import { graphy } from '../../../Graphy/Instance'
 
 import * as style from './style.scss'
 import Layout from '../../../Graphy/classes/Layout'
+import { getEdgeCrossings } from '../../../Graphy/util'
 
 interface Props {}
 
 interface State {
   nodeCount: number
   edgeCount: number
+  edgeCrossings: number
 }
 
 export default class StatusBar extends Component<Props, State> {
   state = {
     nodeCount: 0,
     edgeCount: 0,
+    edgeCrossings: 0,
   }
-  private algos: string[] = ['kamada', 'force-atlas', 'force-directed', 'fruchterman', 'mds']
+  private algos: string[] = [
+    'kamada',
+    'force-atlas',
+    'force-directed',
+    'fruchterman',
+    'mds',
+    'isom',
+  ]
   private selectedAlgo: string = 'kamada'
   private algo: Layout
   private iterationCb: string = null
@@ -66,6 +76,13 @@ export default class StatusBar extends Component<Props, State> {
         )
         this.algo = new mds.default()
         break
+      case 'isom':
+        const isom = await import(
+          /* webpackChunkName: 'layout' */
+          '../../../Graphy/layout/ISOM'
+        )
+        this.algo = new isom.default()
+        break
     }
     if (this.algo) {
       this.algo.start(graphy.graph)
@@ -90,6 +107,10 @@ export default class StatusBar extends Component<Props, State> {
         <Expander>
           <div class={style.nodeCount}>Mezgli: {this.state.nodeCount}</div>
           <div class={style.nodeCount}>Malas: {this.state.edgeCount}</div>
+          <div>
+            Malu krustošanās: {this.state.edgeCrossings}{' '}
+            <button onClick={this.calculateCrossings.bind(this)}>Calc crossings</button>
+          </div>
           <select name="layout-algo" id="layout-algo" onChange={this.changeMethod.bind(this)}>
             {this.algos.map(algo => (
               <option value={algo} selected={algo === this.selectedAlgo}>
@@ -117,6 +138,12 @@ export default class StatusBar extends Component<Props, State> {
     })
     graphy.events.subscribe('removeNode', () => {
       this.updateNodeEdgeCount()
+    })
+  }
+
+  calculateCrossings() {
+    this.setState({
+      edgeCrossings: getEdgeCrossings(graphy.graph),
     })
   }
 

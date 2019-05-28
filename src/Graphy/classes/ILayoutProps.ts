@@ -1,11 +1,11 @@
 export interface ILayoutProps {
-  f: {
+  f?: {
     x: number
-    y: number,
+    y: number
   }
   i?: {
     x: number
-    y: number,
+    y: number
   }
   freeze?: number
   [key: string]: number | { x: number; y: number } | { [key: string]: string | number }
