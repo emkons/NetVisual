@@ -1,0 +1,4498 @@
+<?xml version="1.0" encoding="UTF-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key attr.name="label" attr.type="string" for="node" id="label"/>
+<key attr.name="Edge Label" attr.type="string" for="edge" id="edgelabel"/>
+<key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+<key attr.name="r" attr.type="int" for="node" id="r"/>
+<key attr.name="g" attr.type="int" for="node" id="g"/>
+<key attr.name="b" attr.type="int" for="node" id="b"/>
+<key attr.name="x" attr.type="float" for="node" id="x"/>
+<key attr.name="y" attr.type="float" for="node" id="y"/>
+<key attr.name="size" attr.type="float" for="node" id="size"/>
+<graph edgedefault="directed">
+<node id="Oxford_Circus">
+<data key="label">Oxford_Circus</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.5856235</data>
+<data key="y">-4.3968906</data>
+</node>
+<node id="Bond_Street">
+<data key="label">Bond_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.386295</data>
+<data key="y">-5.4350543</data>
+</node>
+<node id="Marble_Arch">
+<data key="label">Marble_Arch</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.811873</data>
+<data key="y">-5.4723372</data>
+</node>
+<node id="Notting_Hill_Gate">
+<data key="label">Notting_Hill_Gate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.48340175</data>
+<data key="y">10.18161</data>
+</node>
+<node id="Queensway">
+<data key="label">Queensway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.858712</data>
+<data key="y">4.056195</data>
+</node>
+<node id="Lancaster_Gate">
+<data key="label">Lancaster_Gate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.6918535</data>
+<data key="y">-8.404343</data>
+</node>
+<node id="Holborn">
+<data key="label">Holborn</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.5011889</data>
+<data key="y">-8.366972</data>
+</node>
+<node id="Chancery_Lane">
+<data key="label">Chancery_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.79446</data>
+<data key="y">7.3920693</data>
+</node>
+<node id="St_Paul's">
+<data key="label">St_Paul's</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.4115043</data>
+<data key="y">6.1701713</data>
+</node>
+<node id="Bank_">
+<data key="label">Bank_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.309029</data>
+<data key="y">0.19790715</data>
+</node>
+<node id="Liverpool_Street">
+<data key="label">Liverpool_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.9622831</data>
+<data key="y">10.134013</data>
+</node>
+<node id="Gloucester_Road">
+<data key="label">Gloucester_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.5506067</data>
+<data key="y">-2.6486776</data>
+</node>
+<node id="Knightsbridge">
+<data key="label">Knightsbridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.4974115</data>
+<data key="y">-4.4746814</data>
+</node>
+<node id="Hyde_Park_Corner">
+<data key="label">Hyde_Park_Corner</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.5158532</data>
+<data key="y">7.790834</data>
+</node>
+<node id="Green_Park">
+<data key="label">Green_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.0469663</data>
+<data key="y">-2.5652206</data>
+</node>
+<node id="Piccadilly_Circus">
+<data key="label">Piccadilly_Circus</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.3659015</data>
+<data key="y">10.106888</data>
+</node>
+<node id="Leicester_Square">
+<data key="label">Leicester_Square</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.297261</data>
+<data key="y">-0.96786195</data>
+</node>
+<node id="Covent_Garden">
+<data key="label">Covent_Garden</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.149714</data>
+<data key="y">-5.3140078</data>
+</node>
+<node id="Russel_Square">
+<data key="label">Russel_Square</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.3176118</data>
+<data key="y">2.6477149</data>
+</node>
+<node id="King''s_Cross_St_Pancras">
+<data key="label">King''s_Cross_St_Pancras</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.826743</data>
+<data key="y">-8.508987</data>
+</node>
+<node id="Euston">
+<data key="label">Euston</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.1539018</data>
+<data key="y">3.0309227</data>
+</node>
+<node id="Warren_Street">
+<data key="label">Warren_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.6929717</data>
+<data key="y">-5.740512</data>
+</node>
+<node id="Victoria">
+<data key="label">Victoria</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.5498326</data>
+<data key="y">0.92114717</data>
+</node>
+<node id="Pimlico">
+<data key="label">Pimlico</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.1631122</data>
+<data key="y">1.7651011</data>
+</node>
+<node id="Vauxhall">
+<data key="label">Vauxhall</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.6013</data>
+<data key="y">-2.257846</data>
+</node>
+<node id="Goodge_Street">
+<data key="label">Goodge_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.124217</data>
+<data key="y">-2.7242656</data>
+</node>
+<node id="Tottenham_Court_Road">
+<data key="label">Tottenham_Court_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.1478436</data>
+<data key="y">-4.4680457</data>
+</node>
+<node id="Charing_Cross">
+<data key="label">Charing_Cross</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.7593203</data>
+<data key="y">-1.5451844</data>
+</node>
+<node id="Embankment">
+<data key="label">Embankment</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.140727</data>
+<data key="y">10.145856</data>
+</node>
+<node id="Waterloo">
+<data key="label">Waterloo</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.3149524</data>
+<data key="y">-8.30907</data>
+</node>
+<node id="Kennington">
+<data key="label">Kennington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.5097392</data>
+<data key="y">10.321193</data>
+</node>
+<node id="Elephant_&amp;_Castle">
+<data key="label">Elephant_&amp;_Castle</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.064513</data>
+<data key="y">-2.7960203</data>
+</node>
+<node id="Borough">
+<data key="label">Borough</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.813824</data>
+<data key="y">0.36802527</data>
+</node>
+<node id="London_Bridge">
+<data key="label">London_Bridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.177634</data>
+<data key="y">-5.7355843</data>
+</node>
+<node id="Monument">
+<data key="label">Monument</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.2677765</data>
+<data key="y">10.050864</data>
+</node>
+<node id="Moorgate">
+<data key="label">Moorgate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.8381564</data>
+<data key="y">9.475402</data>
+</node>
+<node id="Old_Street">
+<data key="label">Old_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.560457</data>
+<data key="y">1.6522712</data>
+</node>
+<node id="Angel">
+<data key="label">Angel</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.479889</data>
+<data key="y">-4.6940045</data>
+</node>
+<node id="Oval">
+<data key="label">Oval</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.932226</data>
+<data key="y">-8.740045</data>
+</node>
+<node id="Stockwell">
+<data key="label">Stockwell</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.3026133</data>
+<data key="y">0.9267475</data>
+</node>
+<node id="South_Kensington">
+<data key="label">South_Kensington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.990599</data>
+<data key="y">8.994782</data>
+</node>
+<node id="Sloane_Square">
+<data key="label">Sloane_Square</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.9703329</data>
+<data key="y">2.8873937</data>
+</node>
+<node id="St_James's_Park">
+<data key="label">St_James's_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.6080933</data>
+<data key="y">-8.802133</data>
+</node>
+<node id="Westminister">
+<data key="label">Westminister</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.673462</data>
+<data key="y">-0.7104103</data>
+</node>
+<node id="Temple">
+<data key="label">Temple</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.34877878</data>
+<data key="y">6.520749</data>
+</node>
+<node id="Blackfriars">
+<data key="label">Blackfriars</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.3611088</data>
+<data key="y">-2.1540713</data>
+</node>
+<node id="Mansion_House">
+<data key="label">Mansion_House</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.7245417</data>
+<data key="y">7.4133606</data>
+</node>
+<node id="Cannon_Street">
+<data key="label">Cannon_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.45078596</data>
+<data key="y">5.579752</data>
+</node>
+<node id="Tower_Hill">
+<data key="label">Tower_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.310394</data>
+<data key="y">8.6803665</data>
+</node>
+<node id="Aldgate">
+<data key="label">Aldgate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.6499032</data>
+<data key="y">-4.0914416</data>
+</node>
+<node id="Aldgate_East">
+<data key="label">Aldgate_East</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.770045</data>
+<data key="y">5.577148</data>
+</node>
+<node id="Barbican">
+<data key="label">Barbican</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.909576</data>
+<data key="y">7.4670815</data>
+</node>
+<node id="Farrington">
+<data key="label">Farrington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.8924549</data>
+<data key="y">-4.6574535</data>
+</node>
+<node id="Euston_Square">
+<data key="label">Euston_Square</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.8889904</data>
+<data key="y">-1.7355927</data>
+</node>
+<node id="Great_Portland_Street">
+<data key="label">Great_Portland_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.0801152</data>
+<data key="y">-1.8837508</data>
+</node>
+<node id="Baker_Street">
+<data key="label">Baker_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.90265363</data>
+<data key="y">-1.3672361</data>
+</node>
+<node id="Edgware_Road">
+<data key="label">Edgware_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.776797</data>
+<data key="y">5.864449</data>
+</node>
+<node id="Bayswater">
+<data key="label">Bayswater</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.8642148</data>
+<data key="y">-3.0860908</data>
+</node>
+<node id="High_Street_Kensington">
+<data key="label">High_Street_Kensington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.424379</data>
+<data key="y">1.2382443</data>
+</node>
+<node id="Southwark">
+<data key="label">Southwark</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.613401</data>
+<data key="y">-7.057679</data>
+</node>
+<node id="Regent's_Park">
+<data key="label">Regent's_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.9956695</data>
+<data key="y">2.21498</data>
+</node>
+<node id="Lambeth_North">
+<data key="label">Lambeth_North</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.0124335</data>
+<data key="y">6.12268</data>
+</node>
+<node id="Marylebone">
+<data key="label">Marylebone</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.729774</data>
+<data key="y">2.9235382</data>
+</node>
+<node id="Paddington">
+<data key="label">Paddington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.3295617</data>
+<data key="y">7.2623987</data>
+</node>
+<node id="Highbury_&amp;_Islington">
+<data key="label">Highbury_&amp;_Islington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.0639894</data>
+<data key="y">-3.7696373</data>
+</node>
+<node id="Finsbury_Park">
+<data key="label">Finsbury_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.6934385</data>
+<data key="y">-3.69174</data>
+</node>
+<node id="Seven_Sisters">
+<data key="label">Seven_Sisters</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.1221154</data>
+<data key="y">-0.5362279</data>
+</node>
+<node id="Tottenham_Hale">
+<data key="label">Tottenham_Hale</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.382904</data>
+<data key="y">-8.250518</data>
+</node>
+<node id="Blackhorse_Road">
+<data key="label">Blackhorse_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.9303446</data>
+<data key="y">1.0799177</data>
+</node>
+<node id="Walthamstow_Central">
+<data key="label">Walthamstow_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.1604824</data>
+<data key="y">-8.312167</data>
+</node>
+<node id="Mornington_Crescent">
+<data key="label">Mornington_Crescent</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.575461</data>
+<data key="y">3.1245015</data>
+</node>
+<node id="Camden_Town">
+<data key="label">Camden_Town</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.7042153</data>
+<data key="y">-8.561335</data>
+</node>
+<node id="Edgware">
+<data key="label">Edgware</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.7750113</data>
+<data key="y">-7.9798303</data>
+</node>
+<node id="Burnt_Oak">
+<data key="label">Burnt_Oak</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.00782</data>
+<data key="y">-1.9849313</data>
+</node>
+<node id="Colindale">
+<data key="label">Colindale</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.0923882</data>
+<data key="y">8.510265</data>
+</node>
+<node id="Hendon_Central">
+<data key="label">Hendon_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.319599</data>
+<data key="y">7.96058</data>
+</node>
+<node id="Brent_Cross">
+<data key="label">Brent_Cross</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.22677</data>
+<data key="y">6.5154123</data>
+</node>
+<node id="Golders_Green">
+<data key="label">Golders_Green</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.2029433</data>
+<data key="y">-8.265815</data>
+</node>
+<node id="Hampstead">
+<data key="label">Hampstead</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.041942</data>
+<data key="y">10.210176</data>
+</node>
+<node id="Belsize_Park">
+<data key="label">Belsize_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.845714</data>
+<data key="y">-4.785362</data>
+</node>
+<node id="Chalk_Farm">
+<data key="label">Chalk_Farm</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.072328</data>
+<data key="y">-1.197151</data>
+</node>
+<node id="High_Barnet">
+<data key="label">High_Barnet</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.7444167</data>
+<data key="y">6.8793893</data>
+</node>
+<node id="Totteridge_&amp;_Whetstone">
+<data key="label">Totteridge_&amp;_Whetstone</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.5125172</data>
+<data key="y">9.302149</data>
+</node>
+<node id="Woodside_Park">
+<data key="label">Woodside_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.4007697</data>
+<data key="y">7.826696</data>
+</node>
+<node id="West_Finchley">
+<data key="label">West_Finchley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.4027421</data>
+<data key="y">8.980447</data>
+</node>
+<node id="Finchley_Central">
+<data key="label">Finchley_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.84999037</data>
+<data key="y">1.0477955</data>
+</node>
+<node id="Mill_Hill_East">
+<data key="label">Mill_Hill_East</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.923913</data>
+<data key="y">-8.706103</data>
+</node>
+<node id="East_Finchley">
+<data key="label">East_Finchley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.751228</data>
+<data key="y">6.2192564</data>
+</node>
+<node id="Highgate">
+<data key="label">Highgate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.583753</data>
+<data key="y">-8.304391</data>
+</node>
+<node id="Archway">
+<data key="label">Archway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.19311504</data>
+<data key="y">6.7739534</data>
+</node>
+<node id="Tufnell_Park">
+<data key="label">Tufnell_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.175192</data>
+<data key="y">3.0788288</data>
+</node>
+<node id="Kentish_Town">
+<data key="label">Kentish_Town</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.9643252</data>
+<data key="y">7.122355</data>
+</node>
+<node id="Morden">
+<data key="label">Morden</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.7353249</data>
+<data key="y">-5.487184</data>
+</node>
+<node id="South_Wimbledon">
+<data key="label">South_Wimbledon</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.227472</data>
+<data key="y">-0.36588272</data>
+</node>
+<node id="Colliers_Wood">
+<data key="label">Colliers_Wood</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.9185688</data>
+<data key="y">1.4849507</data>
+</node>
+<node id="Tooting_Broadway">
+<data key="label">Tooting_Broadway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.009375</data>
+<data key="y">-6.646755</data>
+</node>
+<node id="Tooting_Bec">
+<data key="label">Tooting_Bec</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.1765175</data>
+<data key="y">1.0383292</data>
+</node>
+<node id="Balham">
+<data key="label">Balham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.68693</data>
+<data key="y">-0.5916266</data>
+</node>
+<node id="Clapham_South">
+<data key="label">Clapham_South</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.428777</data>
+<data key="y">-9.00508</data>
+</node>
+<node id="Clapham_Common">
+<data key="label">Clapham_Common</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.8613782</data>
+<data key="y">1.6929976</data>
+</node>
+<node id="Clapham_North">
+<data key="label">Clapham_North</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.685646</data>
+<data key="y">-1.1198785</data>
+</node>
+<node id="Brixton">
+<data key="label">Brixton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.960926</data>
+<data key="y">5.6287556</data>
+</node>
+<node id="Earl's_Court">
+<data key="label">Earl's_Court</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.3875059</data>
+<data key="y">-6.784639</data>
+</node>
+<node id="Barons_Court">
+<data key="label">Barons_Court</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.3521945</data>
+<data key="y">-7.311837</data>
+</node>
+<node id="Hammersmith">
+<data key="label">Hammersmith</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.4580715</data>
+<data key="y">-2.4788826</data>
+</node>
+<node id="Turnham_Green">
+<data key="label">Turnham_Green</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.492351</data>
+<data key="y">-6.158529</data>
+</node>
+<node id="Acton_Town">
+<data key="label">Acton_Town</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.920143</data>
+<data key="y">-4.326419</data>
+</node>
+<node id="Heathrow_Terminal_1,2,3">
+<data key="label">Heathrow_Terminal_1,2,3</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.8366253</data>
+<data key="y">-8.794406</data>
+</node>
+<node id="Heathrow_Terminal_5">
+<data key="label">Heathrow_Terminal_5</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.790013</data>
+<data key="y">6.1839027</data>
+</node>
+<node id="Heathrow_Terminal_4">
+<data key="label">Heathrow_Terminal_4</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.2498167</data>
+<data key="y">3.9113622</data>
+</node>
+<node id="Hatton_Cross">
+<data key="label">Hatton_Cross</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.4017</data>
+<data key="y">-7.4802055</data>
+</node>
+<node id="Hounslow_West">
+<data key="label">Hounslow_West</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.1595235</data>
+<data key="y">-8.431422</data>
+</node>
+<node id="Hounslow_Central">
+<data key="label">Hounslow_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.064007</data>
+<data key="y">6.7650056</data>
+</node>
+<node id="Hounslow_East">
+<data key="label">Hounslow_East</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.5112643</data>
+<data key="y">-3.303269</data>
+</node>
+<node id="Osterley">
+<data key="label">Osterley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.2957735</data>
+<data key="y">-5.287006</data>
+</node>
+<node id="Boston_Manor">
+<data key="label">Boston_Manor</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.3444674</data>
+<data key="y">6.102384</data>
+</node>
+<node id="Northfields">
+<data key="label">Northfields</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.5016594</data>
+<data key="y">1.9168853</data>
+</node>
+<node id="South_Ealing">
+<data key="label">South_Ealing</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-9.012108</data>
+<data key="y">0.4226508</data>
+</node>
+<node id="Wimbledon">
+<data key="label">Wimbledon</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.7976262</data>
+<data key="y">-7.731408</data>
+</node>
+<node id="Wimbledon_Park">
+<data key="label">Wimbledon_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.736686</data>
+<data key="y">0.91736454</data>
+</node>
+<node id="Southfields">
+<data key="label">Southfields</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.7981962</data>
+<data key="y">3.355756</data>
+</node>
+<node id="East_Putney">
+<data key="label">East_Putney</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.833568</data>
+<data key="y">-6.9191165</data>
+</node>
+<node id="Putney_Bridge">
+<data key="label">Putney_Bridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.385497</data>
+<data key="y">-3.8540502</data>
+</node>
+<node id="Parsons_Green">
+<data key="label">Parsons_Green</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.012209</data>
+<data key="y">7.7577295</data>
+</node>
+<node id="Fulham_Broadway">
+<data key="label">Fulham_Broadway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.157908</data>
+<data key="y">-9.526644</data>
+</node>
+<node id="West_Brompton">
+<data key="label">West_Brompton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.1862135</data>
+<data key="y">-7.815459</data>
+</node>
+<node id="West_Kensington">
+<data key="label">West_Kensington</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.90195</data>
+<data key="y">-7.6460724</data>
+</node>
+<node id="Ravenscourt_Park">
+<data key="label">Ravenscourt_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.79452</data>
+<data key="y">5.7441206</data>
+</node>
+<node id="Stamford_Brook">
+<data key="label">Stamford_Brook</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.301601</data>
+<data key="y">-5.669193</data>
+</node>
+<node id="Richmond">
+<data key="label">Richmond</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.0381684</data>
+<data key="y">8.205604</data>
+</node>
+<node id="Kew_Gardens">
+<data key="label">Kew_Gardens</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.523285</data>
+<data key="y">5.852576</data>
+</node>
+<node id="Gunnesbury">
+<data key="label">Gunnesbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.6094773</data>
+<data key="y">-8.161895</data>
+</node>
+<node id="Chiswick_Park">
+<data key="label">Chiswick_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.38079214</data>
+<data key="y">7.1126685</data>
+</node>
+<node id="Ealing_Common">
+<data key="label">Ealing_Common</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.7480164</data>
+<data key="y">3.023424</data>
+</node>
+<node id="Ealing_Broadway">
+<data key="label">Ealing_Broadway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.0989108</data>
+<data key="y">-3.1709087</data>
+</node>
+<node id="Holland_Park">
+<data key="label">Holland_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.6829462</data>
+<data key="y">3.8567235</data>
+</node>
+<node id="Shepard's_Bush">
+<data key="label">Shepard's_Bush</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.61186</data>
+<data key="y">2.119332</data>
+</node>
+<node id="White_City">
+<data key="label">White_City</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.622037</data>
+<data key="y">-0.28765628</data>
+</node>
+<node id="East_Acton">
+<data key="label">East_Acton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.163657</data>
+<data key="y">-3.0738258</data>
+</node>
+<node id="North_Acton">
+<data key="label">North_Acton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.024421</data>
+<data key="y">4.865207</data>
+</node>
+<node id="West_Acton">
+<data key="label">West_Acton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.41994873</data>
+<data key="y">-5.624137</data>
+</node>
+<node id="West_Ruislip">
+<data key="label">West_Ruislip</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.2050607</data>
+<data key="y">-5.00345</data>
+</node>
+<node id="Ruislip_Gardens">
+<data key="label">Ruislip_Gardens</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.2674121</data>
+<data key="y">-1.9991072</data>
+</node>
+<node id="South_Ruislip">
+<data key="label">South_Ruislip</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.8133636</data>
+<data key="y">2.7759986</data>
+</node>
+<node id="Northolt">
+<data key="label">Northolt</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.477608</data>
+<data key="y">-3.0645719</data>
+</node>
+<node id="Greenford">
+<data key="label">Greenford</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.7191392</data>
+<data key="y">-9.299714</data>
+</node>
+<node id="Perivale">
+<data key="label">Perivale</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.498552</data>
+<data key="y">-9.007804</data>
+</node>
+<node id="Hanger_Lane">
+<data key="label">Hanger_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.31802446</data>
+<data key="y">3.98219</data>
+</node>
+<node id="Park_Royal">
+<data key="label">Park_Royal</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.448243</data>
+<data key="y">-7.044578</data>
+</node>
+<node id="North_Ealing">
+<data key="label">North_Ealing</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.98593</data>
+<data key="y">5.5215526</data>
+</node>
+<node id="Sudbury_Town">
+<data key="label">Sudbury_Town</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.0766304</data>
+<data key="y">-2.5248036</data>
+</node>
+<node id="Alperton">
+<data key="label">Alperton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.0498406</data>
+<data key="y">4.853518</data>
+</node>
+<node id="Sudbury_Hill">
+<data key="label">Sudbury_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.6463714</data>
+<data key="y">8.624431</data>
+</node>
+<node id="Uxbridge">
+<data key="label">Uxbridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.538896</data>
+<data key="y">-6.542579</data>
+</node>
+<node id="Hillingdon">
+<data key="label">Hillingdon</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.5544554</data>
+<data key="y">1.4803357</data>
+</node>
+<node id="Ickenham">
+<data key="label">Ickenham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.1434329</data>
+<data key="y">9.923024</data>
+</node>
+<node id="Ruislip">
+<data key="label">Ruislip</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.5171375</data>
+<data key="y">-2.9818559</data>
+</node>
+<node id="Ruislip_Manor">
+<data key="label">Ruislip_Manor</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.837903</data>
+<data key="y">0.20908289</data>
+</node>
+<node id="Eastcote">
+<data key="label">Eastcote</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.400127</data>
+<data key="y">-5.844421</data>
+</node>
+<node id="Rayners_Lane">
+<data key="label">Rayners_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.3427477</data>
+<data key="y">-9.407477</data>
+</node>
+<node id="South_Harrow">
+<data key="label">South_Harrow</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.2284278</data>
+<data key="y">7.9623523</data>
+</node>
+<node id="West_Harrow">
+<data key="label">West_Harrow</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.6435389</data>
+<data key="y">-6.1052446</data>
+</node>
+<node id="Harrow-on-the-Hill">
+<data key="label">Harrow-on-the-Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.9904925</data>
+<data key="y">8.849747</data>
+</node>
+<node id="Amersham">
+<data key="label">Amersham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.477818</data>
+<data key="y">3.1849835</data>
+</node>
+<node id="Chalfont_&amp;_Latimer">
+<data key="label">Chalfont_&amp;_Latimer</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.7429667</data>
+<data key="y">3.9811451</data>
+</node>
+<node id="Chesham">
+<data key="label">Chesham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.4119253</data>
+<data key="y">-8.601418</data>
+</node>
+<node id="Chorleywood">
+<data key="label">Chorleywood</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.670054</data>
+<data key="y">9.195111</data>
+</node>
+<node id="Rickmansworth">
+<data key="label">Rickmansworth</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.199083</data>
+<data key="y">10.171972</data>
+</node>
+<node id="Moor_Park">
+<data key="label">Moor_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.0563953</data>
+<data key="y">7.4084444</data>
+</node>
+<node id="Croxley">
+<data key="label">Croxley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.6738043</data>
+<data key="y">6.6836367</data>
+</node>
+<node id="Watford">
+<data key="label">Watford</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.759589</data>
+<data key="y">-2.2326095</data>
+</node>
+<node id="Pinner">
+<data key="label">Pinner</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.0015583</data>
+<data key="y">-6.595745</data>
+</node>
+<node id="NorthHarrow">
+<data key="label">NorthHarrow</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.6512706</data>
+<data key="y">8.740985</data>
+</node>
+<node id="Northwood_Hills">
+<data key="label">Northwood_Hills</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.6418815</data>
+<data key="y">-7.6028314</data>
+</node>
+<node id="Northwood">
+<data key="label">Northwood</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.822728</data>
+<data key="y">-2.0987387</data>
+</node>
+<node id="Finchley_Road">
+<data key="label">Finchley_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.8756495</data>
+<data key="y">-6.826286</data>
+</node>
+<node id="Wembley_Park">
+<data key="label">Wembley_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.449534</data>
+<data key="y">-8.689114</data>
+</node>
+<node id="Preston_Road">
+<data key="label">Preston_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.26465</data>
+<data key="y">-8.903791</data>
+</node>
+<node id="Northwick_Park">
+<data key="label">Northwick_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.497767</data>
+<data key="y">6.239506</data>
+</node>
+<node id="Watford_Junction">
+<data key="label">Watford_Junction</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.8472385</data>
+<data key="y">-8.065326</data>
+</node>
+<node id="Watford_High_Street">
+<data key="label">Watford_High_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.1637597</data>
+<data key="y">-7.6440825</data>
+</node>
+<node id="Bushey">
+<data key="label">Bushey</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.4542575</data>
+<data key="y">-2.5783422</data>
+</node>
+<node id="Carpenders_Park">
+<data key="label">Carpenders_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.173955</data>
+<data key="y">-1.4060649</data>
+</node>
+<node id="Hatch_End">
+<data key="label">Hatch_End</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.4051538</data>
+<data key="y">6.512788</data>
+</node>
+<node id="Headstone_Lane">
+<data key="label">Headstone_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.033979</data>
+<data key="y">5.565602</data>
+</node>
+<node id="Harrow_&amp;_Wealdstone">
+<data key="label">Harrow_&amp;_Wealdstone</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.783171</data>
+<data key="y">-2.4510076</data>
+</node>
+<node id="Kenton">
+<data key="label">Kenton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.2706676</data>
+<data key="y">-3.3037992</data>
+</node>
+<node id="South_Kenton">
+<data key="label">South_Kenton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.4501793</data>
+<data key="y">-2.3704143</data>
+</node>
+<node id="North_Wembley">
+<data key="label">North_Wembley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.5724764</data>
+<data key="y">-4.818731</data>
+</node>
+<node id="Wembley_Central">
+<data key="label">Wembley_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.4485886</data>
+<data key="y">-2.756299</data>
+</node>
+<node id="Stonebridge_Park">
+<data key="label">Stonebridge_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.679682</data>
+<data key="y">8.416625</data>
+</node>
+<node id="Harlesden">
+<data key="label">Harlesden</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.7109804</data>
+<data key="y">-9.429161</data>
+</node>
+<node id="Willesden_Junction">
+<data key="label">Willesden_Junction</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.682101</data>
+<data key="y">-3.2718072</data>
+</node>
+<node id="Kensal_Green_">
+<data key="label">Kensal_Green_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.6446366</data>
+<data key="y">-5.150413</data>
+</node>
+<node id="Queen's_Park">
+<data key="label">Queen's_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.1797376</data>
+<data key="y">-0.9708252</data>
+</node>
+<node id="Kilburn_Park">
+<data key="label">Kilburn_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.507594</data>
+<data key="y">5.8268285</data>
+</node>
+<node id="Malda_Vale">
+<data key="label">Malda_Vale</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.233279</data>
+<data key="y">4.4579344</data>
+</node>
+<node id="Warwick_Avenue">
+<data key="label">Warwick_Avenue</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.3724952</data>
+<data key="y">0.53805435</data>
+</node>
+<node id="St_John's_Wood">
+<data key="label">St_John's_Wood</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.97021437</data>
+<data key="y">-3.8993008</data>
+</node>
+<node id="Swiss_Cottage">
+<data key="label">Swiss_Cottage</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.8981323</data>
+<data key="y">3.532676</data>
+</node>
+<node id="Queensbury">
+<data key="label">Queensbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.0921156</data>
+<data key="y">-9.420994</data>
+</node>
+<node id="Kingsbury">
+<data key="label">Kingsbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.793338</data>
+<data key="y">8.146503</data>
+</node>
+<node id="Neasden">
+<data key="label">Neasden</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.885208</data>
+<data key="y">-4.417436</data>
+</node>
+<node id="Dollis_Hill">
+<data key="label">Dollis_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.3206227</data>
+<data key="y">-9.463156</data>
+</node>
+<node id="Willesden_Green_">
+<data key="label">Willesden_Green_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.99666387</data>
+<data key="y">6.354007</data>
+</node>
+<node id="Kilburn">
+<data key="label">Kilburn</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.37835723</data>
+<data key="y">-9.066031</data>
+</node>
+<node id="West_Hampstead">
+<data key="label">West_Hampstead</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.4376426</data>
+<data key="y">1.6828021</data>
+</node>
+<node id="Stanmore">
+<data key="label">Stanmore</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.740103</data>
+<data key="y">3.9259362</data>
+</node>
+<node id="Canons_Park">
+<data key="label">Canons_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.663348</data>
+<data key="y">0.14132036</data>
+</node>
+<node id="Royal_Oak_">
+<data key="label">Royal_Oak_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.24149175</data>
+<data key="y">-2.4178884</data>
+</node>
+<node id="Westburn_Park">
+<data key="label">Westburn_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.441018</data>
+<data key="y">-1.9030932</data>
+</node>
+<node id="Ladbroke_Grove">
+<data key="label">Ladbroke_Grove</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.7398121</data>
+<data key="y">9.833918</data>
+</node>
+<node id="Latimer_Road">
+<data key="label">Latimer_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.933967</data>
+<data key="y">-7.54047</data>
+</node>
+<node id="Wood_Lane">
+<data key="label">Wood_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.4955635</data>
+<data key="y">9.769707</data>
+</node>
+<node id="Shepherd's_Bush_Market_">
+<data key="label">Shepherd's_Bush_Market_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.9474726</data>
+<data key="y">-6.824608</data>
+</node>
+<node id="Goldhawk_Road">
+<data key="label">Goldhawk_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.3610017</data>
+<data key="y">1.3638881</data>
+</node>
+<node id="Manor_House">
+<data key="label">Manor_House</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.7588167</data>
+<data key="y">-6.8473406</data>
+</node>
+<node id="Cockfosters">
+<data key="label">Cockfosters</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.9864182</data>
+<data key="y">7.6487284</data>
+</node>
+<node id="Oakwood">
+<data key="label">Oakwood</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.6609201</data>
+<data key="y">6.6062455</data>
+</node>
+<node id="Arnos_Grove">
+<data key="label">Arnos_Grove</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.35946</data>
+<data key="y">4.4505305</data>
+</node>
+<node id="Wood_Green">
+<data key="label">Wood_Green</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.9727898</data>
+<data key="y">-9.265631</data>
+</node>
+<node id="Turnpike_Lane">
+<data key="label">Turnpike_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.7730174</data>
+<data key="y">-5.449815</data>
+</node>
+<node id="Arsenal">
+<data key="label">Arsenal</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.4715624</data>
+<data key="y">10.190398</data>
+</node>
+<node id="Holloway_Road">
+<data key="label">Holloway_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.1807942</data>
+<data key="y">5.491351</data>
+</node>
+<node id="Caledonian_Road">
+<data key="label">Caledonian_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.2113657</data>
+<data key="y">8.989234</data>
+</node>
+<node id="Epping">
+<data key="label">Epping</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.22768</data>
+<data key="y">-2.7521875</data>
+</node>
+<node id="Theydon_Bois">
+<data key="label">Theydon_Bois</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.3480835</data>
+<data key="y">0.28833875</data>
+</node>
+<node id="Debden">
+<data key="label">Debden</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.6538696</data>
+<data key="y">-0.42514777</data>
+</node>
+<node id="Loughton">
+<data key="label">Loughton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.665256</data>
+<data key="y">-9.090781</data>
+</node>
+<node id="Buckhurst_Hill">
+<data key="label">Buckhurst_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.51758254</data>
+<data key="y">3.107743</data>
+</node>
+<node id="_Woodford">
+<data key="label">_Woodford</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.3472757</data>
+<data key="y">4.5159965</data>
+</node>
+<node id="South_Woodford">
+<data key="label">South_Woodford</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.011388</data>
+<data key="y">3.1337466</data>
+</node>
+<node id="Snaresbrook">
+<data key="label">Snaresbrook</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.1555734</data>
+<data key="y">-4.956502</data>
+</node>
+<node id="Leytonstone">
+<data key="label">Leytonstone</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.230327</data>
+<data key="y">0.4523016</data>
+</node>
+<node id="Leyton">
+<data key="label">Leyton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.2733936</data>
+<data key="y">10.268012</data>
+</node>
+<node id="Stratford">
+<data key="label">Stratford</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.7477791</data>
+<data key="y">-0.14865123</data>
+</node>
+<node id="Mile_End">
+<data key="label">Mile_End</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.5280647</data>
+<data key="y">-5.6602817</data>
+</node>
+<node id="Bethnal_Green_">
+<data key="label">Bethnal_Green_</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.14756036</data>
+<data key="y">-6.5339723</data>
+</node>
+<node id="Roding_Valley">
+<data key="label">Roding_Valley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.9340684</data>
+<data key="y">7.6465263</data>
+</node>
+<node id="Chigwell">
+<data key="label">Chigwell</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.858976</data>
+<data key="y">-6.3507333</data>
+</node>
+<node id="Grange_Hill">
+<data key="label">Grange_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.4291952</data>
+<data key="y">-7.4451537</data>
+</node>
+<node id="Hainault">
+<data key="label">Hainault</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.923387</data>
+<data key="y">7.972061</data>
+</node>
+<node id="Fairlop">
+<data key="label">Fairlop</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.1981125</data>
+<data key="y">4.3736215</data>
+</node>
+<node id="Barkingside">
+<data key="label">Barkingside</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.3448732</data>
+<data key="y">7.5845156</data>
+</node>
+<node id="Newbury_Park">
+<data key="label">Newbury_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.0944514</data>
+<data key="y">-1.6862835</data>
+</node>
+<node id="Gants_Hill">
+<data key="label">Gants_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.3885255</data>
+<data key="y">9.407016</data>
+</node>
+<node id="Redbridge">
+<data key="label">Redbridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.8264384</data>
+<data key="y">-4.7344847</data>
+</node>
+<node id="Wanstead">
+<data key="label">Wanstead</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.8009408</data>
+<data key="y">-7.5158243</data>
+</node>
+<node id="Bow_Road">
+<data key="label">Bow_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.112072</data>
+<data key="y">1.8934202</data>
+</node>
+<node id="Stepney_Green">
+<data key="label">Stepney_Green</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.524693</data>
+<data key="y">-0.6775353</data>
+</node>
+<node id="Bromley-by-Bow">
+<data key="label">Bromley-by-Bow</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.8056097</data>
+<data key="y">-6.1533427</data>
+</node>
+<node id="West_Ham">
+<data key="label">West_Ham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-9.133792</data>
+<data key="y">-5.854261</data>
+</node>
+<node id="Plaistow">
+<data key="label">Plaistow</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.6313486</data>
+<data key="y">4.8116355</data>
+</node>
+<node id="Upton_Park">
+<data key="label">Upton_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">3.4384003</data>
+<data key="y">1.7411566</data>
+</node>
+<node id="East_Ham">
+<data key="label">East_Ham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.6564565</data>
+<data key="y">-1.3181604</data>
+</node>
+<node id="Barking">
+<data key="label">Barking</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.5786138</data>
+<data key="y">-7.068767</data>
+</node>
+<node id="Upney">
+<data key="label">Upney</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.284036</data>
+<data key="y">-2.7029495</data>
+</node>
+<node id="Becontree">
+<data key="label">Becontree</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.9795365</data>
+<data key="y">-4.3038993</data>
+</node>
+<node id="Dagenham_East">
+<data key="label">Dagenham_East</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.1797786</data>
+<data key="y">-7.995547</data>
+</node>
+<node id="Elm_Park">
+<data key="label">Elm_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.3155231</data>
+<data key="y">-5.416713</data>
+</node>
+<node id="Horchurch">
+<data key="label">Horchurch</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.4715705</data>
+<data key="y">3.71998</data>
+</node>
+<node id="Upminister_Bridge">
+<data key="label">Upminister_Bridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.893893</data>
+<data key="y">-4.7193675</data>
+</node>
+<node id="Upminister">
+<data key="label">Upminister</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.6211065</data>
+<data key="y">-6.780994</data>
+</node>
+<node id="Whitechapel">
+<data key="label">Whitechapel</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.9055044</data>
+<data key="y">-3.9087636</data>
+</node>
+<node id="Bermondsey">
+<data key="label">Bermondsey</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.5282926</data>
+<data key="y">1.0613204</data>
+</node>
+<node id="Canada_Water">
+<data key="label">Canada_Water</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.0505915</data>
+<data key="y">3.537597</data>
+</node>
+<node id="Canary_Warf">
+<data key="label">Canary_Warf</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.178371</data>
+<data key="y">-5.1439605</data>
+</node>
+<node id="North_Greenwich">
+<data key="label">North_Greenwich</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.30023</data>
+<data key="y">-4.564591</data>
+</node>
+<node id="Canning_Town">
+<data key="label">Canning_Town</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.3590133</data>
+<data key="y">0.4979572</data>
+</node>
+<node id="South_Acton">
+<data key="label">South_Acton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.4969532</data>
+<data key="y">-8.484243</data>
+</node>
+<node id="Acton_Central">
+<data key="label">Acton_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.1602864</data>
+<data key="y">-6.442441</data>
+</node>
+<node id="Kensal_Rise">
+<data key="label">Kensal_Rise</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.53601444</data>
+<data key="y">-0.96229947</data>
+</node>
+<node id="Brondesbury_Park">
+<data key="label">Brondesbury_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.7761636</data>
+<data key="y">7.1827517</data>
+</node>
+<node id="Brondesbury">
+<data key="label">Brondesbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.844789</data>
+<data key="y">-1.1784219</data>
+</node>
+<node id="Finchley_Road_&amp;_Frognal">
+<data key="label">Finchley_Road_&amp;_Frognal</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.95039</data>
+<data key="y">-6.3288918</data>
+</node>
+<node id="Hampsted_Heath">
+<data key="label">Hampsted_Heath</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.215532</data>
+<data key="y">5.746582</data>
+</node>
+<node id="Gospel_Oak">
+<data key="label">Gospel_Oak</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.6128594</data>
+<data key="y">-1.7027673</data>
+</node>
+<node id="Camden_Road">
+<data key="label">Camden_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.186854</data>
+<data key="y">-3.005514</data>
+</node>
+<node id="Cledonian_Road_&amp;_Barnsbury">
+<data key="label">Cledonian_Road_&amp;_Barnsbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.790683</data>
+<data key="y">6.0306125</data>
+</node>
+<node id="Canonbury">
+<data key="label">Canonbury</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.704041</data>
+<data key="y">-8.815349</data>
+</node>
+<node id="Dalston_Kingsland">
+<data key="label">Dalston_Kingsland</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.1667373</data>
+<data key="y">4.4551206</data>
+</node>
+<node id="Hackney_Wick">
+<data key="label">Hackney_Wick</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.558995</data>
+<data key="y">2.0337446</data>
+</node>
+<node id="Homerton">
+<data key="label">Homerton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.6678628</data>
+<data key="y">9.50211</data>
+</node>
+<node id="Hackney_Central">
+<data key="label">Hackney_Central</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.2181916</data>
+<data key="y">1.2868631</data>
+</node>
+<node id="Dalston_Junction">
+<data key="label">Dalston_Junction</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.100828</data>
+<data key="y">4.534803</data>
+</node>
+<node id="Shoreditch_High_Street">
+<data key="label">Shoreditch_High_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.0233251</data>
+<data key="y">7.4050636</data>
+</node>
+<node id="Hoxton">
+<data key="label">Hoxton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-9.076496</data>
+<data key="y">7.872506</data>
+</node>
+<node id="Haggerston">
+<data key="label">Haggerston</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.938326</data>
+<data key="y">8.857551</data>
+</node>
+<node id="Shadwell">
+<data key="label">Shadwell</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.69575</data>
+<data key="y">9.018895</data>
+</node>
+<node id="Wapping">
+<data key="label">Wapping</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.010012</data>
+<data key="y">-6.144925</data>
+</node>
+<node id="Rotherhithe">
+<data key="label">Rotherhithe</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.326358</data>
+<data key="y">-0.34053028</data>
+</node>
+<node id="Surrey_Quays">
+<data key="label">Surrey_Quays</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.8158174</data>
+<data key="y">-8.025621</data>
+</node>
+<node id="New_Cross">
+<data key="label">New_Cross</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.968581</data>
+<data key="y">-8.081001</data>
+</node>
+<node id="New_Cross_Gate">
+<data key="label">New_Cross_Gate</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.306846</data>
+<data key="y">-2.638213</data>
+</node>
+<node id="Queens_Road_Peckham">
+<data key="label">Queens_Road_Peckham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.856452</data>
+<data key="y">3.4205914</data>
+</node>
+<node id="Peckham_Rye">
+<data key="label">Peckham_Rye</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.735686</data>
+<data key="y">-1.9326578</data>
+</node>
+<node id="Denmark_Hill">
+<data key="label">Denmark_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.038234</data>
+<data key="y">-3.6362007</data>
+</node>
+<node id="Clapham_High_Street">
+<data key="label">Clapham_High_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.650249</data>
+<data key="y">1.549157</data>
+</node>
+<node id="Imperial_Wharf">
+<data key="label">Imperial_Wharf</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.9692354</data>
+<data key="y">6.13994</data>
+</node>
+<node id="Clapham_Junction">
+<data key="label">Clapham_Junction</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">6.4587593</data>
+<data key="y">2.5009348</data>
+</node>
+<node id="Wandsworth_Road">
+<data key="label">Wandsworth_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.2408168</data>
+<data key="y">3.9286096</data>
+</node>
+<node id="Kensington_Olympia">
+<data key="label">Kensington_Olympia</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.8854046</data>
+<data key="y">5.893897</data>
+</node>
+<node id="Lewisham">
+<data key="label">Lewisham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.863096</data>
+<data key="y">7.270135</data>
+</node>
+<node id="Elverson_Road">
+<data key="label">Elverson_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.692047</data>
+<data key="y">-4.5123744</data>
+</node>
+<node id="Deptford_Bridge">
+<data key="label">Deptford_Bridge</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.906532</data>
+<data key="y">2.7845006</data>
+</node>
+<node id="Greenwich">
+<data key="label">Greenwich</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.5542617</data>
+<data key="y">6.052639</data>
+</node>
+<node id="Cutty_Sark_for_Maritime_Greenwich">
+<data key="label">Cutty_Sark_for_Maritime_Greenwich</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.7482667</data>
+<data key="y">-3.9919393</data>
+</node>
+<node id="Island_Gardens">
+<data key="label">Island_Gardens</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.948415</data>
+<data key="y">-3.8392494</data>
+</node>
+<node id="Mudchute">
+<data key="label">Mudchute</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.7949862</data>
+<data key="y">-5.254866</data>
+</node>
+<node id="Crossharbour">
+<data key="label">Crossharbour</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.857058</data>
+<data key="y">7.6375957</data>
+</node>
+<node id="South_Quay">
+<data key="label">South_Quay</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.0461645</data>
+<data key="y">4.3823514</data>
+</node>
+<node id="Heron_Quays">
+<data key="label">Heron_Quays</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.5282603</data>
+<data key="y">-2.365044</data>
+</node>
+<node id="West_India_Quay">
+<data key="label">West_India_Quay</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.6911002</data>
+<data key="y">6.2894244</data>
+</node>
+<node id="Poplar">
+<data key="label">Poplar</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.4358187</data>
+<data key="y">-0.2311867</data>
+</node>
+<node id="Bow_Church">
+<data key="label">Bow_Church</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.428489</data>
+<data key="y">3.7307618</data>
+</node>
+<node id="Devons_Road">
+<data key="label">Devons_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">4.8830276</data>
+<data key="y">-8.1176815</data>
+</node>
+<node id="Langdon_Park">
+<data key="label">Langdon_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.948306</data>
+<data key="y">-6.3618417</data>
+</node>
+<node id="All_Saints">
+<data key="label">All_Saints</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.2595823</data>
+<data key="y">-0.26881236</data>
+</node>
+<node id="Pudding_Mill_Lane">
+<data key="label">Pudding_Mill_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.76087</data>
+<data key="y">-2.8544376</data>
+</node>
+<node id="Stratford_High_Street">
+<data key="label">Stratford_High_Street</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.506978</data>
+<data key="y">8.252263</data>
+</node>
+<node id="Abbey_Road">
+<data key="label">Abbey_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">7.6483665</data>
+<data key="y">-3.0373082</data>
+</node>
+<node id="Star_Lane">
+<data key="label">Star_Lane</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.92312545</data>
+<data key="y">5.0643153</data>
+</node>
+<node id="Royal_Victoria">
+<data key="label">Royal_Victoria</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.069968</data>
+<data key="y">5.465076</data>
+</node>
+<node id="Custom_House_for_ExCeL">
+<data key="label">Custom_House_for_ExCeL</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.005626</data>
+<data key="y">4.463395</data>
+</node>
+<node id="Prince_Regent">
+<data key="label">Prince_Regent</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.990998</data>
+<data key="y">3.8038552</data>
+</node>
+<node id="Royal_Albert">
+<data key="label">Royal_Albert</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.770082</data>
+<data key="y">-5.586651</data>
+</node>
+<node id="Beckton_Park">
+<data key="label">Beckton_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">1.559921</data>
+<data key="y">9.389477</data>
+</node>
+<node id="Cyprus">
+<data key="label">Cyprus</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.346158</data>
+<data key="y">-6.104599</data>
+</node>
+<node id="Gallions_Reach">
+<data key="label">Gallions_Reach</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">9.302459</data>
+<data key="y">6.779184</data>
+</node>
+<node id="Beckton">
+<data key="label">Beckton</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.6859026</data>
+<data key="y">3.4689567</data>
+</node>
+<node id="Woolwich_Arsenal">
+<data key="label">Woolwich_Arsenal</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.3929727</data>
+<data key="y">-4.70101</data>
+</node>
+<node id="King_George_V">
+<data key="label">King_George_V</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.0010356886</data>
+<data key="y">-1.9908978</data>
+</node>
+<node id="London_City_Airport">
+<data key="label">London_City_Airport</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.1934812</data>
+<data key="y">5.65661</data>
+</node>
+<node id="West_Silvertown">
+<data key="label">West_Silvertown</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-8.252937</data>
+<data key="y">7.3245163</data>
+</node>
+<node id="Pontoon_Dock">
+<data key="label">Pontoon_Dock</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.3107615</data>
+<data key="y">-2.6473997</data>
+</node>
+<node id="Stratford_International">
+<data key="label">Stratford_International</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.1817865</data>
+<data key="y">-2.277178</data>
+</node>
+<node id="Tower_Gateway">
+<data key="label">Tower_Gateway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.087795</data>
+<data key="y">8.872729</data>
+</node>
+<node id="Limehouse">
+<data key="label">Limehouse</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.8751037</data>
+<data key="y">5.578677</data>
+</node>
+<node id="Westferry">
+<data key="label">Westferry</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-5.29641</data>
+<data key="y">-6.5545897</data>
+</node>
+<node id="Blackwall">
+<data key="label">Blackwall</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-7.4726405</data>
+<data key="y">2.57317</data>
+</node>
+<node id="East_India">
+<data key="label">East_India</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-4.3823905</data>
+<data key="y">-5.4262266</data>
+</node>
+<node id="Upper_Holloway">
+<data key="label">Upper_Holloway</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.4376438</data>
+<data key="y">-8.488599</data>
+</node>
+<node id="Crouch_Hill">
+<data key="label">Crouch_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-2.8753011</data>
+<data key="y">-2.397236</data>
+</node>
+<node id="Harringay_Green_Lanes">
+<data key="label">Harringay_Green_Lanes</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-3.4925346</data>
+<data key="y">1.4883741</data>
+</node>
+<node id="South_Tottenham">
+<data key="label">South_Tottenham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.464342</data>
+<data key="y">-3.742582</data>
+</node>
+<node id="Walthamstow_Queen’s_Road">
+<data key="label">Walthamstow_Queen’s_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.35999</data>
+<data key="y">-8.338377</data>
+</node>
+<node id="Leyton_Midland_Road">
+<data key="label">Leyton_Midland_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">8.457451</data>
+<data key="y">-3.6107404</data>
+</node>
+<node id="Leytonstone_High_Road">
+<data key="label">Leytonstone_High_Road</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.13161741</data>
+<data key="y">4.002293</data>
+</node>
+<node id="Wanstead_Park">
+<data key="label">Wanstead_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-9.130267</data>
+<data key="y">3.0935352</data>
+</node>
+<node id="Woodgrange_Park">
+<data key="label">Woodgrange_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">5.2264895</data>
+<data key="y">7.1346374</data>
+</node>
+<node id="Brockley">
+<data key="label">Brockley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">0.43699962</data>
+<data key="y">1.9107857</data>
+</node>
+<node id="Honor_Oak_Park">
+<data key="label">Honor_Oak_Park</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.1834857</data>
+<data key="y">5.737221</data>
+</node>
+<node id="Forest_Hill">
+<data key="label">Forest_Hill</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.807916</data>
+<data key="y">10.00204</data>
+</node>
+<node id="Sydenham">
+<data key="label">Sydenham</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.0808463</data>
+<data key="y">-7.032644</data>
+</node>
+<node id="Penge_West">
+<data key="label">Penge_West</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-0.57079095</data>
+<data key="y">-1.0123049</data>
+</node>
+<node id="Anerley">
+<data key="label">Anerley</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">2.3708673</data>
+<data key="y">-3.016381</data>
+</node>
+<node id="Norwood_Junction">
+<data key="label">Norwood_Junction</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-6.2070956</data>
+<data key="y">-2.434074</data>
+</node>
+<node id="West_Croydon">
+<data key="label">West_Croydon</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">10.306283</data>
+<data key="y">-3.120456</data>
+</node>
+<node id="Crystal_Palace">
+<data key="label">Crystal_Palace</data>
+<data key="size">4.0</data>
+<data key="r">0</data>
+<data key="g">0</data>
+<data key="b">0</data>
+<data key="x">-1.5153444</data>
+<data key="y">9.07725</data>
+</node>
+<edge id="0" source="Oxford_Circus" target="Bond_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="1" source="Marble_Arch" target="Bond_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="2" source="Notting_Hill_Gate" target="Queensway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="3" source="Queensway" target="Lancaster_Gate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="4" source="Lancaster_Gate" target="Marble_Arch">
+<data key="weight">1.0</data>
+</edge>
+<edge id="5" source="Oxford_Circus" target="Holborn">
+<data key="weight">1.0</data>
+</edge>
+<edge id="6" source="Holborn" target="Chancery_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="7" source="Chancery_Lane" target="St_Paul's">
+<data key="weight">1.0</data>
+</edge>
+<edge id="8" source="St_Paul's" target="Bank_">
+<data key="weight">1.0</data>
+</edge>
+<edge id="9" source="Bank_" target="Liverpool_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="10" source="Gloucester_Road" target="Knightsbridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="11" source="Knightsbridge" target="Hyde_Park_Corner">
+<data key="weight">1.0</data>
+</edge>
+<edge id="12" source="Hyde_Park_Corner" target="Green_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="13" source="Green_Park" target="Piccadilly_Circus">
+<data key="weight">1.0</data>
+</edge>
+<edge id="14" source="Piccadilly_Circus" target="Leicester_Square">
+<data key="weight">1.0</data>
+</edge>
+<edge id="15" source="Leicester_Square" target="Covent_Garden">
+<data key="weight">1.0</data>
+</edge>
+<edge id="16" source="Covent_Garden" target="Holborn">
+<data key="weight">1.0</data>
+</edge>
+<edge id="17" source="Holborn" target="Russel_Square">
+<data key="weight">1.0</data>
+</edge>
+<edge id="18" source="Russel_Square" target="King''s_Cross_St_Pancras">
+<data key="weight">1.0</data>
+</edge>
+<edge id="19" source="King''s_Cross_St_Pancras" target="Euston">
+<data key="weight">1.0</data>
+</edge>
+<edge id="20" source="Euston" target="Warren_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="21" source="Warren_Street" target="Oxford_Circus">
+<data key="weight">1.0</data>
+</edge>
+<edge id="22" source="Oxford_Circus" target="Green_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="23" source="Green_Park" target="Victoria">
+<data key="weight">1.0</data>
+</edge>
+<edge id="24" source="Victoria" target="Pimlico">
+<data key="weight">1.0</data>
+</edge>
+<edge id="25" source="Pimlico" target="Vauxhall">
+<data key="weight">1.0</data>
+</edge>
+<edge id="26" source="Warren_Street" target="Goodge_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="27" source="Goodge_Street" target="Tottenham_Court_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="28" source="Tottenham_Court_Road" target="Leicester_Square">
+<data key="weight">1.0</data>
+</edge>
+<edge id="29" source="Leicester_Square" target="Charing_Cross">
+<data key="weight">1.0</data>
+</edge>
+<edge id="30" source="Charing_Cross" target="Embankment">
+<data key="weight">1.0</data>
+</edge>
+<edge id="31" source="Embankment" target="Waterloo">
+<data key="weight">1.0</data>
+</edge>
+<edge id="32" source="Waterloo" target="Kennington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="33" source="Kennington" target="Elephant_&amp;_Castle">
+<data key="weight">1.0</data>
+</edge>
+<edge id="34" source="Borough" target="Elephant_&amp;_Castle">
+<data key="weight">1.0</data>
+</edge>
+<edge id="35" source="Borough" target="London_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="36" source="London_Bridge" target="Monument">
+<data key="weight">1.0</data>
+</edge>
+<edge id="37" source="Monument" target="Moorgate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="38" source="Moorgate" target="Old_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="39" source="Old_Street" target="Angel">
+<data key="weight">1.0</data>
+</edge>
+<edge id="40" source="Angel" target="King''s_Cross_St_Pancras">
+<data key="weight">1.0</data>
+</edge>
+<edge id="41" source="Kennington" target="Oval">
+<data key="weight">1.0</data>
+</edge>
+<edge id="42" source="Oval" target="Stockwell">
+<data key="weight">1.0</data>
+</edge>
+<edge id="43" source="Stockwell" target="Vauxhall">
+<data key="weight">1.0</data>
+</edge>
+<edge id="44" source="Gloucester_Road" target="South_Kensington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="45" source="South_Kensington" target="Sloane_Square">
+<data key="weight">1.0</data>
+</edge>
+<edge id="46" source="Sloane_Square" target="Victoria">
+<data key="weight">1.0</data>
+</edge>
+<edge id="47" source="Victoria" target="St_James's_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="48" source="St_James's_Park" target="Westminister">
+<data key="weight">1.0</data>
+</edge>
+<edge id="49" source="Westminister" target="Embankment">
+<data key="weight">1.0</data>
+</edge>
+<edge id="50" source="Embankment" target="Temple">
+<data key="weight">1.0</data>
+</edge>
+<edge id="51" source="Temple" target="Blackfriars">
+<data key="weight">1.0</data>
+</edge>
+<edge id="52" source="Blackfriars" target="Mansion_House">
+<data key="weight">1.0</data>
+</edge>
+<edge id="53" source="Mansion_House" target="Cannon_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="54" source="Cannon_Street" target="Monument">
+<data key="weight">1.0</data>
+</edge>
+<edge id="55" source="Monument" target="Tower_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="56" source="Tower_Hill" target="Aldgate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="57" source="Tower_Hill" target="Aldgate_East">
+<data key="weight">1.0</data>
+</edge>
+<edge id="58" source="Aldgate" target="Liverpool_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="59" source="Aldgate_East" target="Liverpool_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="60" source="Liverpool_Street" target="Moorgate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="61" source="Moorgate" target="Barbican">
+<data key="weight">1.0</data>
+</edge>
+<edge id="62" source="Barbican" target="Farrington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="63" source="Farrington" target="King''s_Cross_St_Pancras">
+<data key="weight">1.0</data>
+</edge>
+<edge id="64" source="King''s_Cross_St_Pancras" target="Euston_Square">
+<data key="weight">1.0</data>
+</edge>
+<edge id="65" source="Euston_Square" target="Great_Portland_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="66" source="Great_Portland_Street" target="Baker_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="67" source="Edgware_Road" target="Baker_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="68" source="Edgware_Road" target="Bayswater">
+<data key="weight">1.0</data>
+</edge>
+<edge id="69" source="Bayswater" target="Notting_Hill_Gate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="70" source="Notting_Hill_Gate" target="High_Street_Kensington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="71" source="High_Street_Kensington" target="Gloucester_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="72" source="Baker_Street" target="Bond_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="73" source="Bond_Street" target="Green_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="74" source="Green_Park" target="Westminister">
+<data key="weight">1.0</data>
+</edge>
+<edge id="75" source="Westminister" target="Waterloo">
+<data key="weight">1.0</data>
+</edge>
+<edge id="76" source="Waterloo" target="Southwark">
+<data key="weight">1.0</data>
+</edge>
+<edge id="77" source="Southwark" target="London_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="78" source="Baker_Street" target="Regent's_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="79" source="Regent's_Park" target="Oxford_Circus">
+<data key="weight">1.0</data>
+</edge>
+<edge id="80" source="Oxford_Circus" target="Piccadilly_Circus">
+<data key="weight">1.0</data>
+</edge>
+<edge id="81" source="Piccadilly_Circus" target="Charing_Cross">
+<data key="weight">1.0</data>
+</edge>
+<edge id="82" source="Waterloo" target="Lambeth_North">
+<data key="weight">1.0</data>
+</edge>
+<edge id="83" source="Lambeth_North" target="Elephant_&amp;_Castle">
+<data key="weight">1.0</data>
+</edge>
+<edge id="84" source="Baker_Street" target="Marylebone">
+<data key="weight">1.0</data>
+</edge>
+<edge id="85" source="Marylebone" target="Edgware_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="86" source="Edgware_Road" target="Paddington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="88" source="King''s_Cross_St_Pancras" target="Highbury_&amp;_Islington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="89" source="Finsbury_Park" target="Highbury_&amp;_Islington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="90" source="Finsbury_Park" target="Seven_Sisters">
+<data key="weight">1.0</data>
+</edge>
+<edge id="91" source="Seven_Sisters" target="Tottenham_Hale">
+<data key="weight">1.0</data>
+</edge>
+<edge id="92" source="Tottenham_Hale" target="Blackhorse_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="93" source="Blackhorse_Road" target="Walthamstow_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="94" source="Euston" target="Mornington_Crescent">
+<data key="weight">1.0</data>
+</edge>
+<edge id="95" source="Mornington_Crescent" target="Camden_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="96" source="Euston" target="Camden_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="97" source="Edgware" target="Burnt_Oak">
+<data key="weight">1.0</data>
+</edge>
+<edge id="98" source="Burnt_Oak" target="Colindale">
+<data key="weight">1.0</data>
+</edge>
+<edge id="99" source="Colindale" target="Hendon_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="100" source="Hendon_Central" target="Brent_Cross">
+<data key="weight">1.0</data>
+</edge>
+<edge id="101" source="Brent_Cross" target="Golders_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="102" source="Hampstead" target="Golders_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="103" source="Hampstead" target="Belsize_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="104" source="Belsize_Park" target="Chalk_Farm">
+<data key="weight">1.0</data>
+</edge>
+<edge id="105" source="Camden_Town" target="Chalk_Farm">
+<data key="weight">1.0</data>
+</edge>
+<edge id="106" source="High_Barnet" target="Totteridge_&amp;_Whetstone">
+<data key="weight">1.0</data>
+</edge>
+<edge id="107" source="Totteridge_&amp;_Whetstone" target="Woodside_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="108" source="Woodside_Park" target="West_Finchley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="109" source="Finchley_Central" target="West_Finchley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="110" source="Finchley_Central" target="Mill_Hill_East">
+<data key="weight">1.0</data>
+</edge>
+<edge id="111" source="Finchley_Central" target="East_Finchley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="112" source="East_Finchley" target="Highgate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="113" source="Highgate" target="Archway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="114" source="Archway" target="Tufnell_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="115" source="Tufnell_Park" target="Kentish_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="116" source="Kentish_Town" target="Camden_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="117" source="Morden" target="South_Wimbledon">
+<data key="weight">1.0</data>
+</edge>
+<edge id="118" source="South_Wimbledon" target="Colliers_Wood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="119" source="Tooting_Broadway" target="Colliers_Wood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="120" source="Tooting_Bec" target="Tooting_Broadway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="121" source="Balham" target="Tooting_Bec">
+<data key="weight">1.0</data>
+</edge>
+<edge id="122" source="Clapham_South" target="Balham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="123" source="Clapham_Common" target="Clapham_South">
+<data key="weight">1.0</data>
+</edge>
+<edge id="124" source="Clapham_North" target="Clapham_Common">
+<data key="weight">1.0</data>
+</edge>
+<edge id="125" source="Stockwell" target="Clapham_North">
+<data key="weight">1.0</data>
+</edge>
+<edge id="126" source="Stockwell" target="Brixton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="127" source="Gloucester_Road" target="Earl's_Court">
+<data key="weight">1.0</data>
+</edge>
+<edge id="128" source="Earl's_Court" target="Barons_Court">
+<data key="weight">1.0</data>
+</edge>
+<edge id="129" source="Barons_Court" target="Hammersmith">
+<data key="weight">1.0</data>
+</edge>
+<edge id="130" source="Hammersmith" target="Turnham_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="131" source="Turnham_Green" target="Acton_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="132" source="Heathrow_Terminal_1,2,3" target="Heathrow_Terminal_5">
+<data key="weight">1.0</data>
+</edge>
+<edge id="133" source="Heathrow_Terminal_1,2,3" target="Heathrow_Terminal_4">
+<data key="weight">1.0</data>
+</edge>
+<edge id="134" source="Heathrow_Terminal_4" target="Heathrow_Terminal_1,2,3">
+<data key="weight">1.0</data>
+</edge>
+<edge id="135" source="Heathrow_Terminal_1,2,3" target="Hatton_Cross">
+<data key="weight">1.0</data>
+</edge>
+<edge id="136" source="Hounslow_West" target="Hatton_Cross">
+<data key="weight">1.0</data>
+</edge>
+<edge id="137" source="Hounslow_Central" target="Hounslow_West">
+<data key="weight">1.0</data>
+</edge>
+<edge id="138" source="Hounslow_Central" target="Hounslow_East">
+<data key="weight">1.0</data>
+</edge>
+<edge id="139" source="Hounslow_East" target="Osterley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="140" source="Osterley" target="Boston_Manor">
+<data key="weight">1.0</data>
+</edge>
+<edge id="141" source="Boston_Manor" target="Northfields">
+<data key="weight">1.0</data>
+</edge>
+<edge id="142" source="Northfields" target="South_Ealing">
+<data key="weight">1.0</data>
+</edge>
+<edge id="143" source="South_Ealing" target="Acton_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="144" source="Wimbledon" target="Wimbledon_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="145" source="Wimbledon_Park" target="Southfields">
+<data key="weight">1.0</data>
+</edge>
+<edge id="146" source="Southfields" target="East_Putney">
+<data key="weight">1.0</data>
+</edge>
+<edge id="147" source="East_Putney" target="Putney_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="148" source="Parsons_Green" target="Putney_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="149" source="Fulham_Broadway" target="Parsons_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="150" source="West_Brompton" target="Fulham_Broadway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="151" source="Earl's_Court" target="West_Brompton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="152" source="Earl's_Court" target="West_Kensington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="153" source="West_Kensington" target="Barons_Court">
+<data key="weight">1.0</data>
+</edge>
+<edge id="154" source="Hammersmith" target="Ravenscourt_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="155" source="Ravenscourt_Park" target="Stamford_Brook">
+<data key="weight">1.0</data>
+</edge>
+<edge id="156" source="Stamford_Brook" target="Turnham_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="157" source="Richmond" target="Kew_Gardens">
+<data key="weight">1.0</data>
+</edge>
+<edge id="158" source="Kew_Gardens" target="Gunnesbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="159" source="Gunnesbury" target="Turnham_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="160" source="Turnham_Green" target="Chiswick_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="161" source="Chiswick_Park" target="Acton_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="162" source="Acton_Town" target="Ealing_Common">
+<data key="weight">1.0</data>
+</edge>
+<edge id="163" source="Ealing_Common" target="Ealing_Broadway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="164" source="Holland_Park" target="Notting_Hill_Gate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="165" source="Shepard's_Bush" target="Holland_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="166" source="Shepard's_Bush" target="White_City">
+<data key="weight">1.0</data>
+</edge>
+<edge id="167" source="White_City" target="East_Acton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="168" source="North_Acton" target="East_Acton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="169" source="West_Acton" target="North_Acton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="170" source="Ealing_Broadway" target="West_Acton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="171" source="West_Ruislip" target="Ruislip_Gardens">
+<data key="weight">1.0</data>
+</edge>
+<edge id="172" source="Ruislip_Gardens" target="South_Ruislip">
+<data key="weight">1.0</data>
+</edge>
+<edge id="173" source="Northolt" target="South_Ruislip">
+<data key="weight">1.0</data>
+</edge>
+<edge id="174" source="Northolt" target="Greenford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="175" source="Greenford" target="Perivale">
+<data key="weight">1.0</data>
+</edge>
+<edge id="176" source="Perivale" target="Hanger_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="177" source="Park_Royal" target="North_Ealing">
+<data key="weight">1.0</data>
+</edge>
+<edge id="178" source="North_Ealing" target="Ealing_Broadway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="179" source="North_Acton" target="Hanger_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="180" source="Sudbury_Town" target="Alperton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="181" source="Alperton" target="Park_Royal">
+<data key="weight">1.0</data>
+</edge>
+<edge id="182" source="Sudbury_Hill" target="Sudbury_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="183" source="Uxbridge" target="Hillingdon">
+<data key="weight">1.0</data>
+</edge>
+<edge id="184" source="Hillingdon" target="Ickenham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="185" source="Ickenham" target="Ruislip">
+<data key="weight">1.0</data>
+</edge>
+<edge id="186" source="Ruislip" target="Ruislip_Manor">
+<data key="weight">1.0</data>
+</edge>
+<edge id="187" source="Eastcote" target="Ruislip_Manor">
+<data key="weight">1.0</data>
+</edge>
+<edge id="188" source="Rayners_Lane" target="Eastcote">
+<data key="weight">1.0</data>
+</edge>
+<edge id="189" source="South_Harrow" target="Rayners_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="190" source="Sudbury_Hill" target="South_Harrow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="191" source="Rayners_Lane" target="West_Harrow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="192" source="West_Harrow" target="Harrow-on-the-Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="193" source="Amersham" target="Chalfont_&amp;_Latimer">
+<data key="weight">1.0</data>
+</edge>
+<edge id="194" source="Chesham" target="Chalfont_&amp;_Latimer">
+<data key="weight">1.0</data>
+</edge>
+<edge id="195" source="Chalfont_&amp;_Latimer" target="Chorleywood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="196" source="Chorleywood" target="Rickmansworth">
+<data key="weight">1.0</data>
+</edge>
+<edge id="197" source="Rickmansworth" target="Moor_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="198" source="Moor_Park" target="Croxley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="199" source="Croxley" target="Watford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="200" source="Pinner" target="NorthHarrow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="201" source="Northwood_Hills" target="Pinner">
+<data key="weight">1.0</data>
+</edge>
+<edge id="202" source="Northwood" target="Northwood_Hills">
+<data key="weight">1.0</data>
+</edge>
+<edge id="203" source="Moor_Park" target="Northwood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="204" source="NorthHarrow" target="Harrow-on-the-Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="205" source="Finchley_Road" target="Baker_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="206" source="Finchley_Road" target="Wembley_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="207" source="Wembley_Park" target="Preston_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="208" source="Preston_Road" target="Northwick_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="209" source="Northwick_Park" target="Harrow-on-the-Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="210" source="Watford_Junction" target="Watford_High_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="211" source="Watford_High_Street" target="Bushey">
+<data key="weight">1.0</data>
+</edge>
+<edge id="212" source="Bushey" target="Carpenders_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="213" source="Carpenders_Park" target="Hatch_End">
+<data key="weight">1.0</data>
+</edge>
+<edge id="214" source="Hatch_End" target="Headstone_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="215" source="Headstone_Lane" target="Harrow_&amp;_Wealdstone">
+<data key="weight">1.0</data>
+</edge>
+<edge id="216" source="Harrow_&amp;_Wealdstone" target="Kenton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="217" source="Kenton" target="South_Kenton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="218" source="South_Kenton" target="North_Wembley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="219" source="North_Wembley" target="Wembley_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="220" source="Wembley_Central" target="Stonebridge_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="221" source="Stonebridge_Park" target="Harlesden">
+<data key="weight">1.0</data>
+</edge>
+<edge id="222" source="Harlesden" target="Willesden_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="223" source="Willesden_Junction" target="Kensal_Green_">
+<data key="weight">1.0</data>
+</edge>
+<edge id="224" source="Kensal_Green_" target="Queen's_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="225" source="Kilburn_Park" target="Malda_Vale">
+<data key="weight">1.0</data>
+</edge>
+<edge id="226" source="Queen's_Park" target="Kilburn_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="227" source="Malda_Vale" target="Warwick_Avenue">
+<data key="weight">1.0</data>
+</edge>
+<edge id="228" source="Warwick_Avenue" target="Paddington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="229" source="Baker_Street" target="St_John's_Wood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="230" source="St_John's_Wood" target="Swiss_Cottage">
+<data key="weight">1.0</data>
+</edge>
+<edge id="231" source="Swiss_Cottage" target="Finchley_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="232" source="Queensbury" target="Kingsbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="233" source="Neasden" target="Dollis_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="234" source="Willesden_Green_" target="Dollis_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="235" source="Kilburn" target="Willesden_Green_">
+<data key="weight">1.0</data>
+</edge>
+<edge id="236" source="West_Hampstead" target="Kilburn">
+<data key="weight">1.0</data>
+</edge>
+<edge id="237" source="Finchley_Road" target="West_Hampstead">
+<data key="weight">1.0</data>
+</edge>
+<edge id="238" source="Stanmore" target="Canons_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="239" source="Canons_Park" target="Queensbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="240" source="Paddington" target="Royal_Oak_">
+<data key="weight">1.0</data>
+</edge>
+<edge id="241" source="Royal_Oak_" target="Westburn_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="242" source="Westburn_Park" target="Ladbroke_Grove">
+<data key="weight">1.0</data>
+</edge>
+<edge id="243" source="Ladbroke_Grove" target="Latimer_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="244" source="Latimer_Road" target="White_City">
+<data key="weight">1.0</data>
+</edge>
+<edge id="245" source="White_City" target="Wood_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="246" source="Wood_Lane" target="Latimer_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="247" source="Shepherd's_Bush_Market_" target="Wood_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="248" source="Shepherd's_Bush_Market_" target="Goldhawk_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="249" source="Goldhawk_Road" target="Hammersmith">
+<data key="weight">1.0</data>
+</edge>
+<edge id="250" source="Shepard's_Bush" target="Willesden_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="251" source="Manor_House" target="Finsbury_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="252" source="Cockfosters" target="Oakwood">
+<data key="weight">1.0</data>
+</edge>
+<edge id="253" source="Oakwood" target="Arnos_Grove">
+<data key="weight">1.0</data>
+</edge>
+<edge id="254" source="Arnos_Grove" target="Wood_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="255" source="Turnpike_Lane" target="Wood_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="256" source="Manor_House" target="Turnpike_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="257" source="Finsbury_Park" target="Arsenal">
+<data key="weight">1.0</data>
+</edge>
+<edge id="258" source="Arsenal" target="Holloway_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="259" source="Holloway_Road" target="Caledonian_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="260" source="Caledonian_Road" target="King''s_Cross_St_Pancras">
+<data key="weight">1.0</data>
+</edge>
+<edge id="261" source="Epping" target="Theydon_Bois">
+<data key="weight">1.0</data>
+</edge>
+<edge id="262" source="Theydon_Bois" target="Debden">
+<data key="weight">1.0</data>
+</edge>
+<edge id="263" source="Debden" target="Loughton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="264" source="Loughton" target="Buckhurst_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="265" source="Buckhurst_Hill" target="_Woodford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="266" source="_Woodford" target="South_Woodford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="267" source="South_Woodford" target="Snaresbrook">
+<data key="weight">1.0</data>
+</edge>
+<edge id="268" source="Snaresbrook" target="Leytonstone">
+<data key="weight">1.0</data>
+</edge>
+<edge id="269" source="Leytonstone" target="Leyton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="270" source="Leyton" target="Stratford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="271" source="Stratford" target="Mile_End">
+<data key="weight">1.0</data>
+</edge>
+<edge id="272" source="Mile_End" target="Bethnal_Green_">
+<data key="weight">1.0</data>
+</edge>
+<edge id="273" source="Bethnal_Green_" target="Liverpool_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="274" source="Roding_Valley" target="_Woodford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="275" source="Roding_Valley" target="Chigwell">
+<data key="weight">1.0</data>
+</edge>
+<edge id="276" source="Chigwell" target="Grange_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="277" source="Grange_Hill" target="Hainault">
+<data key="weight">1.0</data>
+</edge>
+<edge id="278" source="Fairlop" target="Hainault">
+<data key="weight">1.0</data>
+</edge>
+<edge id="279" source="Barkingside" target="Fairlop">
+<data key="weight">1.0</data>
+</edge>
+<edge id="280" source="Barkingside" target="Newbury_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="281" source="Newbury_Park" target="Gants_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="282" source="Gants_Hill" target="Redbridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="283" source="Redbridge" target="Wanstead">
+<data key="weight">1.0</data>
+</edge>
+<edge id="284" source="Wanstead" target="Leytonstone">
+<data key="weight">1.0</data>
+</edge>
+<edge id="285" source="Mile_End" target="Bow_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="286" source="Mile_End" target="Stepney_Green">
+<data key="weight">1.0</data>
+</edge>
+<edge id="287" source="Bow_Road" target="Bromley-by-Bow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="288" source="West_Ham" target="Bromley-by-Bow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="289" source="West_Ham" target="Plaistow">
+<data key="weight">1.0</data>
+</edge>
+<edge id="290" source="Plaistow" target="Upton_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="291" source="Upton_Park" target="East_Ham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="292" source="East_Ham" target="Barking">
+<data key="weight">1.0</data>
+</edge>
+<edge id="293" source="Barking" target="Upney">
+<data key="weight">1.0</data>
+</edge>
+<edge id="294" source="Upney" target="Becontree">
+<data key="weight">1.0</data>
+</edge>
+<edge id="295" source="Becontree" target="Dagenham_East">
+<data key="weight">1.0</data>
+</edge>
+<edge id="296" source="Dagenham_East" target="Elm_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="297" source="Elm_Park" target="Horchurch">
+<data key="weight">1.0</data>
+</edge>
+<edge id="298" source="Horchurch" target="Upminister_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="299" source="Upminister_Bridge" target="Upminister">
+<data key="weight">1.0</data>
+</edge>
+<edge id="300" source="Stepney_Green" target="Whitechapel">
+<data key="weight">1.0</data>
+</edge>
+<edge id="301" source="Aldgate_East" target="Whitechapel">
+<data key="weight">1.0</data>
+</edge>
+<edge id="302" source="Stratford" target="West_Ham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="303" source="London_Bridge" target="Bermondsey">
+<data key="weight">1.0</data>
+</edge>
+<edge id="304" source="Bermondsey" target="Canada_Water">
+<data key="weight">1.0</data>
+</edge>
+<edge id="305" source="Canada_Water" target="Canary_Warf">
+<data key="weight">1.0</data>
+</edge>
+<edge id="306" source="Canary_Warf" target="North_Greenwich">
+<data key="weight">1.0</data>
+</edge>
+<edge id="307" source="North_Greenwich" target="Canning_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="308" source="Neasden" target="Wembley_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="309" source="Wembley_Park" target="Kingsbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="310" source="Gunnesbury" target="South_Acton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="311" source="South_Acton" target="Acton_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="312" source="Willesden_Junction" target="Acton_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="313" source="Willesden_Junction" target="Kensal_Rise">
+<data key="weight">1.0</data>
+</edge>
+<edge id="314" source="Brondesbury_Park" target="Brondesbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="315" source="Kensal_Rise" target="Brondesbury_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="316" source="Brondesbury" target="West_Hampstead">
+<data key="weight">1.0</data>
+</edge>
+<edge id="317" source="West_Hampstead" target="Finchley_Road_&amp;_Frognal">
+<data key="weight">1.0</data>
+</edge>
+<edge id="318" source="Finchley_Road_&amp;_Frognal" target="Hampsted_Heath">
+<data key="weight">1.0</data>
+</edge>
+<edge id="319" source="Hampsted_Heath" target="Gospel_Oak">
+<data key="weight">1.0</data>
+</edge>
+<edge id="320" source="Gospel_Oak" target="Camden_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="321" source="Camden_Road" target="Cledonian_Road_&amp;_Barnsbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="322" source="Cledonian_Road_&amp;_Barnsbury" target="Highbury_&amp;_Islington">
+<data key="weight">1.0</data>
+</edge>
+<edge id="323" source="Highbury_&amp;_Islington" target="Canonbury">
+<data key="weight">1.0</data>
+</edge>
+<edge id="324" source="Canonbury" target="Dalston_Kingsland">
+<data key="weight">1.0</data>
+</edge>
+<edge id="325" source="Hackney_Wick" target="Stratford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="326" source="Hackney_Wick" target="Homerton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="327" source="Homerton" target="Hackney_Central">
+<data key="weight">1.0</data>
+</edge>
+<edge id="328" source="Hackney_Central" target="Dalston_Kingsland">
+<data key="weight">1.0</data>
+</edge>
+<edge id="329" source="Canonbury" target="Dalston_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="330" source="Whitechapel" target="Shoreditch_High_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="331" source="Shoreditch_High_Street" target="Hoxton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="332" source="Haggerston" target="Dalston_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="333" source="Haggerston" target="Hoxton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="334" source="Whitechapel" target="Shadwell">
+<data key="weight">1.0</data>
+</edge>
+<edge id="335" source="Shadwell" target="Wapping">
+<data key="weight">1.0</data>
+</edge>
+<edge id="336" source="Rotherhithe" target="Wapping">
+<data key="weight">1.0</data>
+</edge>
+<edge id="337" source="Rotherhithe" target="Canada_Water">
+<data key="weight">1.0</data>
+</edge>
+<edge id="338" source="Canada_Water" target="Surrey_Quays">
+<data key="weight">1.0</data>
+</edge>
+<edge id="339" source="New_Cross" target="Surrey_Quays">
+<data key="weight">1.0</data>
+</edge>
+<edge id="340" source="Surrey_Quays" target="New_Cross_Gate">
+<data key="weight">1.0</data>
+</edge>
+<edge id="341" source="Queens_Road_Peckham" target="Surrey_Quays">
+<data key="weight">1.0</data>
+</edge>
+<edge id="342" source="Peckham_Rye" target="Queens_Road_Peckham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="343" source="Denmark_Hill" target="Peckham_Rye">
+<data key="weight">1.0</data>
+</edge>
+<edge id="344" source="Denmark_Hill" target="Clapham_High_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="345" source="West_Brompton" target="Imperial_Wharf">
+<data key="weight">1.0</data>
+</edge>
+<edge id="346" source="Clapham_Junction" target="Imperial_Wharf">
+<data key="weight">1.0</data>
+</edge>
+<edge id="347" source="Wandsworth_Road" target="Clapham_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="348" source="Clapham_High_Street" target="Wandsworth_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="349" source="West_Brompton" target="Kensington_Olympia">
+<data key="weight">1.0</data>
+</edge>
+<edge id="350" source="Shepard's_Bush" target="Kensington_Olympia">
+<data key="weight">1.0</data>
+</edge>
+<edge id="351" source="Lewisham" target="Elverson_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="352" source="Elverson_Road" target="Deptford_Bridge">
+<data key="weight">1.0</data>
+</edge>
+<edge id="353" source="Deptford_Bridge" target="Greenwich">
+<data key="weight">1.0</data>
+</edge>
+<edge id="354" source="Greenwich" target="Cutty_Sark_for_Maritime_Greenwich">
+<data key="weight">1.0</data>
+</edge>
+<edge id="355" source="Cutty_Sark_for_Maritime_Greenwich" target="Island_Gardens">
+<data key="weight">1.0</data>
+</edge>
+<edge id="356" source="Island_Gardens" target="Mudchute">
+<data key="weight">1.0</data>
+</edge>
+<edge id="357" source="Mudchute" target="Crossharbour">
+<data key="weight">1.0</data>
+</edge>
+<edge id="358" source="Crossharbour" target="South_Quay">
+<data key="weight">1.0</data>
+</edge>
+<edge id="359" source="South_Quay" target="Heron_Quays">
+<data key="weight">1.0</data>
+</edge>
+<edge id="360" source="Heron_Quays" target="Canary_Warf">
+<data key="weight">1.0</data>
+</edge>
+<edge id="361" source="Canary_Warf" target="West_India_Quay">
+<data key="weight">1.0</data>
+</edge>
+<edge id="362" source="Poplar" target="West_India_Quay">
+<data key="weight">1.0</data>
+</edge>
+<edge id="363" source="Bow_Church" target="Devons_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="364" source="Langdon_Park" target="Devons_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="365" source="Langdon_Park" target="All_Saints">
+<data key="weight">1.0</data>
+</edge>
+<edge id="366" source="Poplar" target="All_Saints">
+<data key="weight">1.0</data>
+</edge>
+<edge id="367" source="Bow_Church" target="Bow_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="368" source="Bow_Church" target="Pudding_Mill_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="369" source="Pudding_Mill_Lane" target="Stratford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="370" source="Stratford" target="Stratford_High_Street">
+<data key="weight">1.0</data>
+</edge>
+<edge id="371" source="Stratford_High_Street" target="Abbey_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="372" source="Abbey_Road" target="West_Ham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="373" source="West_Ham" target="Star_Lane">
+<data key="weight">1.0</data>
+</edge>
+<edge id="374" source="Star_Lane" target="Canning_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="375" source="Canning_Town" target="Royal_Victoria">
+<data key="weight">1.0</data>
+</edge>
+<edge id="376" source="Royal_Victoria" target="Custom_House_for_ExCeL">
+<data key="weight">1.0</data>
+</edge>
+<edge id="377" source="Custom_House_for_ExCeL" target="Prince_Regent">
+<data key="weight">1.0</data>
+</edge>
+<edge id="378" source="Prince_Regent" target="Royal_Albert">
+<data key="weight">1.0</data>
+</edge>
+<edge id="379" source="Royal_Albert" target="Beckton_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="380" source="Beckton_Park" target="Cyprus">
+<data key="weight">1.0</data>
+</edge>
+<edge id="381" source="Cyprus" target="Gallions_Reach">
+<data key="weight">1.0</data>
+</edge>
+<edge id="382" source="Gallions_Reach" target="Beckton">
+<data key="weight">1.0</data>
+</edge>
+<edge id="383" source="Woolwich_Arsenal" target="King_George_V">
+<data key="weight">1.0</data>
+</edge>
+<edge id="384" source="King_George_V" target="London_City_Airport">
+<data key="weight">1.0</data>
+</edge>
+<edge id="385" source="West_Silvertown" target="Pontoon_Dock">
+<data key="weight">1.0</data>
+</edge>
+<edge id="386" source="Pontoon_Dock" target="London_City_Airport">
+<data key="weight">1.0</data>
+</edge>
+<edge id="387" source="Canning_Town" target="West_Silvertown">
+<data key="weight">1.0</data>
+</edge>
+<edge id="388" source="Stratford_International" target="Stratford">
+<data key="weight">1.0</data>
+</edge>
+<edge id="389" source="Bank_" target="Monument">
+<data key="weight">1.0</data>
+</edge>
+<edge id="390" source="Tower_Gateway" target="Tower_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="391" source="Bank_" target="Tower_Gateway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="392" source="Tower_Gateway" target="Limehouse">
+<data key="weight">1.0</data>
+</edge>
+<edge id="393" source="Limehouse" target="Westferry">
+<data key="weight">1.0</data>
+</edge>
+<edge id="394" source="Westferry" target="Poplar">
+<data key="weight">1.0</data>
+</edge>
+<edge id="395" source="Westferry" target="West_India_Quay">
+<data key="weight">1.0</data>
+</edge>
+<edge id="396" source="Poplar" target="Blackwall">
+<data key="weight">1.0</data>
+</edge>
+<edge id="397" source="Blackwall" target="East_India">
+<data key="weight">1.0</data>
+</edge>
+<edge id="398" source="East_India" target="Canning_Town">
+<data key="weight">1.0</data>
+</edge>
+<edge id="399" source="Gospel_Oak" target="Upper_Holloway">
+<data key="weight">1.0</data>
+</edge>
+<edge id="400" source="Upper_Holloway" target="Crouch_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="401" source="Crouch_Hill" target="Harringay_Green_Lanes">
+<data key="weight">1.0</data>
+</edge>
+<edge id="402" source="Harringay_Green_Lanes" target="South_Tottenham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="403" source="South_Tottenham" target="Blackhorse_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="404" source="Blackhorse_Road" target="Walthamstow_Queen’s_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="405" source="Walthamstow_Queen’s_Road" target="Leyton_Midland_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="406" source="Leyton_Midland_Road" target="Leytonstone_High_Road">
+<data key="weight">1.0</data>
+</edge>
+<edge id="407" source="Leytonstone_High_Road" target="Wanstead_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="408" source="Woodgrange_Park" target="Wanstead_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="409" source="Woodgrange_Park" target="Barking">
+<data key="weight">1.0</data>
+</edge>
+<edge id="410" source="New_Cross_Gate" target="Brockley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="411" source="Brockley" target="Honor_Oak_Park">
+<data key="weight">1.0</data>
+</edge>
+<edge id="412" source="Honor_Oak_Park" target="Forest_Hill">
+<data key="weight">1.0</data>
+</edge>
+<edge id="413" source="Forest_Hill" target="Sydenham">
+<data key="weight">1.0</data>
+</edge>
+<edge id="414" source="Sydenham" target="Penge_West">
+<data key="weight">1.0</data>
+</edge>
+<edge id="415" source="Penge_West" target="Anerley">
+<data key="weight">1.0</data>
+</edge>
+<edge id="416" source="Anerley" target="Norwood_Junction">
+<data key="weight">1.0</data>
+</edge>
+<edge id="417" source="Norwood_Junction" target="West_Croydon">
+<data key="weight">1.0</data>
+</edge>
+<edge id="418" source="Crystal_Palace" target="Sydenham">
+<data key="weight">1.0</data>
+</edge>
+</graph>
+</graphml>
