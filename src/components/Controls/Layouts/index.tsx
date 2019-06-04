@@ -53,7 +53,12 @@ export default class Layouts extends Component<LayoutsProps, LayoutsState> {
     return (
       <div class={style.layouts}>
         <p>Izkārtošanas algoritmi</p>
-        <select name="layout-algo" id="layout-algo" onChange={this.changeMethod.bind(this)}>
+        <select
+          disabled={state.running}
+          name="layout-algo"
+          id="layout-algo"
+          onChange={this.changeMethod.bind(this)}
+        >
           {this.algos.map(algo => (
             <option value={algo} selected={algo === this.selectedAlgo}>
               {algo}
