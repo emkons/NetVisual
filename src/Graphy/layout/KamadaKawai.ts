@@ -115,6 +115,8 @@ export default class KamadaKawai extends Layout implements ILayout {
 
   protected init(graph: Graph): void {
     this.initNodeLayoutProps(graph.nodes())
+
+    this.diameter = Math.sqrt(graph.nodes().length) * 300
     // Initialize dMax
     let dMax = 0
 

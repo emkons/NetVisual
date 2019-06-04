@@ -10,16 +10,16 @@ interface URLMap {
 export default class Samples extends Component {
   urls: URLMap[] = [
     {
-      url: 'examples/test.graphml',
-      name: 'TEST',
+      url: 'examples/Sawmill_36-62.graphml',
+      name: 'Kokzāģētava',
     },
     {
-      url: 'examples/Airplanes.graphml',
-      name: 'Airplanes',
+      url: 'examples/Emails.graphml',
+      name: 'E-pasti',
     },
     {
-      url: 'examples/UK_Subway.graphml',
-      name: 'UK Subway',
+      url: 'examples/Random_992-2545.graphml',
+      name: 'Zinātniskie raksti',
     },
   ]
   render() {

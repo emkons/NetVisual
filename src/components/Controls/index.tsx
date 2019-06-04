@@ -3,6 +3,7 @@ import * as style from './style.scss'
 import StatusBar from './StatusBar'
 import ZoomButtons from './ZoomButtons'
 import DataObjectInfo from './DataObjectInfo'
+import Layouts from './Layouts'
 import AddEdge from './AddEdge'
 
 interface ControlsProps {}
@@ -17,6 +18,7 @@ export default class Controls extends Component<ControlsProps, ControlsState> {
         <ZoomButtons>
           <AddEdge />
         </ZoomButtons>
+        <Layouts />
         <StatusBar />
       </div>
     )

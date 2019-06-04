@@ -1,12 +1,18 @@
 import { h, Component } from 'preact'
 import { graphy } from '../../../Graphy/Instance'
+import * as style from './style.scss'
 
 export default class AddEdge extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.addEdge}>Add Edge</button>
-        <button onClick={this.addNode}>Add Node</button>
+        <p>Pievienot:</p>
+        <button class={style.addBtn} onClick={this.addEdge}>
+          Malu
+        </button>
+        <button class={style.addBtn} onClick={this.addNode}>
+          Mezglu
+        </button>
       </div>
     )
   }

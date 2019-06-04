@@ -11,9 +11,9 @@ export default class FruchtermanReingold extends Layout implements ILayout {
 
   // Algorithm properties
   protected area = 10000
-  protected speed = 1
+  protected speed = 10
   protected gravity = 10
-  protected minMovement = 0.001
+  protected minMovement = 0.01
 
   // Internal variables
   private prevLimit: number
@@ -91,6 +91,10 @@ export default class FruchtermanReingold extends Layout implements ILayout {
         node.y += (yDist / dist) * limitedDist
       }
     })
+  }
+
+  protected init(graph: Graph) {
+    this.minMovement = 0.001 * graph.nodes().length
   }
 
   protected shouldContinue(graph: Graph) {

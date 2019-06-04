@@ -296,7 +296,7 @@ export default class Graph extends GraphyComponent {
             currentIndex = index
           }
         })
-        ; [queue[currentIndex], queue[queue.length - 1]] = [
+        ;[queue[currentIndex], queue[queue.length - 1]] = [
           queue[queue.length - 1],
           queue[currentIndex],
         ]

@@ -6,7 +6,7 @@ import { eigenPower } from './util'
 export default class MDS extends Layout implements ILayout {
   public incremental = false
 
-  protected scale: number = 100
+  protected scale: number = 1000
 
   public process(graph: Graph) {
     const nodes = graph.calcPaths()
@@ -29,7 +29,6 @@ export default class MDS extends Layout implements ILayout {
 
     // Calculate mean of distance^2 and subtract from matrix
     const mean = sum / d.length / d.length
-    // const d4 = d3.map(row => row.map(col => col - mean))
 
     // Calculate row averages and subtract from matrix
     const averages = d.map(row => row.reduce((prev, col) => prev + col, 0) / row.length)
@@ -50,8 +49,11 @@ export default class MDS extends Layout implements ILayout {
     const max2EigenSqrt = Math.sqrt(max2Eigen)
 
     // Calculate coordinates
-    vectors[1][0] = vectors[0][1]
+    // vectors[1][0] = vectors[0][1]
+    console.log('vectors', vectors)
+    console.log('values', values)
     const n = values.length
+    this.scale = this.scale / Math.max(values[0], values[1])
     nodes.forEach((node, index) => {
       node.x = vectors[0][index] * values[0] * this.scale
       node.y = vectors[1][index] * values[1] * this.scale
@@ -66,6 +68,6 @@ export default class MDS extends Layout implements ILayout {
   }
 
   public shouldContinue(graph: Graph): boolean {
-    return true
+    return false
   }
 }

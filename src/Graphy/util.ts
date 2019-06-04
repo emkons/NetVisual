@@ -1,5 +1,6 @@
 import Graph, { Edge, Node } from './classes/Graph'
 import { maxHeaderSize } from 'http'
+import { sumSqrt } from './layout/util'
 
 export type ID = string | number
 
@@ -230,4 +231,23 @@ export function getEdgeCrossings(graph: Graph): number {
     })
   })
   return crossings / 2
+}
+
+export function calculateEdgeLengthStats(graph: Graph): { mean: number; stdev: number } {
+  const lengths = graph.edges().map(edge => {
+    const dx = edge.target.x - edge.source.x
+    const dy = edge.target.y - edge.source.y
+    return sumSqrt(dx, dy)
+  })
+
+  const sum = lengths.reduce((prev, l) => prev + l, 0)
+  const mean = sum / lengths.length
+
+  const sumSQ = lengths.reduce((prev, l) => prev + (l - mean) * (l - mean))
+  const stdev = Math.sqrt(sumSQ / lengths.length)
+
+  return {
+    mean,
+    stdev,
+  }
 }

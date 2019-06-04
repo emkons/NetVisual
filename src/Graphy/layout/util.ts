@@ -180,42 +180,70 @@ export function eigenPower(inMatrix: number[][]): { values: number[]; vectors: n
     lambdaOld = lambdaNew
   }
   values.push(lambdaOld)
-  vectors.push(x.map(el => el))
-  console.log('vector', x)
-  console.log('val', lambdaOld)
-  console.log('matrix', matrix)
+  const x11 = x.map(el => el)
+  vectors.push(x11)
+  // console.log('vector', x)
+  // console.log('val', lambdaOld)
+  // console.log('matrix', matrix)
 
-  // Remove 1st eigenvector from matrix
-  let maxEl = -Infinity
-  matrix.forEach(row => {
-    row.forEach(col => {
-      maxEl = col > maxEl ? col : maxEl
+  let prevX = x11
+
+  for (let i = 0; i < n / 2; i += 1) {
+    // Remove 1st eigenvector from matrix
+    let maxEl = -Infinity
+    matrix.forEach(row => {
+      row.forEach(col => {
+        maxEl = col > maxEl ? col : maxEl
+      })
     })
-  })
-  matrix = matrix.map((row, i) => row.map((col, j) => col - (lambdaOld * x[i] * x[j]) / maxEl))
+    matrix = matrix.map((row, i) => row.map((col, j) => col - (lambdaOld * x[i] * x[j]) / maxEl))
 
-  // Get 2nd eigenvector and eigenvalue
-  iters = 0
-  err = Infinity
-  x = x.map(el => Math.random())
-  while (err > 0.001 && iters < maxIters) {
-    iters += 1
-    // Multiply matrix with x
-    const newX = matrix.map(row => row.reduce((prev, curr, index) => prev + curr * x[index], 0))
-    const lambdaNew = newX.reduce(
-      (prev, curr) => (Math.abs(curr) > prev ? Math.abs(curr) : prev),
-      -Infinity
-    )
-    const newXNorm = newX.map(el => el / lambdaNew)
-    x = newXNorm
-    err = Math.abs(lambdaNew - lambdaOld)
-    lambdaOld = lambdaNew
+    // Get 2nd eigenvector and eigenvalue
+    iters = 0
+    err = Infinity
+    x = x.map(el => Math.random())
+    const dotprod = x.reduce((prev, curr, index) => {
+      return prev + curr * prevX[index]
+    }, 0)
+    if (dotprod > -1 && dotprod < 1) {
+      const X1 = prevX[0]
+      x[0] = -dotprod / X1
+    }
+    while (err > 0.001 && iters < maxIters) {
+      iters += 1
+      // Multiply matrix with x
+      const newX = matrix.map(row => row.reduce((prev, curr, index) => prev + curr * x[index], 0))
+      const lambdaNew = newX.reduce(
+        (prev, curr) => (Math.abs(curr) > prev ? Math.abs(curr) : prev),
+        -Infinity
+      )
+      // // Shitty way of trying to orthogonalize
+      // if (iters % 11 === 0) {
+      //   const dotprod = newX.reduce((prev, curr, index) => {
+      //     return prev + curr * x11[index]
+      //   }, 0)
+      //   if (dotprod > -10 && dotprod < 10) {
+      //     const X1 = x11[0]
+      //     newXNorm[0] = -dotprod / X1
+      //   }
+      // }
+      const newXNorm = newX.map(el => el / lambdaNew)
+      x = newXNorm
+      err = Math.abs(lambdaNew - lambdaOld)
+      lambdaOld = lambdaNew
+    }
+    values.push(lambdaOld)
+    prevX = x.map(el => el)
+    vectors.push(x.map(el => el))
+    if (Math.abs(Math.abs(x[0]) - Math.abs(x11[0])) > 0.01) {
+      vectors[1] = x
+      values[1] = lambdaOld
+      break
+    }
   }
-  values.push(lambdaOld)
-  vectors.push(x.map(el => el))
-  console.log('vector', x)
-  console.log('val', lambdaOld)
-  console.log('matrix', matrix)
+  // console.log('vector', x)
+  // console.log('val', lambdaOld)
+  // console.log('matrix', matrix)
 
   return {
     values,

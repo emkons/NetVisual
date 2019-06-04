@@ -45,6 +45,14 @@ export default abstract class Layout extends Events {
     }
   }
 
+  public getInitRuntime() {
+    return this.initRuntime
+  }
+
+  public getTotalRuntime() {
+    return this.totalRuntime
+  }
+
   public stop() {
     this.running = false
     return this.running

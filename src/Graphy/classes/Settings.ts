@@ -10,6 +10,8 @@ export default class Settings {
     default: {
       defaultNodeSize: 10,
       defaultEdgeWidth: 2,
+      defaultEdgeColor: '#7777',
+      defaultNodeColor: '#000',
     },
   }
 
